@@ -11,9 +11,9 @@
 				<image :src="loginImage" mode="" style="width:600rpx;height:350rpx;"></image>
 			</view>
 			<view class="loginInptu">
-				<input type="text" v-if="loginMode == 1" class="username" value="" placeholder="请输入手机号" maxlength="11"
+				<input type="text" v-if="loginMode == 1" @blur="phonecheck" class="username" value="" placeholder="请输入手机号" maxlength="11"
 					@input="phoneInput" />
-				<input type="number" v-else-if="loginMode == 2" class="username" value="" placeholder="请输入手机号"
+				<input type="number" v-else-if="loginMode == 2" class="username" :focus="focus" value="" placeholder="请输入手机号"
 					maxlength="11" @input="phoneInput" />
 			</view>
 			<view class="loginInptu" v-if="loginMode == 1">
@@ -60,7 +60,7 @@
 
 		<!-- 忘记密码/新用户注册 -->
 		<view class="bottomBox">
-			<view class="wangjimima">忘记密码</view>
+			<view class="wangjimima" @click="forget">忘记密码</view>
 			<view class="yonghuzhuce" @click="register">用户注册</view>
 		</view>
 	</view>
@@ -95,13 +95,19 @@
 				markCode: false,
 				seen: false,
 				type_text: "text",
-				type_password: "password"
+				type_password: "password",
+				focus:true,
 			}
 		},
 		onLoad() {
 
 		},
 		methods: {
+			forget(){
+				uni.navigateTo({
+					url: '../forget/forget'
+				})
+			},
 			register: function() {
 				uni.navigateTo({
 					url: '../register/register'
@@ -263,6 +269,33 @@
 							c2: sec
 						})
 					},
+				})
+			},
+			phonecheck(){
+				var data = {
+					uEnvirn: 'MP-WEIXIN',
+					openId: this.phone,
+					FLAG: "CheckPhone"
+				}
+				api.post(userServlet, data).then(res => {
+					//成功时回调函数
+					console.log("=====",res);
+					if (res==false){
+						uni.showToast({
+							title: '手机号未注册',
+							icon: 'none',
+							duration: 2000
+						});
+						this.focus = true
+					} else {
+			
+					}
+				}).catch(err => {
+					uni.showToast({
+						title: '登录失败',
+						icon: 'none',
+						duration: 1000
+					});
 				})
 			},
 			check: function() {
