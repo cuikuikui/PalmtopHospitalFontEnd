@@ -105,7 +105,7 @@
 		methods: {
 			forget(){
 				uni.navigateTo({
-					url: '../forget/forget'
+					url: '../forget/forget?phone=' + this.phone
 				})
 			},
 			register: function() {
