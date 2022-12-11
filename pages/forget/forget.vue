@@ -237,7 +237,7 @@
 							uni.showToast({
 								title: message,
 								icon: 'none',
-								duration: 2000
+								dubration: 2000
 							})
 							uni.navigateTo({
 								url:"./pasword?phone="+this.phone
