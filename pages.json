@@ -173,7 +173,18 @@
             "style" : {
 				"navigationBarTitleText": "绑定手机号"
 			}
-        }
+        },
+		{
+		    "path" : "pages/forget/forget",
+		    "style" : {
+				"navigationBarTitleText": "找回登录密码"
+			}
+		},{
+		    "path" : "pages/forget/pasword",
+		    "style" : {
+				"navigationBarTitleText": "密码重置"
+			}
+		}
         ,{
             "path" : "pages/home/home",
             "style" :                                                                                    
