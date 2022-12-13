@@ -175,6 +175,7 @@
 <script>
 	import uniPopup from '../../components/uni-popup/uni-popup.vue';
 	import shareBtn from '../../components/share-btn/share-btn.vue';
+import { log } from 'util';
 	export default {
 		data() {
 			return {
@@ -202,7 +203,7 @@
 			this.WeChatUserInfo = uni.getStorageSync('WeChatUserInfo')
 			// console.log(this.WeChatUserInfo)
 			// console.log('----------------my-WeChatUserInfo-------------------')
-			console.log(this.WeChatUserInfo)
+			// console.log(this.WeChatUserInfo)
 			// console.log(uni.getStorageSync('LoginIndex'))
 			// console.log('-----------------my-WeChatUserInfo------------------')
 			if (uni.getStorageSync('LoginIndex') == '') {
