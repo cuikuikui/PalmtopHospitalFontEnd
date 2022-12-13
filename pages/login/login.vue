@@ -17,8 +17,8 @@
 					maxlength="11" @input="phoneInput" />
 			</view>
 			<view class="loginInptu" v-if="loginMode == 1">
-				<input :type="seen ? type_text : type_password" class="password" value="" placeholder="请输入密码"
-					maxlength="16" @input="passwordInpur" />
+				<input :type="seen ? type_text : type_password" class="password" v-model="password" value="" placeholder="请输入密码"
+					maxlength="16" />
 				<view v-show='seen' @click="changeSeen" class="passwordType">
 					<image src="../../static/images/openEyes.png" class="passwordType-image" />
 				</view>
@@ -195,11 +195,6 @@
 				}
 				// console.log(e.detail.value)
 			},
-			// 密码输入
-			passwordInpur(e) {
-				this.password = e.detail.value
-				console.log(e.detail.value)
-			},
 			changeSeen: function() {
 				this.seen = !this.seen;
 			},
@@ -215,8 +210,83 @@
 				}
 				// this.code = e.detail.value
 			},
+			async sendCode(code){
+					console.log("xxxxxx",code)
+					this.timer()
+					// zhenzisms.client.init('https://sms_developer.zhenzikj.com', '101155', '7acd8ebc-d61f-45f7-9382-64817f679202');
+					// zhenzisms.client.send(function(res) {
+					// 	if (res.data.code == 0) {
+					// 		that.timer()
+					// 		return;
+					// 	}
+					// 	uni.showToast({
+					// 		title: res.data.data,
+					// 		icon: 'none',
+					// 		duration: 2000
+					// 	})
+					// }, currentPhone, '海隆网' + locaCode + '(登录验证码。工作人员不会向你索要，请勿向任何人透露，以免造成账户或资金损失您的验证码为。')
+			},
+			// 申请验证码
+			applyCode(){
+				let that = this
+				var data = {
+					uEnvirn: 'MP-WEIXIN',
+					openId: this.phone,
+					FLAG: "applyCode"
+				}
+				api.post(userServlet, data).then(async res => {
+					console.log("==验证码===",res);
+					let status = res.split(',')[0];
+					let code = res.split(',')[1];
+					let message = res.split(',')[2];
+					console.log("==status==",status);
+					console.log("==code==",code);
+					console.log("==message==",message);
+					//成功时回调函数
+					console.log("==322222==",status=="200");
+					if(status =='200'){
+						that.iscode = code;
+						await that.sendCode(code);
+						uni.showToast({
+							title: message,
+							icon: 'none',
+							duration: 2000
+						})
+					}else if(status =='201') {
+						uni.showToast({
+							title: message,
+							icon: 'none',
+							duration: 2000
+						})
+					}else if(status =='202'){
+						uni.showToast({
+							title: message,
+							icon: 'none',
+							duration: 2000
+						})
+					}else if(status =='203'){
+						uni.showToast({
+							title: message,
+							icon: 'none',
+							duration: 2000
+						})
+					}else {
+						uni.showToast({
+							title: "系统异常1",
+							icon: 'none',
+							duration: 2000
+						})
+					}
+				}).catch(err => {
+					uni.showToast({
+						title: "系统异常2",
+						icon: 'none',
+						duration: 1000
+					});
+				})
+			},
 			//触发获取验证码功能
-			getCode(e) {
+			async getCode(e) {
 				var that = this;
 				var myreg = /^(14[0-9]|13[0-9]|15[0-9]|17[0-9]|18[0-9])\d{8}$$/;
 				var currentPhone = this.phone;
@@ -232,14 +302,8 @@
 						icon: 'none',
 						duration: 1000
 					})
-				} else {
-					var locaCode = "";
-					for (var i = 0; i < 6; i++) {
-						locaCode += Math.floor(Math.random() * 10);
-					}
-					this.isCode = locaCode
-					console.log(this.isCode)
-					that.timer()
+				} else {					
+					await that.applyCode()
 					// zhenzisms.client.init('https://sms_developer.zhenzikj.com', '101155', '7acd8ebc-d61f-45f7-9382-64817f679202');
 					// zhenzisms.client.send(function(res) {
 					// 	if (res.data.code == 0) {
@@ -251,7 +315,7 @@
 					// 		icon: 'none',
 					// 		duration: 2000
 					// 	})
-					// }, currentPhone, '海隆网' + locaCode + '(登录验证码。工作人员不会向你索要，请勿向任何人透露，以免造成账户或资金损失您的验证码为。')
+					// }, currentPhone, '海隆网' + this.iscode + '(登录验证码。工作人员不会向你索要，请勿向任何人透露，以免造成账户或资金损失您的验证码为。')
 				}
 			},
 			timer: function() {
@@ -336,10 +400,68 @@
 			// 点击登录
 			loginUp: function() {
 				//这里请求接口
-				// uni.clearStorage()
-				//uni.removeStorageSync('WeChatUserInfo')
-				// uni.removeStorageSync('LoginIndex')
-				///uni.removeStorageSync('openid')
+				if(this.loginMode=="1"){
+					this.phonePasLogin()
+				}else {
+					this.phoneCodLogin()
+				}
+			},
+			// 验证码登录
+			phoneCodLogin(){
+				//这里请求接口
+				var data = {
+					uEnvirn: 'MP-WEIXIN',
+					openId: this.phone,
+					code: this.code,
+					FLAG: "validateCode"
+				}
+				console.log("======",data);
+				if (this.check()) {
+					api.post(userServlet, data).then(res => {
+						console.log("===res===",res);
+						let status = res.split('*')[0];
+						let message = res.split('*')[1];
+						let user = res.split('*')[2];
+						let json = JSON.parse(user)  //json字符串转json对象
+						uni.setStorageSync('LoginIndex', 1)
+						uni.setStorageSync('WeChatUserInfo', json)
+						uni.setStorageSync('openid', this.phone)
+						// console.log("==json对象==",json);
+						// console.log("==User数组==",user.split(''));
+						// console.log("==status==",status);
+						// console.log("==message==",message);
+						//成功时回调函数
+						if(status =='200'){
+							this.GetCollectHospitalByOpenid(this.phone)
+							this.GetCollectDoctorByOpenid(this.phone)
+							uni.showToast({
+								title: '登录成功',
+								icon: 'none',
+								duration: 2000
+							});
+							setTimeout(function() {
+								uni.switchTab({
+									url: '../index/index'
+								})
+							}, 2000)
+						}else{
+							uni.showToast({
+								title: message,
+								icon: 'none',
+								duration: 2000
+							})
+						}
+					}).catch(err => {
+						uni.showToast({
+							title: '登录失败',
+							icon: 'none',
+							duration: 1000
+						});
+					})
+				}
+			},
+			// 手机账号密码登录
+			phonePasLogin(){
 				var data = {
 					uEnvirn: 'MP-WEIXIN',
 					openId: this.phone,
@@ -348,6 +470,7 @@
 				if (this.check()) {
 					api.post(userServlet, data).then(res => {
 						//成功时回调函数
+						console.log("=====dsdsds====",res);
 						uni.setStorageSync('LoginIndex', 1)
 						uni.setStorageSync('WeChatUserInfo', res)
 						uni.setStorageSync('openid', this.phone)
