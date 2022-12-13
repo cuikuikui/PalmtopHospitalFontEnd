@@ -228,8 +228,8 @@
 				if (this.check()) {
 					api.post(userServlet, data).then(res => {
 						console.log("===res===",res);
-						let status = res.split(',')[0];
-						let message = res.split(',')[1];
+						let status = res.split('*')[0];
+						let message = res.split('*')[1];
 						console.log("==status==",status);
 						console.log("==message==",message);
 						//成功时回调函数
