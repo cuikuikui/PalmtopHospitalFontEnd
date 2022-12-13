@@ -86,7 +86,7 @@
 				}
 				api.post(GuaHaoServlet, data).then(res => {
 					//成功时回调函数
-					console.log("显示挂号信息", res)
+					console.log("显示挂号信息",res)
 					let arrGuaHao = []
 					if (res[res.length - 1].SYS_HEAD.ReturnCode == "000000") {
 						for (let i = 0; i < res.length - 1; i++) {
