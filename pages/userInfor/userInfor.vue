@@ -73,7 +73,7 @@
 		</view>
 		<!-- 安全设置 -->
 		<text style="line-height:70rpx;font-size: 20rpx;padding-left: 30rpx;">安全设置</text>
-		<view class="item" style="border-top: 1rpx solid #F1F1F1;" @click="modify(3)">
+<!-- 		<view class="item" style="border-top: 1rpx solid #F1F1F1;" @click="modify(3)">
 			<view class="item-left">
 				<text>修改密码</text>
 			</view>
@@ -82,7 +82,7 @@
 					<text>></text>
 				</view>
 			</view>
-		</view>
+		</view> -->
 
 		<view class="exitLogin" @click="exitLogin">退出登录</view>
 

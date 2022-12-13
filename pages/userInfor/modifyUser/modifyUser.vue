@@ -31,20 +31,20 @@
 		<view class="modifPhone" v-if="modifyFlag==2&&newModifyFlag==true">
 			<view class="code">
 				<text>手机号</text>
-				<input type="text" @input="newPhoneInput" placeholder="请输入新手机号" class="input" />
+				<input type="text" @input="newPhoneInput"  placeholder="请输入新手机号" class="input" />
 			</view>
-			<view class="conform" @click="conformPhone" :class="markCode==true?'codeCheck':''">确认绑定新手机</view>
+			<view class="conform" @click="conformPhone" :class="markPhone==true?'codeCheck':''">确认绑定新手机</view>
 		</view>
 
 		<!-- 修改密码 -->
-		<view v-if="modifyFlag==3">
-			<view class="password">
+		<!-- <view v-if="modifyFlag==3"> -->
+			<!-- <view class="password">
 				<input type="password" placeholder="旧密码" @input="oldPwdChange" />
 				<input type="password" placeholder="新密码" @input="newPwdChange" />
 				<input type="password" placeholder="确认密码" @input="conformPwdChange" style="margin-bottom: 20rpx;" />
 			</view>
-			<view class="conform" :class="passwordCheck==true?'codeCheck':''" @click="conformPwds">确认并保存</view>
-		</view>
+			<view class="conform" :class="passwordCheck==true?'codeCheck':''" @click="conformPwds">确认并保存</view> -->
+		<!-- </view> -->
 
 	</view>
 </template>
@@ -128,8 +128,83 @@
 				}
 				// this.code = e.detail.value
 			},
+			async sendCode(code){
+					console.log("xxxxxx",code)
+					this.timer()
+					// zhenzisms.client.init('https://sms_developer.zhenzikj.com', '101155', '7acd8ebc-d61f-45f7-9382-64817f679202');
+					// zhenzisms.client.send(function(res) {
+					// 	if (res.data.code == 0) {
+					// 		that.timer()
+					// 		return;
+					// 	}
+					// 	uni.showToast({
+					// 		title: res.data.data,
+					// 		icon: 'none',
+					// 		duration: 2000
+					// 	})
+					// }, currentPhone, '海隆网' + locaCode + '(登录验证码。工作人员不会向你索要，请勿向任何人透露，以免造成账户或资金损失您的验证码为。')
+			},
+			// 申请验证码
+			applyCode(){
+				let that = this
+				var data = {
+					uEnvirn: 'MP-WEIXIN',
+					openId: uni.getStorageSync("openid"),
+					FLAG: "applyCode"
+				}
+				console.log("======",data);
+				api.post(userServlet, data).then(async res => {
+					console.log("==验证码===",res);
+					let status = res.split(',')[0];
+					let code = res.split(',')[1];
+					let message = res.split(',')[2];
+					console.log("==status==",status);
+					console.log("==code==",code);
+					console.log("==message==",message);
+					//成功时回调函数
+					if(status =='200'){
+						that.iscode = code;
+						await that.sendCode(code);
+						uni.showToast({
+							title: message,
+							icon: 'none',
+							duration: 2000
+						})
+					}else if(status =='201') {
+						uni.showToast({
+							title: message,
+							icon: 'none',
+							duration: 2000
+						})
+					}else if(status =='202'){
+						uni.showToast({
+							title: message,
+							icon: 'none',
+							duration: 2000
+						})
+					}else if(status =='203'){
+						uni.showToast({
+							title: message,
+							icon: 'none',
+							duration: 2000
+						})
+					}else {
+						uni.showToast({
+							title: "系统异常",
+							icon: 'none',
+							duration: 2000
+						})
+					}
+				}).catch(err => {
+					uni.showToast({
+						title: "系统异常",
+						icon: 'none',
+						duration: 1000
+					});
+				})
+			},
 			//触发获取验证码功能
-			getCode: function(e) {
+			async getCode() {
 				var that = this;
 				var myreg = /^(14[0-9]|13[0-9]|15[0-9]|17[0-9]|18[0-9])\d{8}$$/;
 				var currentPhone = this.infor;
@@ -146,13 +221,14 @@
 						duration: 1000
 					})
 				} else {
-					var locaCode = "";
-					for (var i = 0; i < 6; i++) {
-						locaCode += Math.floor(Math.random() * 10);
-					}
-					this.isCode = locaCode
-					console.log(this.isCode)
-					that.timer()
+					await that.applyCode()
+					// var locaCode = "";
+					// for (var i = 0; i < 6; i++) {
+					// 	locaCode += Math.floor(Math.random() * 10);
+					// }
+					// this.isCode = locaCode
+					// console.log(this.isCode)
+					// that.timer()
 					// zhenzisms.client.init('https://sms_developer.zhenzikj.com', '101155', '7acd8ebc-d61f-45f7-9382-64817f679202');
 					// zhenzisms.client.send(function(res) {
 					// 	if (res.data.code == 0) {
@@ -184,41 +260,91 @@
 					},
 				})
 			},
-			checkCode: function() {
-				if (this.code != this.isCode) {
+			check: function() {
+				var myreg = /^(14[0-9]|13[0-9]|15[0-9]|17[0-9]|18[0-9])\d{8}$$/;
+				//验证手机号
+				if (this.phone == "") {
 					uni.showToast({
-						title: '验证码输入错误',
+						title: '手机号不能为空',
+						icon: 'none',
+						duration: 2000
+					})
+					return false;
+				} else if (!myreg.test(this.phone)) {
+					uni.showToast({
+						title: '请输入正确的手机号',
+						icon: 'none',
+						duration: 1000
+					})
+					return false;
+				} else if (this.password == "" && this.loginMode == 1) {
+					uni.showToast({
+						title: '密码不能为空',
+						icon: 'none',
+						duration: 2000
+					})
+					return false;
+				} else if (this.code == "" && this.loginMode == 2) {
+					uni.showToast({
+						title: '验证码不能为空',
 						icon: 'none',
 						duration: 2000
 					})
 					return false;
 				} else {
-					uni.showToast({
-						title: '验证成功',
-						icon: 'none',
-						duration: 2000
-					})
 					return true;
 				}
 			},
+			// 验证码校验
 			conformCode: function() {
 				var inforType = "uPassword"
-				// var inforMation=
-				if (this.checkCode()) {
-					this.newModifyFlag = true
-					// this.updateUser(inforType,inforMation)
-				} else {
-					this.newModifyFlag = false
+				//这里请求接口
+				var data = {
+					uEnvirn: 'MP-WEIXIN',
+					openId: uni.getStorageSync("openid"),
+					code: this.code,
+					FLAG: "validateCode"
 				}
+				console.log("===rrr===",data);
+				api.post(userServlet, data).then(res => {
+					console.log("===res===",res);
+					let status = res.split('*')[0];
+					let message = res.split('*')[1];
+					console.log("==status==",status);
+					console.log("==message==",message);
+					//成功时回调函数
+					if(status =='200'){
+						this.newModifyFlag = true
+						uni.showToast({
+							title: message,
+							icon: 'none',
+							dubration: 2000
+						})
+					}else{
+						this.newModifyFlag = false
+						uni.showToast({
+							title: message,
+							icon: 'none',
+							duration: 2000
+						})
+					}
+				}).catch(err => {
+					// uni.showToast({
+					// 	title: '登录失败',
+					// 	icon: 'none',
+					// 	duration: 1000
+					// });
+				})
+				
 			},
 			newPhoneInput:function(e){
 				var newPhone = e.detail.value//从页面获取到用户输入的验证码
 				// this.code = myCode
 				if (newPhone != '') {
 					this.newPhone = newPhone
-					this.markCode = true //把获取到的密码赋值给全局变量Date中的password
+					this.markPhone = true //把获取到的密码赋值给全局变量Date中的password
 				} else {
-					this.markCode = false //把获取到的密码赋值给全局变量Date中的password
+					this.markPhone = false //把获取到的密码赋值给全局变量Date中的password
 				}
 			},
 			conformPhone:function(){
@@ -398,12 +524,13 @@
 	}
 
 	.modifPhone .phone .getcode {
-		width: 20%;
+		width: 150rpx;
 		background-color: #FC603A;
 		color: white;
 		display: flex;
 		justify-content: center;
 		margin-right: 70rpx;
+		font-size: 15px;
 		padding: 10rpx 10rpx;
 		border-radius: 5rpx;
 	}
