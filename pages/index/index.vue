@@ -54,6 +54,7 @@
 </template>
 
 <script>
+	import { getLogin } from '../../pages/service/api/login.js'
 	// 导入的公共组件
 	import Scan from "components/content/index/Scan";
 	import {
@@ -181,7 +182,7 @@
 		components: {
 			Scan
 		},
-		onLoad() {
+		onLoad() {			
 			// #ifdef MP-WEIXIN
 			uni.showShareMenu({
 				withShareTicket: true,
