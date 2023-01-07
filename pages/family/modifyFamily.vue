@@ -5,14 +5,20 @@
 			<view class="info">
 				<!-- 姓名部分 -->
 				<view class="item">
-					<text>姓名:</text>
+					<view class="left">
+						<text>姓名</text>
+					</view>
 					<view class="right">
-						<input type="text" name="name" :value="modifyFamily.a_Name" :placeholder="modifyFamily.a_Name" :focus="focus" />
+						<input type="text" name="name" :value="modifyFamily.a_Name" :placeholder="modifyFamily.a_Name"
+							:focus="focus" />
 					</view>
 				</view>
 
 				<!-- 性别部分 -->
 				<view class="item">
+					<view class="left">
+						<text>性别</text>
+					</view>
 					<radio-group class="radio-group" name="gender" @change="radioChange">
 						<label class="radio">
 							男
@@ -25,20 +31,71 @@
 					</radio-group>
 				</view>
 
-				<!-- 电话部分 -->
+				<!-- 证件类型 -->
 				<view class="item">
-					<text>手机号:</text>
-					<view class="right">
-						<input name="tel" type="number" :value="modifyFamily.a_Phone" :placeholder="modifyFamily.a_Phone" :focus="focus" />
+					<view class="left">
+						<text>证件类型</text>
+					</view>
+					<view class="right" style="justify-content: flex-start;">
+						<picker name="idType" @change="bindPickerChange" :value="index" :range="array">
+							<view class="uni-input">{{array[index]}}</view>
+						</picker>
 					</view>
 				</view>
 
-
-				<!-- 详细地址部分 -->
+				<!-- 证件号码 -->
 				<view class="item">
-					<text>身份证</text>
+					<view class="left">
+						<text>身份证号</text>
+					</view>
 					<view class="right">
-						<input name="idCard" type="text" :value="modifyFamily.a_IDCard" :placeholder="modifyFamily.a_IDCard" :focus="focus" />
+						<input name="idCard" type="text" :value="modifyFamily.a_IDCard"
+							:placeholder="modifyFamily.a_IDCard" :focus="focus" />
+					</view>
+				</view>
+
+				<!-- 地址 -->
+				<view class="item">
+					<view class="left" >
+						<text>选择地址</text>
+					</view>
+					<view class="right" style="justify-content: flex-start;">
+						<picker name="region" mode="region" @change="RegionChange" :value="region">
+							<view class="picker">
+								{{region[0]}}，{{region[1]}}，{{region[2]}}
+							</view>
+						</picker>
+					</view>
+				</view>
+
+				<!-- 详细地址-->
+				<view class="item">
+					<view class="left">
+						<text>详细地址</text>
+					</view>
+					<view class="right">
+						<input name="detailRegion" :value="detailRegion" type="text" placeholder="输入详细地址" />
+					</view>
+				</view>
+
+				<!-- 电话部分 -->
+				<view class="item">
+					<view class="left">
+						<text>手机号</text>
+					</view>
+					<view class="right">
+						<input name="tel" type="number" :value="modifyFamily.a_Phone"
+							:placeholder="modifyFamily.a_Phone" :focus="focus" />
+					</view>
+				</view>
+				
+				<!-- 设为默认就诊人-->
+				<view class="item">
+					<view class="left">
+						<text>默认就诊人</text>
+					</view>
+					<view class="right" style="justify-content: flex-start;">
+						<switch name="isDefault" @change="SwitchA" :class="switchA?'checked':''" :checked="switchA?true:false"></switch>
 					</view>
 				</view>
 
@@ -64,39 +121,65 @@
 			return {
 				name: "请填写您的姓名",
 				tel: "请填写您的联系方式",
-				index: "0",
-				modifyFamily:'',
-				gender:''
+				array: ['身份证', '军官证', '驾驶证', '台胞证', '护照', '港澳通行证'],
+				index: 0,
+				region: ['选择省', '市', '区/县'],
+				switchA: false,
+				modifyFamily: '',
+				gender: '',
+				detailRegion:''
 			}
 		},
-		onLoad: function (options) {
-			this.fId=options.fId,
-			this.family= uni.getStorageSync('family_list')
-		    var localFId = this.fId;
-		    for (var i = 0; i < this.family.length; i++) {
-		      if (this.family[i].a_Id == localFId) {
-				this.modifyFamily=this.family[i]
-				this.gender=this.family[i].a_Sex
-		        break;
-		      }
-		    }
+		computed:{
+	
+		},
+		onLoad: function(options) {
+			this.fId = options.fId,
+			this.family = uni.getStorageSync('family_list')
+			var localFId = this.fId;
+			for (var i = 0; i < this.family.length; i++) {
+				if (this.family[i].a_Id == localFId) {
+					this.modifyFamily = this.family[i]
+					this.index = this.family[i].idType
+					this.region =this.family[i].region!=undefined ? this.family[i].region.split(','):this.region
+					this.detailRegion = this.family[i].detailRegion
+					this.isDefault = this.family[i].isDefault
+					this.switchA = this.family[i].isDefault =="1" ? true : false
+					this.gender = this.family[i].a_Sex
+					break;
+				}
+			}
 		},
 		methods: {
+			// 设为默认就诊人
+			SwitchA(e) {
+				this.switchA = e.detail.value
+			},
+			// 地址选择
+			RegionChange(e) {
+				this.region = e.detail.value
+				console.log('地址选择', this.region)
+			},
+			// 证件类型选择
+			bindPickerChange: function(e) {
+				console.log('picker发送选择改变，携带值为', e.detail.value)
+				this.index = e.detail.value
+			},
 			// 性别
 			radioChange: function(e) {
 				// var localValue=0
 				// localValue=e.detail.value
 				if (e.detail.value == 0) {
-					this.gender="女"
+					this.gender = "女"
 				} else {
-					this.gender="男"
+					this.gender = "男"
 				}
 			},
 			//点击删除
 			deletes: function() {
 				var data = {
 					aId: this.fId,
-					FLAG:'D'
+					FLAG: 'D'
 				}
 				uni.showModal({
 					title: '提示',
@@ -139,6 +222,9 @@
 					warn = "请填写您的身份证号";
 				} else if (common.isCardID(e.detail.value.idCard) == false) {
 					warn = "身份证号格式不正确";
+				}else if (e.detail.value.detailRegion == "") {
+					warn = "请填写详细地址";
+					this.showWarn(warn)
 				} else {
 					var data = {
 						//从全局变量data中获取数据
@@ -148,9 +234,13 @@
 						aId: that.fId,
 						openId: uni.getStorageSync('openid'),
 						aIDCard: e.detail.value.idCard,
-						FLAG:'U'
+						IdType:e.detail.value.idType,
+						region:e.detail.value.region,
+						detailRegion:e.detail.value.detailRegion,
+						isDefault:e.detail.value.isDefault ==true?'1':'0',
+						FLAG: 'U'
 					}
-					console.log("=======",data)
+					console.log("===修改地址====", data)
 					api.post(AskerServlet, data).then(res => {
 						//成功时回调函数
 						// wx.removeStorageSync('address_list')
@@ -189,7 +279,17 @@
 		margin-left: 30rpx;
 		border-bottom: 1rpx solid #eee;
 	}
-
+	.left{
+		width: 30%;
+	}
+	.right {
+		width: 65%;
+		display: flex;
+		justify-content: center;
+		/* padding-left: 30rpx;
+		width: 75%;
+		display: flex; */
+	}
 	.text1 {
 		font-size: 30rpx;
 	}
@@ -217,12 +317,6 @@
 	.save {
 		background-color: #FFC800;
 		color: #fff;
-	}
-
-	.right {
-		padding-left: 30rpx;
-		width: 75%;
-		display: flex;
 	}
 
 	.image {

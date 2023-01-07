@@ -5,14 +5,21 @@
 			<view class="info">
 				<!-- 姓名部分 -->
 				<view class="item">
-					<text>姓名</text>
+					<view class="left">
+						<text>姓名</text>
+					</view>
+					
 					<view class="right">
-						<input type="text" name="name" :placeholder="name" :focus="focus" />
+						<input type="text" name="name" placeholder="请输入姓名" :focus="focus" />
 					</view>
 				</view>
 
 				<!-- 性别 -->
 				<view class="item">
+					<view class="left">
+						<text>性别</text>
+					</view>
+					
 					<radio-group class="radio-group" name="gender" @change="radioChange">
 						<label class="radio">
 							男
@@ -25,19 +32,75 @@
 					</radio-group>
 				</view>
 
-				<!-- 身份证号 -->
+				<!-- 证件类型 -->
 				<view class="item">
-					<text>身份证号</text>
-					<view class="right">
-						<input name="idCard" type="text" :placeholder="idCard" :focus="focus" />
+					<view class="left">
+						<text>证件类型</text>
+					</view>
+					
+					<view class="right" style="justify-content: flex-start;">
+						<picker name="idType" @change="bindPickerChange" :value="index" :range="array">
+							<view>{{array[index]}}</view>
+						</picker>
 					</view>
 				</view>
 
-				<!-- 电话部分 -->
+				<!-- 身份证号 -->
 				<view class="item">
-					<text>手机号</text>
+					<view class="left">
+						<text>身份证号</text>
+					</view>
+					
 					<view class="right">
-						<input name="tel" type="number" :placeholder="tel" :focus="focus" />
+						<input name="idCard" type="text" placeholder="请输入身份证号" />
+					</view>
+				</view>
+
+				<!-- 地址 -->
+				<view class="item">
+					<view class="left" >
+						<text>选择地址</text>
+					</view>
+				
+					<view class="right" style="justify-content: flex-start;">
+						<picker name="region" mode="region" @change="RegionChange" :value="region">
+							<view class="picker">
+								{{region[0]}}，{{region[1]}}，{{region[2]}}
+							</view>
+						</picker>
+					</view>
+				</view>
+
+				<!-- 详细地址-->
+				<view class="item">
+					<view class="left">
+						<text>详细地址</text>
+					</view>
+					
+					<view class="right">
+						<input name="detailRegion" type="text" placeholder="输入详细地址" />
+					</view>
+				</view>
+
+				<!-- 手机-->
+				<view class="item">
+					<view class="left">
+						<text>手机号</text>
+					</view>
+					
+					<view class="right">
+						<input name="tel" type="number" placeholder="请输入手机号" />
+					</view>
+				</view>
+				
+				<!-- 设为默认就诊人-->
+				<view class="item">
+					<view class="left">
+						<text>默认就诊人</text>
+					</view>
+					
+					<view class="right" style="justify-content: flex-start;">
+						<switch name="isDefault" @change="SwitchA" :class="switchA?'checked':''" :checked="switchA?true:false"></switch>
 					</view>
 				</view>
 			</view>
@@ -53,17 +116,36 @@
 	} from '../common/api.js'
 	import common from '../common/common.js'
 	import api from '../common/request.js'
-	import {randomNum} from '../common/utils.js'
+	import {
+		randomNum
+	} from '../common/utils.js'
 	export default {
 		data() {
 			return {
-				name: "请填写您的姓名",
 				gender: "男",
-				tel: "请填写您的联系方式",
-				idCard: "请输入您的身份证号"
+				IDCardType: '',
+				array: ['身份证', '军官证', '驾驶证', '台胞证', '护照', '港澳通行证'],
+				index: 0,
+				region: ['选择省', '市', '区/县'],
+				switchA: false,
 			}
 		},
 		methods: {
+			// 设为默认就诊人
+			SwitchA(e) {
+				this.switchA = e.detail.value
+			},
+			// 地址选择
+			RegionChange(e) {
+				this.region = e.detail.value
+				console.log('地址选择', this.region)
+			},
+			// 证件类型选择
+			bindPickerChange: function(e) {
+				console.log('picker发送选择改变，携带值为', e.detail.value)
+				this.index = e.detail.value
+			},
+			// 性别选择
 			radioChange: function(e) {
 				if (e.detail.value == 0) {
 					this.gender = "女"
@@ -78,7 +160,7 @@
 					duration: 2000 //持续的时间
 				})
 			},
-			formSubmit: function(e) {
+			formSubmit: function(e) {				
 				var openid = uni.getStorageSync('openid')
 				var that = this
 				var warn = "";
@@ -86,30 +168,37 @@
 				if (e.detail.value.name == "") {
 					warn = "请填写您的姓名！";
 					this.showWarn(warn)
-				} else if (e.detail.value.tel == "") {
-					warn = "请填写您的手机号！";
-					this.showWarn(warn)
-				} else if (!(/^1(3|4|5|7|8)\d{9}$/.test(e.detail.value.tel))) {
-					warn = "手机号格式不正确";
-					this.showWarn(warn)
 				} else if (e.detail.value.idCard == "") {
 					warn = "请填写您的身份证号";
 					this.showWarn(warn)
 				} else if (common.isCardID(e.detail.value.idCard) == false) {
 					warn = "身份证号格式不正确";
 					this.showWarn(warn)
+				} else if (e.detail.value.detailRegion == "") {
+					warn = "请填写详细地址";
+					this.showWarn(warn)
+				} else if (e.detail.value.tel == "") {
+					warn = "请填写您的手机号！";
+					this.showWarn(warn)
+				} else if (!(/^1(3|4|5|7|8)\d{9}$/.test(e.detail.value.tel))) {
+					warn = "手机号格式不正确";
+					this.showWarn(warn)
 				} else {
-					console.log("======",randomNum("a",6))
 					var data = {
 						//从全局变量data中获取数据
-						aId:randomNum("a",6),
+						aId: randomNum(new Date().getFullYear(), 6),
 						aName: e.detail.value.name,
 						aSex: this.gender,
 						aPhone: e.detail.value.tel,
 						aIDCard: e.detail.value.idCard,
 						openId: openid,
-						FLAG:"C"
+						IdType:e.detail.value.idType,
+						region:e.detail.value.region,
+						detailRegion:e.detail.value.detailRegion,
+						isDefault:e.detail.value.isDefault ==true?'1':'0',
+						FLAG: "C"
 					}
+					console.log("====data====",data);
 					api.post(AskerServlet, data).then(res => {
 						//成功时回调函数
 						// wx.removeStorageSync('address_list')
@@ -142,13 +231,24 @@
 	}
 
 	.item {
+		width: 100%;
 		height: 90rpx;
 		align-items: center;
 		display: flex;
 		margin-left: 30rpx;
 		border-bottom: 1rpx solid #eee;
 	}
-
+	.left{
+		width: 30%;
+	}
+	.right {
+		width: 65%;
+		display: flex;
+		justify-content: center;
+		/* padding-left: 30rpx;
+		width: 75%;
+		display: flex; */
+	}
 	input placeholder {
 		color: red;
 	}
@@ -171,11 +271,7 @@
 		color: #fff;
 	}
 
-	.right {
-		padding-left: 30rpx;
-		width: 75%;
-		display: flex;
-	}
+
 
 	.item .center {
 		width: 450rpx;
