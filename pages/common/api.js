@@ -34,6 +34,7 @@ const userServlet ='/userServlet'
 const HospitalServlet ='/HospitalServlet'
 const NoticeServlet ='/NoticeServlet'
 const Questions_List_Json='/Questions_List_Json'
+const AppointServlet ='/AppointServlet'
 //抛出getMainPage这个常量
 module.exports = {
   // getMainPage1,
@@ -71,4 +72,5 @@ module.exports = {
   ScheduleServlet,
   CollectionServlet,
   GuaHaoServlet,
+  AppointServlet
 }
