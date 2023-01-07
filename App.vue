@@ -1,6 +1,6 @@
 
-
 <script>
+
 	export default {
 		globalData:{
 			    hospitals:null,
@@ -37,6 +37,8 @@
 </script>
 
 <style>
+	
+	@import "wxcomponents/dist/common/index.wxss";
 	@import '././static/style/weui.wxss';
 
 	/*每个页面公共css */

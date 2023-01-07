@@ -193,14 +193,64 @@
                 "enablePullDownRefresh": false
             }
             
+        },{
+            "path" : "pages/nucleicAcid/index",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "核酸检测",
+                "enablePullDownRefresh": false
+            }
+        },{
+            "path" : "pages/nucleicAcid/appointment",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "新冠筛查预约申请",
+                "enablePullDownRefresh": false
+            }
+        },{
+            "path" : "pages/nucleicAcid/success",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "新冠筛查预约成功",
+                "enablePullDownRefresh": false
+            }
+        },{
+            "path" : "pages/nucleicAcid/record",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "新冠筛查预约记录",
+                "enablePullDownRefresh": false
+            }
+        },{
+            "path" : "pages/nucleicAcid/recordDetail",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "新冠筛查预约详情",
+                "enablePullDownRefresh": false
+            }
+        },{
+            "path" : "pages/nucleicAcid/pay1",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "门诊缴费",
+                "enablePullDownRefresh": false
+            }
         }
+		
     ],
 	"globalStyle": {
 		"navigationBarTextStyle": "white",
 		"navigationBarTitleText": "uni-app",
 		"navigationBarBackgroundColor": "#FD0517",
 		"backgroundColor": "#FD0517",
-		"enablePullDownRefresh": true
+		"enablePullDownRefresh": true,
+		"usingComponents": {
+		  //按需引入组件(以button为例)
+		  "van-button": "wxcomponents/dist/button/index",
+		  "van-field":"wxcomponents/dist/field/index",
+		  "van-popup": "wxcomponents/dist/popup/index",
+		  "van-picker": "wxcomponents/dist/picker/index"
+		}
 	},
 	"tabBar": {
 		"color": "#7A7E83",
