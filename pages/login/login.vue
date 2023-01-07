@@ -463,18 +463,24 @@
 			// 手机账号密码登录
 			phonePasLogin(){
 				var data = {
+					FLAG: "phonePasLogin",
 					uEnvirn: 'MP-WEIXIN',
 					openId: this.phone,
-					FLAG: "R"
+					password:this.password	
 				}
 				if (this.check()) {
 					api.post(userServlet, data).then(res => {
 						//成功时回调函数
 						console.log("=====dsdsds====",res);
+						let status = res.split('*')[0];
+						let user = res.split('*')[1];
+						let json = JSON.parse(user)  //
+						
+						
 						uni.setStorageSync('LoginIndex', 1)
-						uni.setStorageSync('WeChatUserInfo', res)
+						uni.setStorageSync('WeChatUserInfo', json)
 						uni.setStorageSync('openid', this.phone)
-						if (res.open_Id == this.phone && res.u_Password == this.password) {
+						if (status=="200") {
 							this.GetCollectHospitalByOpenid(this.phone)
 							this.GetCollectDoctorByOpenid(this.phone)
 							uni.showToast({
