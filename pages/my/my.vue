@@ -17,7 +17,7 @@
 					<image src="../../static/images/family.png"></image>
 				</view>
 				<view class="weui_cell_bd">
-					<view class="weui_cell_bd_p"> 家庭成员 </view>
+					<view class="weui_cell_bd_p"> 就诊人 </view>
 				</view>
 				<!-- <view v-if="item.isunread" class="badge">{{item.unreadNum}}</view> -->
 				<view class="with_arrow">
