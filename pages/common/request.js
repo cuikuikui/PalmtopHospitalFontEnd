@@ -8,6 +8,7 @@ const request = (url, options) => {
       //如果是GET,GET自动让数据成为query String,其他方法需要让options.data转化为字符串
       header: {
         "Content-Type": "application/x-www-form-urlencoded;charset=utf-8",
+		'Content-Type':'application/x-www-form-urlencoded'
         //  'token':token                     
       },
       //header中可以监听到token值的变化
@@ -30,6 +31,9 @@ const request = (url, options) => {
       }
     })
   })
+  
+  
+  
 }
 //封装get方法
 const get = (url, options = {}) => {
