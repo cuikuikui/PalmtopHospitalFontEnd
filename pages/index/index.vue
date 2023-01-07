@@ -54,7 +54,6 @@
 </template>
 
 <script>
-	import { getLogin } from '../../pages/service/api/login.js'
 	// 导入的公共组件
 	import Scan from "components/content/index/Scan";
 	import {
@@ -105,9 +104,14 @@
 					},
 					{
 						index: 2,
-						name: "预约体检",
+						name: "核酸检测",
 						src: "http://localhost:8080/PalmtopHospitalBackEnd/images/myd.png"
 					},
+					// {
+					// 	index: 2,
+					// 	name: "预约体检",
+					// 	src: "http://localhost:8080/PalmtopHospitalBackEnd/images/myd.png"
+					// },
 					{
 						index: 3,
 						name: "医院介绍",
@@ -255,10 +259,8 @@
 						url: '../hospital/hospital'
 					})
 				} else if (index == 2) {
-					uni.showToast({
-						title: '待开发中.............',
-						icon: 'loading',
-						duration: 2000 //持续的时间
+					uni.navigateTo({
+						url: '../nucleicAcid/index'
 					})
 				} else if (index == 3) {
 					uni.navigateTo({
