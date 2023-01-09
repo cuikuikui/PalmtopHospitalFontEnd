@@ -143,6 +143,10 @@
 	} from '../common/api.js'
 	import api from '../common/request.js'
 	var util = require('../common/util.js');
+	
+	import {
+		getNowFormatDate,getNowFormatTime
+	} from '../common/utils.js'
 	export default {
 		data() {
 			return {
@@ -458,7 +462,8 @@
 				}
 				console.log("=appdate==",appdate)
 				var dd = new Date();
-				var dateTimes=dd.getFullYear()+'-'+dd.getMonth()+'-'+dd.getDate()+' '+dd.getHours()+':'+dd.getMinutes()+':'+dd.getSeconds()
+				var dateTimes=getNowFormatDate() +" "+getNowFormatTime()
+				// dd.getFullYear()+'-'+dd.getMonth()+'-'+dd.getDate()+' '+dd.getHours()+':'+dd.getMinutes()+':'+dd.getSeconds()
 				this.dateTimes=dateTimes  //此处日期要插入数据库中用于排序
 				//console.log('111111111   '+dateTimes+'   111111111111')
 				var strTime=dd.toLocaleTimeString() //此处日期要插入数据库中用于显示挂号信息	
