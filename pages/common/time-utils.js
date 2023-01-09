@@ -1,8 +1,3 @@
-import  DateFormat  from "**/页面方法/基础类/DateFormat_1.0.js"; // 交易级别日志
-import  TimeFormat  from "**/页面方法/基础类/TimeFormat_1.0.js";
-import  DateAdder  from "**/页面方法/基础类/DateAdder_1.0.js";
-//import  DateCompare  from "**/页面方法/基础类/DateCompare_1.0.js";
-
 export default {
   getClientNowSystemTime(format,time) {
     let date = '';
