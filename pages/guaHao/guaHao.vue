@@ -1,7 +1,7 @@
 <template>
 	<view class="container">
 		<scroll-view :scroll-y="true">
-			<view class="item" v-for="(item,index) in guaHao" :key="index" :data-gid="item.g_Id"
+			<view class="item" v-for="(item,index) in guaHao" :key="item.g_Id" :data-gid="item.g_Id"
 				:data-gorder="item.g_Order" @click="guaHaoDetail">
 				<view class="top">
 					<text>预约详情</text>
