@@ -356,7 +356,7 @@
 					}
 				}).catch(err => {
 					uni.showToast({
-						title: '登录失败',
+						title: '登录失败xxx',
 						icon: 'none',
 						duration: 1000
 					});
