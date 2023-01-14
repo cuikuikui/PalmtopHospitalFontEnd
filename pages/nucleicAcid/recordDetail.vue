@@ -103,7 +103,7 @@
 		},
 		methods:{
 			submit(){
-				uni.redirectTo({
+				uni.navigateTo({
 					url:"./pay1"
 				})
 			},

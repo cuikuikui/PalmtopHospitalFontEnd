@@ -72,7 +72,7 @@
 		},
 		methods:{
 			appointDetail(code,FId,Fname,IDCard,Phone,appDate,appNo,appType,appStatus,paySatus){
-				uni.redirectTo({
+				uni.navigateTo({
 					url:'./recordDetail?code=' + code + '&FId=' + FId+ '&Fname=' + Fname+ '&IDCard=' + IDCard+ '&Phone=' + Phone+ '&appDate=' + appDate+ '&appNo=' + appNo+ '&appType=' + appType+ '&appStatus=' + appStatus+ '&paySatus=' + paySatus
 				})
 			},

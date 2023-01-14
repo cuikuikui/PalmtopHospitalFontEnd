@@ -21,20 +21,20 @@
 		methods:{
 			Jump(id){
 				if(id =='1'){
-					uni.redirectTo({
+					uni.navigateTo({
 						url: '../family/listFamily'
 					})
 				}else if(id=='2'){
 					console.log("-------");
-					uni.redirectTo({
+					uni.navigateTo({
 						url: '../nucleicAcid/appointment'
 					})
 				}else if(id=='3'){
-					uni.redirectTo({
+					uni.navigateTo({
 						url:"./record"
 					})	
 				}else if(id=='4'){
-					
+			
 				}
 			}
 		}

@@ -68,7 +68,7 @@
 								icon: 'none',
 								duration: 2000
 							});
-							uni.redirectTo({
+							uni.navigateTo({
 								url:'../nucleicAcid/pay1'
 							})
 						}, 2000);
@@ -92,7 +92,7 @@
 				});
 				setTimeout(function() {
 					uni.hideLoading();
-					uni.redirectTo({
+					uni.navigateTo({
 						url: '../nucleicAcid/record'
 					})
 				}, 2000);

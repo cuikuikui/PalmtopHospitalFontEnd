@@ -127,9 +127,16 @@
 				});
 				return 0;
 			}
-			this.family = arr.filter((item)=>{
-				return item.isDefault =='1'
-			})
+			this.family =arr
+			for(let i =0;i<arr.length;i++){
+				if(arr[i].isDefault=="1"){
+					this.index=i
+					break;
+				}
+			}
+			// this.family = arr.filter((item)=>{
+			// 	return item.isDefault =='1'
+			// })
 			
 			for(let i =0;i<this.family.length;i++){
 				this.appoints.push(this.family[i].a_Name+" "+this.family[i].a_Id)
@@ -142,7 +149,7 @@
 		},
 		methods:{
 			toRecord(){
-				uni.redirectTo({
+				uni.navigateTo({
 					url:"./record"
 				})	
 			},
@@ -205,7 +212,7 @@
 						});
 						setTimeout(function () {
 							uni.hideLoading();
-							uni.redirectTo({
+							uni.navigateTo({
 								url:'../nucleicAcid/success?appNo='+ data.appNo + '&appType=' + data.appType
 							})
 						}, 2000);
