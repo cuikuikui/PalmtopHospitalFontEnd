@@ -5,7 +5,6 @@
 </template>
 
 <script>
-	import { log } from 'util';
 import {GuaHaoServlet} from '../../pages/common/api.js'
 	import api from '../../pages/common/request.js'
 	var util = require('../../pages/common/util.js');
@@ -110,12 +109,6 @@ import {GuaHaoServlet} from '../../pages/common/api.js'
 					gId: gId,
 					gPayStatus:'2',
 				}
-				// var data = {
-				// 	FLAG: "U",
-				// 	payFlag:'UB',
-				// 	gId: gId,
-				// 	gPayStatus:'2',
-				// }
 				api.post(GuaHaoServlet, data).then(res => {
 					if (res[0].SYS_HEAD.ReturnCode = '000000') {
 			
