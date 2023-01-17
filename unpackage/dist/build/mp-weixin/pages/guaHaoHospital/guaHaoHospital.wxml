@@ -1,0 +1,1 @@
+<view><scroll-view class="container" scroll-y="true"><block wx:for="{{hospitals}}" wx:for-item="item" wx:for-index="index" wx:key="index"><view class="item" data-hid="{{item.hid}}" data-event-opts="{{[['tap',[['goToEvaluate',['$event']]]]]}}" bindtap="__e"><image src="{{item.himg}}"></image><text>{{item.hname}}</text></view></block></scroll-view></view>

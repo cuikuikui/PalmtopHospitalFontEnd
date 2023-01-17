@@ -1,0 +1,1 @@
+<view><view class="header"><view class="image"><image src="../../static/images/logo.png"></image></view><view class="text1"><text>海隆掌上医院</text></view><view class="text2"><text>版本V1.0</text></view><view class="bottom"><text style="text-indent:50rpx;" decode="{{true}}">昆山海隆软件开发有限公司    版权所有</text><text>Copyright © 2020 Hyron. All Rights Reserved</text></view></view></view>

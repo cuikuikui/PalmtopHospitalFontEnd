@@ -1,0 +1,125 @@
+
+.content {
+	width: 100%;
+	height: 1200rpx;
+	background-color: #F1F1F1
+}
+
+/* 修改用户名 */
+.modifyName {
+	/* padding-left:30rpx; */
+}
+.modifyName .input {
+	padding: 20rpx 30rpx;
+	font-size: 30rpx;
+	color: #C8C7CC;
+	background-color: white;
+}
+.modifyName .conform {
+	display: flex;
+	margin: 20rpx 30rpx;
+	border-radius: 15rpx;
+	justify-content: center;
+	align-items: center;
+	padding: 20rpx 30rpx;
+	color: white;
+	background-color: #999999;
+}
+
+/* 修改手机号 */
+.modifPhone {
+	display: flex;
+	flex-direction: column;
+}
+.modifPhone .phone {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+	align-items: center;
+	background-color: white;
+	padding: 20rpx 0rpx
+}
+.modifPhone .phone .phone-1 {
+	width: 60%;
+	margin-left: 45rpx;
+	display: flex;
+	justify-content: space-between;
+	/* background-color: #09FC76; */
+}
+.modifPhone .phone .getcode {
+	width: 150rpx;
+	background-color: #FC603A;
+	color: white;
+	display: flex;
+	justify-content: center;
+	margin-right: 70rpx;
+	font-size: 15px;
+	padding: 10rpx 10rpx;
+	border-radius: 5rpx;
+}
+.modifPhone .code {
+	display: flex;
+}
+.modifPhone .code {
+	display: flex;
+	flex-direction: row;
+	margin-top: 3rpx;
+	justify-content: space-around;
+	align-items: center;
+	/* margin-left: -10rpx; */
+	background-color: white;
+	padding: 20rpx 0rpx
+}
+.modifPhone .code .input {
+	margin-right: 175rpx;
+}
+.modifPhone .conform {
+	width: 600rpx;
+	padding: 15rpx 0rpx;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	color: #767676;
+	background-color: #CCCCCC;
+	margin-top: 40rpx;
+	border-radius: 5rpx;
+	margin-left: 70rpx;
+}
+.modifPhone .codeCheck {
+	background-color: #FC603A;
+	color: white;
+}
+
+/* 修改密码 */
+.password {
+	/* margin: 10rpx 30rpx; */
+	display: flex;
+	flex-direction: column;
+	background-color: white;
+}
+.password input {
+	border: 1rpx solid #DCDBDB;
+	margin: 10rpx 30rpx;
+	padding: 20rpx 20rpx;
+	margin-top: 20rpx;
+	background-color: #DDDDDD;
+	border-radius: 5rpx;
+}
+.conform {
+	display: flex;
+	margin: 30rpx 30rpx;
+	border-radius: 5rpx;
+	justify-content: center;
+	font-weight: bold;
+	align-items: center;
+	padding: 20rpx 30rpx;
+	color: white;
+	background-color: #999999;
+}
+.codeCheck {
+	background-color: #1C16F2;
+	color: white;
+	padding: 10rpx 20rpx;
+	border-radius: 5rpx;
+}
+

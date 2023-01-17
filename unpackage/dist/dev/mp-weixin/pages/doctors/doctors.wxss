@@ -1,0 +1,368 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*科室排班表  */
+.table {
+	width: 100%;
+	/* height:500rpx; */
+	padding: 15rpx;
+	/* padding-top: 100rpx; */
+	display: flex;
+	flex-direction: column;
+	/*border: 1rpx solid rgba(218, 217, 217, 1);*/
+	border-bottom: 10rpx solid rgba(218, 217, 217, 1);
+	/* background-color: blue; */
+}
+.table_header {
+	display: flex;
+	height: 110rpx;
+}
+.th1 {
+	display: flex;
+	/*flex-direction: column;*/
+	width: 150rpx;
+	height: 100rpx;
+	/*background: rgba(241, 252, 255, 1);*/
+	border-right: 1rpx solid #494747;
+	padding:0 5px;
+/* 	padding-right: 5rpx;
+	padding-left: 5rpx; */
+	/*border-bottom: 1rpx solid rgba(218, 217, 217, 1); */
+	justify-content: center;
+	align-items: center;
+	/*overflow-x: auto;*/
+}
+.th2 {
+	display: flex;
+	flex-direction: row;
+	width: 100rpx;
+	height: 110rpx;
+	/*background: rgba(241, 252, 255, 1);*/
+	/*border-right: 1rpx solid #494747; */
+	padding-right: 15rpx;
+	padding-left: 15rpx;
+	/*border-bottom: 1rpx solid rgba(218, 217, 217, 1); */
+	justify-content: center;
+	align-items: center;
+	overflow-x: auto;
+}
+.cell_label {
+	width: 80rpx;
+	/* height: 60rpx; */
+	font-size: 30rpx;
+	padding-left: 10rpx;
+	color: rgba(74, 74, 74, 1);
+}
+.colorFlag {
+	color: #0AF920;
+}
+.cell_date_label {
+	font-size: 30rpx;
+	/*color: rgba(74, 74, 74, 1);*/
+}
+.table_main {
+	display: flex;
+	flex-direction: row;
+}
+.right-item {
+	display: flex;
+	flex-direction: row;
+}
+.doctors {
+	width: 100%;
+	height: 1100rpx;
+}
+.itemdot {
+	width: 100%;
+	height: 270rpx;
+	border-bottom: 10rpx solid rgba(218, 217, 217, 1);
+	margin-top: 15rpx;
+	padding: 15rpx;
+	padding-left: 30rpx;
+	padding-top: 30rpx;
+}
+.itemdot .top {
+	width: 100%;
+	height: 190rpx;
+	display: flex;
+	/*background-color: #13B5F1*/
+}
+.itemdot .top .left {
+	width: 230rpx;
+	height: 180rpx;
+	/*background-color: #FF0707*/
+}
+.itemdot .top .right {
+	width: 100%;
+	height: 180rpx;
+	display: flex;
+	flex-direction: column;
+	align-items: space-between;
+	padding-left: 20rpx;
+	font-size: 28rpx;
+	line-height: 70rpx;
+	color: #B0ABAB;
+	/*background-color: #07FFDF*/
+}
+.youHao {
+	width: 70rpx;
+	height: 40rpx;
+	background-color: #09FC76;
+	color: white;
+	position: relative;
+	left: 450rpx;
+	top: -50rpx;
+	line-height: 40rpx;
+	display: flex;
+	justify-content: center;
+}
+.wuHao {
+	width: 70rpx;
+	height: 40rpx;
+	background-color: #6B6B6B;
+	color: white;
+	position: relative;
+	left: 450rpx;
+	top: -50rpx;
+	line-height: 40rpx;
+	display: flex;
+	justify-content: center;
+}
+.itemdot .bottom {
+	width: 700rpx;
+	height: 50rpx;
+	font-size: 30rpx;
+	overflow: hidden;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+}
+

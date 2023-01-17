@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText": "挂号列表",
+  "usingComponents": {
+    "count-down": "/components/uni-countDown/uni-countDown"
+  }
+}

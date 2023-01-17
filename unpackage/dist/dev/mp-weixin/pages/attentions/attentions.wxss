@@ -1,0 +1,198 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*医院信息页面*/
+.container {
+	width: 100%;
+	height: 1800rpx;
+	position: relative;
+	padding: 20rpx 40rpx;
+	/*top:90rpx;*/
+	/*background-color: white;*/
+}
+.container1 {
+	width: 100%;
+	height: 1000rpx;
+	background-color: rgba(0, 0, 0, 0.7);
+}
+.isLocationShow {
+	display: block;
+}
+.isLocationHide {
+	display: none;
+}
+.actContainer {
+	background-color: #949292
+}
+.hospital {
+	width: 100%;
+	height: 220rpx;
+	display: flex;
+	align-items: center;
+	padding-bottom: 20rpx;
+	border-bottom: 2rpx solid #E3E0E0;
+	/*background-color:yellow;*/
+}
+.lt {
+	width: 20%;
+}
+.rt {
+	width: 80%;
+	line-height: 80rpx;
+	margin-left: 20rpx;
+}
+.rt.top {
+	width: 100%;
+	height: 60rpx;
+	display: flex;
+	align-items: center;
+	margin-bottom: 10rpx;
+	/*background-color: #2E0DF8*/
+}
+.rt.top text {
+	font-size: 30rpx;
+	color: #9A9696
+}
+.center {
+	width: 100%;
+	height: 60rpx;
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	margin-bottom: 10rpx;
+	margin-left: -100rpx;
+	/*background-color: #0DF829*/
+}
+.center .left1 {
+	margin-left: 90rpx;
+}
+.center .center1 {
+	margin-left: 80rpx;
+}
+.center .bottom1 {
+	margin-left: 80rpx;
+}
+.center image {
+	width: 30rpx;
+	height: 30rpx;
+	/*margin-left: -20rpx;*/
+	/*margin-right: -50rpx;*/
+}
+.center text {
+	font-size: 30rpx;
+	color: #9A9696
+}
+.bottom {
+	width: 100%;
+	height: 60rpx;
+	margin-bottom: 10rpx;
+	/*background-color: #F8EA0D*/
+}
+.bottom image {
+	width: 30rpx;
+	height: 30rpx;
+	/*margin-left: -70rpx;*/
+	/*margin-left: -20rpx;*/
+}
+.bottom text {
+	font-size: 30rpx;
+	color: #9A9696
+}
+

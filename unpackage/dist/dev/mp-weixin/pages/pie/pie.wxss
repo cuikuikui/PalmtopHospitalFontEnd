@@ -1,0 +1,29 @@
+
+.charts {
+	width: 750rpx;
+	height: 500rpx;
+	background-color: #FFFFFF;
+}
+.qiun-charts {
+	width: 750rpx;
+	height: 500rpx;
+	background-color: #FFFFFF;
+}
+.qiun-bg-white {
+	background: #FFFFFF;
+}
+.qiun-title-bar {
+	width: 96%;
+	padding: 10rpx 2%;
+	flex-wrap: nowrap;
+}
+.qiun-common-mt {
+	margin-top: 10rpx;
+}
+.qiun-title-dot-light {
+	border-left: 10rpx solid #0ea391;
+	padding-left: 10rpx;
+	font-size: 32rpx;
+	color: #000000
+}
+

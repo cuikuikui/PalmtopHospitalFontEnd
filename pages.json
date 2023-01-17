@@ -27,9 +27,10 @@
 			"style": {}
 		}, {
 			"path": "pages/webView/webView",
-			"style" : {  
-				"navigationStyle":"custom"  
-			}  
+			"style": {
+				"navigationBarTitleText": "uni-app",
+				"navigationStyle": "custom"
+			}
 		}, {
 			"path": "pages/login/login",
 			"style": {
@@ -65,179 +66,221 @@
 			"style": {
 				"navigationBarTitleText": "搜索医生"
 			}
-		}
-	    ,{
-            "path" : "pages/doctors/doctors",
-            "style" : {
+		}, {
+			"path": "pages/doctors/doctors",
+			"style": {
 				"navigationBarTitleText": "医生信息"
 			}
-        }
-        ,{
-            "path" : "pages/doctorDetail/doctorDetail",
-            "style" : {
+		}, {
+			"path": "pages/doctorDetail/doctorDetail",
+			"style": {
 				"navigationBarTitleText": "医生列表"
 			}
-        }
-        ,{
-            "path" : "pages/confirmGuahao/confirmGuahao",
-            "style" : {
+		}, {
+			"path": "pages/confirmGuahao/confirmGuahao",
+			"style": {
 				"navigationBarTitleText": "挂号确认"
 			}
-        }
-        ,{
-            "path" : "pages/family/addFamily",
-            "style" : {
+		}, {
+			"path": "pages/family/addFamily",
+			"style": {
 				"navigationBarTitleText": "选择就诊人"
 			}
-        },{
-            "path" : "pages/family/listFamily",
-            "style" : {
+		}, {
+			"path": "pages/family/listFamily",
+			"style": {
 				"navigationBarTitleText": "就诊人"
 			}
-        },{
-            "path" : "pages/family/modifyFamily",
-            "style" : {
+		}, {
+			"path": "pages/family/detailFamily",
+			"style": {
+				"navigationBarTitleText": "就诊卡详情"
+			}
+		}, {
+			"path": "pages/family/modifyFamily",
+			"style": {
 				"navigationBarTitleText": "修改就诊人信息"
 			}
-        }
-        ,{
-            "path" : "pages/guaHaoEvaluate/guaHaoEvaluate",
-            "style" : {
+		}, {
+			"path": "pages/guaHaoEvaluate/guaHaoEvaluate",
+			"style": {
 				"navigationBarTitleText": "满意度调查"
 			}
-        }
-        ,{
-            "path" : "pages/guaHaoEvaluateSuccess/guaHaoEvaluateSuccess",
-            "style" : {}
-        }
-        ,{
-            "path" : "pages/attentions/attentions",
-            "style" : {
+		}, {
+			"path": "pages/guaHaoEvaluateSuccess/guaHaoEvaluateSuccess",
+			"style": {}
+		}, {
+			"path": "pages/attentions/attentions",
+			"style": {
 				"navigationBarTitleText": "关注"
 			}
-        },
+		},
 		{
-		    "path" : "pages/userInfor/userInfor",
-		    "style" : {
+			"path": "pages/userInfor/userInfor",
+			"style": {
 				"navigationBarTitleText": "个人中心"
 			}
-		}
-        ,{
-            "path" : "pages/disClaimer/disClaimer",
-            "style" : {
+		}, {
+			"path": "pages/disClaimer/disClaimer",
+			"style": {
 				"navigationBarTitleText": "免责声明"
 			}
-        }
-        ,{
-            "path" : "pages/aboutUs/aboutUs",
-            "style" : {
+		}, {
+			"path": "pages/aboutUs/aboutUs",
+			"style": {
 				"navigationBarTitleText": "关于我们"
 			}
-        },
-		 {
-		    "path" : "pages/guaHaoDetail/guaHaoDetail",
-		    "style" : {
+		},
+		{
+			"path": "pages/guaHaoDetail/guaHaoDetail",
+			"style": {
 				"navigationBarTitleText": "挂号详情"
 			}
-		}
-        ,{
-            "path" : "pages/Common_Problems/Common_Problems",
-            "style" : {
+		}, {
+			"path": "pages/Common_Problems/Common_Problems",
+			"style": {
 				"navigationBarTitleText": "使用帮助"
 			}
-        }
-        ,{
-            "path" : "pages/pie/pie",
-            "style" : {}
-        }
-        ,{
-            "path" : "pages/userInfor/modifyUser/modifyUser",
-            "style" : {
+		}, {
+			"path": "pages/pie/pie",
+			"style": {}
+		}, {
+			"path": "pages/userInfor/modifyUser/modifyUser",
+			"style": {
 				"navigationBarTitleText": "修改信息"
 			}
-        }
-        ,{
-            "path" : "pages/register/register",
-            "style" : {
+		}, {
+			"path": "pages/register/register",
+			"style": {
 				"navigationBarTitleText": "用户注册"
 			}
-        }
-        ,{
-            "path" : "pages/bindCard/bindCard",
-            "style" : {
-				"navigationBarTitleText": "绑定就诊卡"
-			}
-        }
-        ,{
-            "path" : "pages/WechatLogin/bindPhone/bindPhone",
-            "style" : {
+		}, {
+			"path": "pages/WechatLogin/bindPhone/bindPhone",
+			"style": {
 				"navigationBarTitleText": "绑定手机号"
 			}
-        },
+		},
 		{
-		    "path" : "pages/forget/forget",
-		    "style" : {
+			"path": "pages/forget/forget",
+			"style": {
 				"navigationBarTitleText": "找回登录密码"
 			}
-		},{
-		    "path" : "pages/forget/pasword",
-		    "style" : {
+		}, {
+			"path": "pages/forget/pasword",
+			"style": {
 				"navigationBarTitleText": "密码重置"
 			}
+		}, {
+			"path": "pages/home/home",
+			"style": {
+				"navigationBarTitleText": "",
+				"enablePullDownRefresh": false
+			}
+
+		}, {
+			"path": "pages/nucleicAcid/index",
+			"style": {
+				"navigationBarTitleText": "核酸检测",
+				"enablePullDownRefresh": false
+			}
+		}, {
+			"path": "pages/nucleicAcid/appointment",
+			"style": {
+				"navigationBarTitleText": "新冠筛查预约申请",
+				"enablePullDownRefresh": false
+			}
+		}, {
+			"path": "pages/nucleicAcid/success",
+			"style": {
+				"navigationBarTitleText": "新冠筛查预约成功",
+				"enablePullDownRefresh": false
+			}
+		}, {
+			"path": "pages/nucleicAcid/record",
+			"style": {
+				"navigationBarTitleText": "新冠筛查预约记录",
+				"enablePullDownRefresh": false
+			}
+		}, {
+			"path": "pages/nucleicAcid/recordDetail",
+			"style": {
+				"navigationBarTitleText": "新冠筛查预约详情",
+				"enablePullDownRefresh": false
+			}
+		}, {
+			"path": "pages/nucleicAcid/pay1",
+			"style": {
+				"navigationBarTitleText": "门诊缴费",
+				"enablePullDownRefresh": false
+			}
+		}, {
+			"path": "uni_modules/uni-pay/pages/success/success",
+			"style": {
+				"backgroundColor": "#F8F8F8",
+				"navigationBarTitleText": "支付成功"
+			}
+		}, {
+			"path": "uni_modules/uni-pay/pages/ad-interactive-webview/ad-interactive-webview",
+			"style": {
+				"backgroundColor": "#F8F8F8",
+				"navigationBarTitleText": "ad"
+			}
 		}
-        ,{
-            "path" : "pages/home/home",
-            "style" :                                                                                    
-            {
-                "navigationBarTitleText": "",
-                "enablePullDownRefresh": false
-            }
-            
-        },{
-            "path" : "pages/nucleicAcid/index",
-            "style" :                                                                                    
-            {
-                "navigationBarTitleText": "核酸检测",
-                "enablePullDownRefresh": false
-            }
-        },{
-            "path" : "pages/nucleicAcid/appointment",
-            "style" :                                                                                    
-            {
-                "navigationBarTitleText": "新冠筛查预约申请",
-                "enablePullDownRefresh": false
-            }
-        },{
-            "path" : "pages/nucleicAcid/success",
-            "style" :                                                                                    
-            {
-                "navigationBarTitleText": "新冠筛查预约成功",
-                "enablePullDownRefresh": false
-            }
-        },{
-            "path" : "pages/nucleicAcid/record",
-            "style" :                                                                                    
-            {
-                "navigationBarTitleText": "新冠筛查预约记录",
-                "enablePullDownRefresh": false
-            }
-        },{
-            "path" : "pages/nucleicAcid/recordDetail",
-            "style" :                                                                                    
-            {
-                "navigationBarTitleText": "新冠筛查预约详情",
-                "enablePullDownRefresh": false
-            }
-        },{
-            "path" : "pages/nucleicAcid/pay1",
-            "style" :                                                                                    
-            {
-                "navigationBarTitleText": "门诊缴费",
-                "enablePullDownRefresh": false
-            }
-        }
-		
-    ],
+	],
+	//分包加载配置，此配置为小程序的分包加载机制。
+	// "subPackages": [{
+	// 	"root": "pagesA", //子包的根目录
+	// 	"pages": [
+	// 		{ //这里的配置路径和pages里的一样
+	// 			"path": "list", //配置页面路径，这里要注意，因为root已经选中了文件夹，所以我们只要填写文件名就好
+	// 			"style": {
+	// 				"navigationBarTitleText": "",
+	// 				"enablePullDownRefresh": false
+	// 			}
+	// 		},
+	// 		{
+	// 			"path": "tab",
+	// 			"style": {
+	// 				"navigationBarTitleText": "",
+	// 				"enablePullDownRefresh": false
+	// 			}
+	// 		}
+	// 	]
+	// }, {
+	// 	"root": "pagesB", //子包的根目录
+	// 	"pages": [{ //这里的配置路径和pages里的一样
+	// 			"path": "list", //配置页面路径，这里要注意，因为root已经选中了文件夹，所以我们只要填写文件名就好
+	// 			"style": {
+	// 				"navigationBarTitleText": "",
+	// 				"enablePullDownRefresh": false
+	// 			}
+	// 		},
+	// 		{
+	// 			"path": "tab",
+	// 			"style": {
+	// 				"navigationBarTitleText": "",
+	// 				"enablePullDownRefresh": false
+	// 			}
+	// 		}
+	// 	]
+	// },{
+	// 	"root": "pagesC", //子包的根目录
+	// 	"pages": [{ //这里的配置路径和pages里的一样
+	// 			"path": "list", //配置页面路径，这里要注意，因为root已经选中了文件夹，所以我们只要填写文件名就好
+	// 			"style": {
+	// 				"navigationBarTitleText": "",
+	// 				"enablePullDownRefresh": false
+	// 			}
+	// 		},
+	// 		{
+	// 			"path": "tab",
+	// 			"style": {
+	// 				"navigationBarTitleText": "",
+	// 				"enablePullDownRefresh": false
+	// 			}
+	// 		}
+	// 	]
+	// }],
 	"globalStyle": {
 		"navigationBarTextStyle": "white",
 		"navigationBarTitleText": "uni-app",
@@ -245,11 +288,7 @@
 		"backgroundColor": "#FD0517",
 		"enablePullDownRefresh": true,
 		"usingComponents": {
-		  //按需引入组件(以button为例)
-		  "van-button": "wxcomponents/dist/button/index",
-		  "van-field":"wxcomponents/dist/field/index",
-		  "van-popup": "wxcomponents/dist/popup/index",
-		  "van-picker": "wxcomponents/dist/picker/index"
+			//按需引入组件(以button为例)
 		}
 	},
 	"tabBar": {
@@ -259,19 +298,18 @@
 		"backgroundColor": "#ffffff",
 		"list": [{
 			"pagePath": "pages/index/index",
-			"iconPath": "static/images/index.png",
-			"selectedIconPath": "static/images/index-selected.png",
-			"color": "white",
+			"iconPath": "static/images/tarbar/index.png",
+			"selectedIconPath": "static/images/tarbar/index-selected.png",
 			"text": "首页"
 		}, {
 			"pagePath": "pages/guaHao/guaHao",
-			"iconPath": "static/images/registered.png",
-			"selectedIconPath": "static/images/registered-selected.png",
+			"iconPath": "static/images/tarbar/registered.png",
+			"selectedIconPath": "static/images/tarbar/registered-selected.png",
 			"text": "挂号"
 		}, {
 			"pagePath": "pages/my/my",
-			"iconPath": "static/images/my.png",
-			"selectedIconPath": "static/images/my-selected.png",
+			"iconPath": "static/images/tarbar/my.png",
+			"selectedIconPath": "static/images/tarbar/my-selected.png",
 			"text": "我的"
 		}]
 	},
@@ -282,5 +320,11 @@
 			"path": "pages/index/index", //启动页面，必选
 			"query": "interval=4000&autoplay=false" //启动参数，在页面的onLoad函数里面得到。
 		}]
+	},
+	"–minimize": {
+		"dev:mp-weixin": "cross-env NODE_ENV=development UNI_PLATFORM=mp-weixin vue-cli-service uni-build --watch --minimize"
+	},
+	"optimization": {
+		"subPackages": true
 	}
 }

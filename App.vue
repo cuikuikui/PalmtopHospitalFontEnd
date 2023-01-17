@@ -1,6 +1,5 @@
 
 <script>
-
 	export default {
 		globalData:{
 			    hospitals:null,
@@ -25,7 +24,7 @@
 		},
 		onLaunch: function() {
 			// uni.clearStorage()
-			console.log('App Launch')
+			console.log('App Launch5')
 		},
 		onShow: function() {
 			console.log('App Show')
@@ -36,10 +35,8 @@
 	}
 </script>
 
-<style>
-	
-	@import "wxcomponents/dist/common/index.wxss";
+<style>	
 	@import '././static/style/weui.wxss';
-
+	@import '././static/style/font/iconfont.css';
 	/*每个页面公共css */
 </style>

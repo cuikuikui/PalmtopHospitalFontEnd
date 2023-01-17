@@ -1,0 +1,180 @@
+@font-face {
+	font-family: "iconfont";
+	/* Project id  */
+	src: url('@/static/style/font/iconfont.ttf?t=1673847929028') format('truetype');
+}
+
+.iconfont {
+	font-family: "iconfont" !important;
+	font-size: 20px;
+	font-style: normal;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+.icon-add:before {
+	content: "\e661";
+}
+
+.icon-order-manager:before {
+	content: "\e617";
+}
+
+.icon-declare:before {
+	content: "\e61b";
+}
+
+.icon-qq:before {
+	content: "\e66a";
+}
+
+.icon-delete:before {
+	content: "\e607";
+}
+
+.icon-weixin:before {
+	content: "\e64b";
+	color: forestgreen;
+	font-size: 45px;
+}
+
+.icon-iconfontzhizuobiaozhun0254:before {
+	content: "\e6aa";
+}
+
+.icon-checked:before {
+	content: "\e601";
+}
+
+.icon-close:before {
+	content: "\e60f";
+}
+
+.icon-search:before {
+	content: "\e61c";
+	font-size: 20px;
+}
+
+.icon-yiyuan:before {
+	content: "\e80e";
+	letter-spacing: 5px;
+}
+
+.icon-dangan:before {
+	content: "\e612";
+}
+
+.icon-ren:before {
+	content: "\e61a";
+}
+
+.icon-weibo:before {
+	content: "\e636";
+}
+
+.icon-shangjiantou:before {
+	content: "\e60c";
+}
+
+.icon-location:before {
+	content: "\e61e";
+	color: #bfbfbf;
+	font-size: 20px;
+}
+
+.icon-star-thr:before {
+	content: "\e633";
+	font-size: 13px;
+	letter-spacing: 2px;
+	color: #bfbfbf;
+}
+
+.icon-star-attention:before {
+	content: "\e633";
+	font-size: 20px;
+	letter-spacing: 2px;
+	color: #131212;
+}
+
+.icon-erweima:before {
+	content: "\e629";
+}
+
+.icon-IDCARD:before {
+	content: "\e7de";
+}
+
+.icon-dengji:before {
+	content: "\e6f7";
+	color: #bfbfbf;
+}
+
+.icon-shouji:before {
+	content: "\e606";
+}
+
+.icon-mima:before {
+	content: "\e689";
+}
+
+.icon-yuyue:before {
+	content: "\e60d";
+}
+
+.icon-saoyisao:before {
+	content: "\e619";
+}
+
+.icon-eye:before {
+	content: "\e604";
+	margin-left: 2px;
+}
+
+.icon-eye1:before {
+	content: "\e6e4";
+	margin-left: 2px;
+}
+
+.icon-arrow-down:before {
+	content: "\e665";
+}
+
+.icon-arrow-right:before {
+	content: "\e666";
+	font-size: 15px;
+	font-weight: bold;
+	color: #bfbfbf
+}
+
+.icon-arrow-right1:before {
+	content: "\e666";
+	font-size: 20px;
+	font-weight: bolder;
+	color: #716f6f;
+	padding-left: 15px;
+}
+
+.icon-xuanze:before {
+	content: "\e613";
+}
+
+.icon-tiwenquestion:before {
+	content: "\e7cd";
+}
+
+.icon-yanzhengma:before {
+	content: "\e61d";
+}
+
+.icon-a-shengqifennushangxindaku-09:before {
+	content: "\e7e9";
+}
+
+.icon-cuowutishi-copy:before {
+	content: "\e7a2";
+}
+
+.icon-alert:before {
+	content: "\e614";
+	color: crimson;
+}

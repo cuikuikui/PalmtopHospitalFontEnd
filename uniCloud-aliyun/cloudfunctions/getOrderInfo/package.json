@@ -1,0 +1,7 @@
+{
+  "name": "getOrderInfo",
+  "dependencies": {
+    "uni-pay": "file:../../../uni_modules/uni-pay/uniCloud/cloudfunctions/common/uni-pay"
+  },
+  "extensions": {}
+}

@@ -1,0 +1,62 @@
+
+.container,
+.scrollview {
+	width: 100%;
+	height: 100%;
+	/*background-color: rgb(215, 250, 221);*/
+}
+.header {
+	line-height: 70rpx;
+	font-size: 30rpx;
+	padding-left: 30rpx;
+	color: #5D5959;
+	background-color: #EFE9E9
+}
+.item {
+	font-size: 30rpx;
+	color: #333333;
+	/* border-bottom: 2rpx solid #f1f0f0;*/
+	display: flex;
+	flex-direction: column;
+	flex-wrap: wrap;
+	line-height: 60rpx;
+	padding-left: 30rpx;
+}
+
+/*预约信息*/
+.orderNum {
+	display: flex;
+	flex-direction: row;
+	/*justify-content: center;*/
+	align-items: center;
+}
+.copy {
+	width: 100rpx;
+	height: 40rpx;
+	background-color: #EAE6E6;
+	margin-left: 50rpx;
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+	border-top: 2rpx solid #D5D3D3;
+}
+
+/*医生信息*/
+.center1 {
+	display: flex;
+	padding-left: 20rpx;
+	padding-top: 20rpx;
+}
+.center1 image {
+	width: 150rpx;
+	height: 150rpx;
+}
+.center1 .right {
+	padding-left: 25rpx;
+	display: flex;
+	flex-direction: column;
+	line-height: 75rpx;
+	color: ;
+}
+

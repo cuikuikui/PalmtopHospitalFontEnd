@@ -1,0 +1,30 @@
+
+.container{
+	height:100%;
+	background-color: #FAF0F0
+}
+.item{
+	height:200rpx;
+	width:700rpx;
+	margin:20rpx;
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
+	box-sizing:border-box;
+ 	border-radius: 20rpx;
+ 	background-color: #FFFFFF
+}
+.item image{
+	width:150rpx;
+	height:150rpx;
+	margin-left: 20rpx;
+	margin-right:20rpx;
+}
+.item text{
+	font-size: 45rpx;
+	color:#F40E0E;
+	/*font-style:italic;*/
+	font-family: cursive;
+	font-weight: bold;
+}
+

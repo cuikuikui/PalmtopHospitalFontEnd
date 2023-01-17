@@ -1,0 +1,73 @@
+
+.container {
+		height: 1400rpx;
+		/*overflow: hidden;*/
+}
+.container .u-wrp-bnr {
+		margin-top: 20rpx;
+		width: 100%;
+		height: 270rpx;
+		display: block;
+		/* position: relative;
+  top: 100rpx; */
+		background: #f0f0f0;
+}
+.container .u-img-slide {
+		width: 100%;
+		height: inherit;
+		/*z-index: 1*/
+}
+.container .title {
+		width: 100%;
+		text-align: center;
+		font-size: 80rpx;
+		font-weight: bold;
+		color: #F40E0E;
+		letter-spacing: 5rpx;
+		font-family: cursive;
+		font-weight: bold;
+		background-color: #00FFFF
+}
+
+	/*轮播图上添加文字*/
+.container .u-wrp-bnr .text1 {
+		width: 200rpx;
+		text-align: center;
+		font-size: 40rpx;
+		font-weight: bold;
+		color: rgb(29, 27, 26);
+		letter-spacing: 5rpx;
+		font-family: cursive;
+		font-weight: bold;
+		position: absolute;
+		border-radius: 20rpx;
+		top: 0;
+		left: 85%;
+		background-color: burlywood;
+		-webkit-transform: translateX(-50%);
+		        transform: translateX(-50%);
+}
+.container .content {
+		padding-left: 30rpx;
+		padding-right: 30rpx;
+		font-size: 26rpx;
+		color: #767474;
+		letter-spacing: 5rpx;
+		font-family: SimSun;
+}
+.container .hname {
+		/*	width:700rpx;
+	height:50rpx;*/
+		margin: 20rpx;
+		background-color: #FAE9E9;
+		padding: 20rpx;
+		color: #101010;
+		font-size: 30rpx;
+		font-weight: bold;
+		border-radius: 15rpx;
+		letter-spacing: 7rpx;
+}
+.container .hname text {
+		color: #1C16F2;
+}
+

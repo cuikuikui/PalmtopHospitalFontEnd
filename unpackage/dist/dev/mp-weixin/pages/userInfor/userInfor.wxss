@@ -1,0 +1,214 @@
+@charset "UTF-8";
+/**
+ * 这里是uni-app内置的常用样式变量
+ *
+ * uni-app 官方扩展插件及插件市场（https://ext.dcloud.net.cn）上很多三方插件均使用了这些样式变量
+ * 如果你是插件开发者，建议你使用scss预处理，并在插件代码中直接使用这些变量（无需 import 这个文件），方便用户通过搭积木的方式开发整体风格一致的App
+ *
+ */
+/**
+ * 如果你是App开发者（插件使用者），你可以通过修改这些变量来定制自己的插件主题，实现自定义主题功能
+ *
+ * 如果你的项目同样使用了scss预处理，你也可以直接在你的 scss 代码中使用如下变量，同时无需 import 这个文件
+ */
+/* 颜色变量 */
+/* 行为相关颜色 */
+/* 文字基本颜色 */
+/* 背景颜色 */
+/* 边框颜色 */
+/* 尺寸变量 */
+/* 文字尺寸 */
+/* 图片尺寸 */
+/* Border Radius */
+/* 水平间距 */
+/* 垂直间距 */
+/* 透明度 */
+/* 文章场景相关 */
+.content {
+  width: 100%;
+  height: 1200rpx;
+  background-color: #F1F1F1;
+}
+.item {
+  /* margin-top: 20rpx; */
+  display: flex;
+  padding: 20rpx 30rpx;
+  background-color: white;
+  align-items: center;
+  flex-direction: row;
+  background-color: white;
+  /* border-bottom: 1rpx solid #CCCCCC; */
+}
+.item .item-left {
+  display: flex;
+  width: 400rpx;
+  font-weight: bold;
+  flex-direction: row;
+}
+.item .item-right {
+  margin-left: 400rpx;
+  color: #C8C7CC;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.item .item-right image {
+  width: 100rpx;
+  height: 100rpx;
+  border-radius: 50%;
+  margin-right: 20rpx;
+}
+/* 退出登录 */
+.exitLogin {
+  margin-top: 50rpx;
+  background-color: white;
+  display: flex;
+  padding: 20rpx 0rpx;
+  justify-content: center;
+  align-items: center;
+  color: red;
+  font-weight: bold;
+}
+.erweima {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  box-sizing: border-box;
+  padding: 10rpx 17rpx;
+  border-bottom: 1rpx solid #c0c0b4;
+}
+.erweima text {
+  font-size: 26rpx;
+}
+.erweima image {
+  width: 50rpx;
+  height: 50rpx;
+}
+/*每个页面公共css 放app.vue页面的 */
+@font-face {
+  font-family: 'font_family';
+  /* project id 1991769 */
+  src: url("//at.alicdn.com/t/font_1991769_u8wpg8jfhpq.eot");
+  src: url("//at.alicdn.com/t/font_1991769_u8wpg8jfhpq.eot?#iefix") format("embedded-opentype"), url("//at.alicdn.com/t/font_1991769_u8wpg8jfhpq.woff2") format("woff2"), url("//at.alicdn.com/t/font_1991769_u8wpg8jfhpq.woff") format("woff"), url("//at.alicdn.com/t/font_1991769_u8wpg8jfhpq.ttf") format("truetype"), url("//at.alicdn.com/t/font_1991769_u8wpg8jfhpq.svg#iconfont") format("svg");
+}
+.font_family {
+  font-family: "font_family" !important;
+  font-size: 16px;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -webkit-text-stroke-width: 0.2px;
+  -moz-osx-font-smoothing: grayscale;
+}
+/* 按钮去掉边框 */
+button::after {
+  border: none;
+}
+button {
+  margin-left: 0;
+  margin-right: 0;
+  padding-left: 0;
+  padding-right: 0;
+  line-height: 1;
+  color: #1c1c1c;
+  font-size: 28rpx;
+  background: none;
+}
+.button-hover {
+  color: #1c1c1c;
+  background: none;
+}
+.poster-img {
+  width: 40%;
+}
+/*每个页面公共css */
+.share-btn {
+  padding: 30rpx 60rpx;
+  background-color: #007aff;
+  color: #fff;
+}
+.share-pro {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  flex-direction: column;
+  z-index: 5;
+  line-height: 1;
+  box-sizing: border-box;
+  /* 显示或关闭内容时动画 */
+}
+.share-pro .share-pro-mask {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.5);
+}
+.share-pro .share-pro-dialog {
+  width: 750rpx;
+  height: 310rpx;
+  overflow: hidden;
+  background-color: #fff;
+  border-radius: 24rpx 24rpx 0px 0px;
+  position: relative;
+  box-sizing: border-box;
+  position: fixed;
+  bottom: 0;
+}
+.share-pro .share-pro-dialog .close-btn {
+  padding: 20rpx 15rpx;
+  position: absolute;
+  top: 0rpx;
+  right: 29rpx;
+}
+.share-pro .share-pro-dialog .share-pro-title {
+  font-size: 28rpx;
+  color: #1c1c1c;
+  padding: 28rpx 41rpx;
+  background-color: #f7f7f7;
+}
+.share-pro .share-pro-dialog .share-pro-body {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  font-size: 28rpx;
+  color: #1c1c1c;
+}
+.share-pro .share-pro-dialog .share-pro-body .share-item {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  justify-content: space-around;
+}
+.share-pro .share-pro-dialog .share-pro-body .share-item .share-icon {
+  text-align: center;
+  font-size: 70rpx;
+  margin-top: 39rpx;
+  margin-bottom: 16rpx;
+  color: #42ae3c;
+}
+.share-pro .share-pro-dialog .share-pro-body .share-item:nth-child(2) .share-icon {
+  color: #ff5f33;
+}
+.share-pro .open {
+  transition: all 0.3s ease-out;
+  -webkit-transform: translateY(0);
+          transform: translateY(0);
+}
+.share-pro .close {
+  transition: all 0.3s ease-out;
+  -webkit-transform: translateY(310rpx);
+          transform: translateY(310rpx);
+}
+.canvas {
+  position: fixed !important;
+  top: 0 !important;
+  left: 0 !important;
+  display: block !important;
+  width: 100% !important;
+  height: 100% !important;
+  z-index: 10;
+}
+

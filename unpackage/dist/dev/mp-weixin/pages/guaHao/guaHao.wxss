@@ -1,0 +1,88 @@
+
+.container {
+	height: 100%;
+	padding: 20rpx;
+	/* background-color: #FD0517; */
+	/* padding-bottom: 550rpx; */
+	box-sizing: border-box;
+}
+.item {
+	width: 100%;
+	/*height:350rpx;*/
+	padding: 15rpx;
+	font-size: 35rpx;
+	box-sizing: border-box;
+	font-size: 30rpx;
+	/*background-color: #22DEE5;*/
+	border: 1rpx solid #FD0517;
+	margin-bottom: 20rpx;
+}
+.item .top {
+	display: flex;
+	justify-content: space-between;
+}
+.item .top1 {
+	display: flex;
+	justify-content: space-between;
+}
+.item .center1 {
+	display: flex;
+	padding-top: 20rpx;
+}
+.item .center1 image {
+	width: 150rpx;
+	height: 150rpx;
+}
+.item .center1 .right {
+	padding-left: 25rpx;
+	display: flex;
+	flex-direction: column;
+	line-height: 75rpx;
+	color: ;
+}
+.item .center2 {
+	display: flex;
+	flex-direction: column;
+	padding-top: 30rpx;
+}
+.bottom {
+	display: flex;
+	justify-content: flex-end;
+	padding-right: 30rpx;
+}
+.bottom .cancel {
+	width: 130rpx;
+	height: 60rpx;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	border-radius: 10rpx;
+	font-size: 30rpx;
+	color: #04D8F7;
+	margin-right: 40rpx;
+	border: 1rpx solid #04D8F7;
+}
+.bottom .pay {
+	width: 130rpx;
+	height: 60rpx;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	border-radius: 10rpx;
+	font-size: 30rpx;
+	color: #04D8F7;
+	border: 1rpx solid #04D8F7;
+}
+.bottom .payFinish {
+	width: 130rpx;
+	height: 60rpx;
+	display: flex;
+	margin: 0 5px;
+	justify-content: center;
+	align-items: center;
+	border-radius: 10rpx;
+	font-size: 30rpx;
+	color: #505050;
+	border: 1rpx solid #535555;
+}
+

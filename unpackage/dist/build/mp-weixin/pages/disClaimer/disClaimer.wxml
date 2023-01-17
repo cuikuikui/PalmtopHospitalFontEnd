@@ -1,0 +1,1 @@
+<view style="padding:10rpx 15rpx;"><block wx:for="{{disClaimers}}" wx:for-item="item" wx:for-index="index" wx:key="*this"><view class="content"><text>{{item.text}}</text></view></block></view>
