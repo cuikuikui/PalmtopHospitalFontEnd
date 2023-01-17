@@ -11,7 +11,7 @@
 					<!-- <count-down v-if = "item.g_PayStatus =='0' || item.g_PayStatus =='2'" @updatePay="payUpdate" :gTime = "item.time_Period" :orderEndTime="item.orderEndTime" :gWeek="item.g_Time" :gId= "item.g_Id" :dId = "item.d_Id" :payStatus = "item.g_PayStatus" /> -->
 				</view>									
 				<view class="center1">
-					<image src="../../static/images/doctor1.png"></image>
+					<image :src="item.d_Img"></image>
 					<view class="right">
 						<text><text style="color:#080808">{{item.d_Name}}</text> {{item.d_Role}}</text>
 						<text>{{item.h_Name}} | {{item.room_Name}}</text>

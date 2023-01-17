@@ -1,7 +1,7 @@
 <template>
 	<view class="family">
 		<view class="item" v-for="(item,index) in family" :key="index" :data-fid="item.a_Id" :data-fidcard="item.a_IDCard"
-				 :data-fname="item.a_Name" :data-fsex="item.a_Sex" :data-fphone="item.a_Phone" :data-nickName="item.nickName2" :data-secretfid="item.secretAid" @click="toClickFamily">
+				 :data-fname="item.a_Name" :data-fsex="item.a_Sex" :data-fphone="item.a_Phone" :data-nickname="item.nickName2" :data-secretfid="item.secretAid" @click="toClickFamily">
 			<view class="header">
 				<!-- <image src="../../static/images/hospital-family.png" mode=""></image> -->
 				<span class="iconfont icon-yiyuan"></span>
@@ -223,7 +223,7 @@
 				if (this.JumpFlag) {
 					this.choseFamily = true
 					var fid = e.currentTarget.dataset.secretfid
-					var fname = e.currentTarget.dataset.nickName
+					var fname = e.currentTarget.dataset.nickname
 					var fidcard = e.currentTarget.dataset.fidcard
 					var fsex = e.currentTarget.dataset.fsex
 					var fphone = e.currentTarget.dataset.fphone
