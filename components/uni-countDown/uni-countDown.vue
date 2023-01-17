@@ -7,7 +7,9 @@
 <script>
 import {GuaHaoServlet} from '../../pages/common/api.js'
 	import api from '../../pages/common/request.js'
-	var util = require('../../pages/common/util.js');
+	import {
+		reload
+	} from '../../pages/common/utils.js'
 	export default {
 		data() {
 			return {
@@ -68,7 +70,7 @@ import {GuaHaoServlet} from '../../pages/common/api.js'
 					success: function(res) {
 						// console.log("====res===",res);
 						if (res.confirm) {
-							util.reload()
+							reload()
 							// self.$emit("updatePay")
 							// console.log('confirm',self.countdownStr) //点击取消之后执行的代码 
 						} else {  
