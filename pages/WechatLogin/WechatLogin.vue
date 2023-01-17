@@ -17,7 +17,7 @@
 		<!--#endif-->
 		<view v-if="canIUse">
 			<view class='header'>
-				<image src='../../static/images/wx_login.png'></image>
+				<span class='iconfont icon-weixin'></span>
 			</view>
 
 			<view class='content'>
@@ -49,7 +49,7 @@
 		userServlet
 	} from '../common/api.js'
 	import api from '../common/request.js'
-	var util = require('../common/util.js');
+	import {getClientNowSystemTime} from '../common/utils.js'
 	export default {
 		data() {
 			return {
@@ -114,7 +114,7 @@
 				// console.log('--------------')
 				
 				// if (uni.getStorageSync('WeChatUserInfo')) {
-					var registerTime = util.formatTime(new Date());
+					var registerTime = getClientNowSystemTime('yyyy-MM-dd HH:mm:ss');
 					var uEnvirn='APP-PLUS'
 					var uFlag='wexin'
 					var data1 = {
@@ -178,7 +178,6 @@
 					uni.navigateTo({
 						url:'./bindPhone/bindPhone?nickName='+e.detail.userInfo.nickName+'&avatarUrl='+e.detail.userInfo.avatarUrl
 					})
-					// var registerTime = util.formatTime(new Date());
 					// var data1 = {
 					// 	openId: uni.getStorageSync('openid'),
 					// 	u_Password:'xxxx',

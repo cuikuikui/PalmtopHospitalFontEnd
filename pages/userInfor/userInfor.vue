@@ -43,7 +43,7 @@
 				<text>二维码名片</text>
 			</view>
 			<view class="item-right" style="width:200rpx;margin-left: 400rpx;">
-				<image src="../../static/images/erweima.png" style="width:70rpx;height: 70rpx;margin-right: 30rpx;" mode=""></image>
+				<span style="margin-right: 30rpx;" class="iconfont icon-erweima"></span>
 				<text>></text>
 			</view>
 		</view>
@@ -61,8 +61,8 @@
 		<!-- 账号绑定 -->
 		<text style="line-height:70rpx;font-size: 20rpx;padding-left: 30rpx;">账号绑定</text>
 		<view class="item" @click="modify(2)">
-			<view class="item-left" style="width:450rpx">
-				<image src="../../static/images/my11.png" mode="" style="width:50rpx;height:50rpx;margin-left: -10rpx;"></image>
+			<view class="item-left" style="width:450rpx;align-items: center">
+				<span class="iconfont icon-shouji1"></span>
 				<text>手机</text>
 			</view>
 			<view style="width:500rpx;display: flex;flex-direction: row;justify-content: flex-end;">

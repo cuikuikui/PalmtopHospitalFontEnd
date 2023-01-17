@@ -14,65 +14,49 @@
 		<view class="info_list">
 			<view class="weui_cell" @click="addFamily">
 				<view class="weui_cell_hd">
-					<image src="../../static/images/family.png"></image>
+					<span class="iconfont icon-juzhenren"></span>
 				</view>
 				<view class="weui_cell_bd">
 					<view class="weui_cell_bd_p"> 就诊人 </view>
 				</view>
-				<!-- <view v-if="item.isunread" class="badge">{{item.unreadNum}}</view> -->
 				<view class="with_arrow">
-					<image src="../../static/images/arrow.png"></image>
+					<span style="color:#131212" class="iconfont icon-arrow-right1"></span>
 				</view>
 			</view>
 
 			<view class="weui_cell" @click="addAttention">
 				<view class="weui_cell_hd">
-					<image src="../../static/images/attention.png"></image>
+					<span class="iconfont icon-star-attention"></span>
 				</view>
 				<view class="weui_cell_bd">
 					<view class="weui_cell_bd_p"> 我的关注 </view>
 				</view>
-				<!-- <view v-if="item.isunread" class="badge">{{item.unreadNum}}</view> -->
 				<view class="with_arrow">
-					<image src="../../static/images/arrow.png"></image>
+					<span style="color:#131212" class="iconfont icon-arrow-right1"></span>
 				</view>
 			</view>
 
 			<view class="weui_cell" @click="Common_Problems">
 				<view class="weui_cell_hd">
-					<image src="../../static/images/question.png"></image>
+					<span class="iconfont icon-tiwenquestion"></span>
 				</view>
 				<view class="weui_cell_bd">
 					<view class="weui_cell_bd_p"> 常见问题 </view>
 				</view>
-				<!-- <view v-if="item.isunread" class="badge">{{item.unreadNum}}</view> -->
 				<view class="with_arrow">
-					<image src="../../static/images/arrow.png"></image>
+					<span style="color:#131212" class="iconfont icon-arrow-right1"></span>
 				</view>
 			</view>
 
-			<view class="weui_cell" @click="AddCard">
-				<view class="weui_cell_hd">
-					<image src="../../static/images/card.png"></image>
-				</view>
-				<view class="weui_cell_bd">
-					<view class="weui_cell_bd_p">绑定就诊卡 </view>
-				</view>
-				<!-- <view v-if="item.isunread" class="badge">{{item.unreadNum}}</view> -->
-				<view class="with_arrow">
-					<image src="../../static/images/arrow.png"></image>
-				</view>
-			</view>
 			<view class="weui_cell" @click="disClaimer">
 				<view class="weui_cell_hd">
-					<image src="../../static/images/disClaimer.png"></image>
+					<span class="iconfont icon-declare"></span>
 				</view>
 				<view class="weui_cell_bd">
 					<view class="weui_cell_bd_p">免责声明 </view>
 				</view>
-				<!-- <view v-if="item.isunread" class="badge">{{item.unreadNum}}</view> -->
 				<view class="with_arrow">
-					<image src="../../static/images/arrow.png"></image>
+					<span style="color:#131212" class="iconfont icon-arrow-right1"></span>
 				</view>
 			</view>
 <!-- 			<view class="weui_cell" @click="questionFeedback">
@@ -89,14 +73,13 @@
 
 			<view class="weui_cell" @click="aboutUs">
 				<view class="weui_cell_hd">
-					<image src="../../static/images/aboutUs.png"></image>
+					<span class="iconfont icon-cuowutishi-copy"></span>
 				</view>
 				<view class="weui_cell_bd">
 					<view class="weui_cell_bd_p">关于我们 </view>
 				</view>
-				<!-- <view v-if="item.isunread" class="badge">{{item.unreadNum}}</view> -->
 				<view class="with_arrow">
-					<image src="../../static/images/arrow.png"></image>
+					<span style="color:#131212" class="iconfont icon-arrow-right1"></span>
 				</view>
 			</view>
 
@@ -115,7 +98,7 @@
 				</view>
 				<!-- <view v-if="item.isunread" class="badge">{{item.unreadNum}}</view> -->
 				<view class="with_arrow">
-					<image src="../../static/images/arrow.png"></image>
+					<span style="color:#131212" class="iconfont icon-arrow-right1"></span>
 				</view>
 			</view>
 			<!--  #endif -->
@@ -147,13 +130,13 @@
 
 			<view class="weui_cell" @click="upDate">
 				<view class="weui_cell_hd">
-					<image src="../../static/images/exit.png"></image>
+					<span class="iconfont icon-update"></span>
 				</view>
 				<view class="weui_cell_bd">
 					<view class="weui_cell_bd_p"> 检查更新 </view>
 				</view>
 				<view class="with_arrow">
-					<image src="../../static/images/arrow.png"></image>
+					<span style="color:#131212" class="iconfont icon-arrow-right1"></span>
 				</view>
 			</view>
 
@@ -174,7 +157,6 @@
 
 <script>
 	import uniPopup from '../../components/uni-popup/uni-popup.vue';
-	import shareBtn from '../../components/share-btn/share-btn.vue';
 import { log } from 'util';
 	export default {
 		data() {
@@ -191,7 +173,7 @@ import { log } from 'util';
 						path: 'pages/index/index',
 						type: 0,
 						webUrl: 'http://uniapp.dcloud.io'
-					}
+					},
 				},
 				// shareFlag: 'showShare',
 			}
@@ -213,8 +195,7 @@ import { log } from 'util';
 			}
 		},
 		components: {
-			uniPopup,
-			shareBtn
+			uniPopup
 		},
 		methods: {
 			userInfor: function(u_Name, u_Img,u_Phone) {
@@ -244,12 +225,6 @@ import { log } from 'util';
 				// 	icon: 'loading',
 				// 	duration: 2000 //持续的时间
 				// })
-			},
-			// 绑定就诊卡
-			AddCard: function(e) {
-				uni.navigateTo({
-					url: '/pages/bindCard/bindCard'
-				})
 			},
 			// 免责声明
 			disClaimer: function() {
@@ -298,9 +273,10 @@ import { log } from 'util';
 				})
 			},
 			makePhone: function(e) {
+				let that = this
 				uni.showModal({
-					title: "提示",
-					content: "你将使用运营商拨打电话86-021-33851886",
+					title: "联系客服",
+					content: '86-021-33851886<\br>客服工作时间:周一至周日<\br>7:30-19:30',
 					success: function(res) {
 						if (res.confirm) {
 							uni.makePhoneCall({

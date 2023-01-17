@@ -8,7 +8,7 @@
 			<view class="phone">
 				<view class="choseCountry">
 					<text>+86</text>
-					<image src="../../../static/images/up.png" mode=""></image>
+					<span class="iconfont icon-arrow-up"></span>
 				</view>
 				<view class="inputPhone">
 					<input  type="text" :value="phoneNumber" placeholder="请输入手机号" @input="inputPhone" />
@@ -42,7 +42,7 @@
 		userServlet
 	} from '../../common/api.js'
 	import api from '../../common/request.js'
-	var util = require('../../common/util.js');
+	import {getClientNowSystemTime} from '../../common/utils.js'
 	export default {
 		data() {
 			return {
@@ -98,7 +98,7 @@
 				if(this.code=isCode){
 					var uEnvirn='MP-WEIXIN'
 					var uFlag='weiixin'
-					var registerTime = util.formatTime(new Date());
+					var registerTime = getClientNowSystemTime('yyyy-MM-dd HH:mm:ss');
 					var data1 = {
 						FLAG:"C",
 						openId: uni.getStorageSync('openid'),

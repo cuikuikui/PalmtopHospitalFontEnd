@@ -1,9 +1,10 @@
 <template>
 	<view class="family">
 		<view class="item" v-for="(item,index) in family" :key="index" :data-fid="item.a_Id" :data-fidcard="item.a_IDCard"
-				 :data-fname="item.a_Name" :data-fsex="item.a_Sex" :data-fphone="item.a_Phone" :data-secretfid="item.secretAid" @click="toClickFamily">
+				 :data-fname="item.a_Name" :data-fsex="item.a_Sex" :data-fphone="item.a_Phone" :data-nickName="item.nickName2" :data-secretfid="item.secretAid" @click="toClickFamily">
 			<view class="header">
-				<image src="../../static/images/hospital-family.png" mode=""></image>
+				<!-- <image src="../../static/images/hospital-family.png" mode=""></image> -->
+				<span class="iconfont icon-yiyuan"></span>
 				<text>徐州中医医院</text>
 			</view>
 			<view class="body">
@@ -41,7 +42,7 @@
 						</view>
 					</view>
 				</view>
-				<view class="body-right" @click.stop="openQrcode">
+				<view class="body-right" @click.stop="openQrcode(item.a_Id,item.nickName2)">
 					<view class="qrcodeText" style="width: 45px;">
 						扫码就医
 					</view>
@@ -65,8 +66,8 @@
 						:iconSize="iconsize" :lv="lv" :onval="onval" :loadMake="loadMake" :usingComponents="true"
 						@result="qrR" />
 					<view class="card">
-						<text>卡号：{{item.a_Id}}</text>
-						<text>就诊人：{{item.nickName2}}</text>
+						<text>卡号：{{value1}}</text>
+						<text>就诊人：{{value2}}</text>
 					</view>
 				</view>
 			</view>
@@ -106,7 +107,7 @@
 				JumpFlag: false,
 				size1: 130, // 二维码大小
 				size2: 400, // 二维码大小
-				val: '2022199345', // 要生成的二维码值
+				val: '', // 要生成的二维码值
 				unit: 'upx', // 单位
 				icon: '', // 二维码图标
 				iconsize: 40, // 二维码图标大小
@@ -116,6 +117,8 @@
 				src: '', // 二维码生成后的图片地址或base64
 				qrcodeFlag:false,
 				totalFamily:0,
+				value1:'',
+				value2:''
 			}
 		},
 		onLoad: function(options) {
@@ -126,7 +129,9 @@
 		},
 		methods: {
 			// 放大二维码
-			openQrcode(){
+			openQrcode(aId,nickName){
+				this.value1 = aId
+				this.value2 = nickName
 				this.qrcodeFlag = true
 			},
 			// 关闭二维码
@@ -217,8 +222,8 @@
 			toClickFamily: function(e) {
 				if (this.JumpFlag) {
 					this.choseFamily = true
-					var fid = e.currentTarget.dataset.fid
-					var fname = e.currentTarget.dataset.fname
+					var fid = e.currentTarget.dataset.secretfid
+					var fname = e.currentTarget.dataset.nickName
 					var fidcard = e.currentTarget.dataset.fidcard
 					var fsex = e.currentTarget.dataset.fsex
 					var fphone = e.currentTarget.dataset.fphone

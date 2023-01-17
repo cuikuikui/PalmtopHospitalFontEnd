@@ -6,8 +6,7 @@
 				<input :type="seen ? type_text : type_password" class="password" value="" placeholder="请设置8-32位(数字+字母)"
 					maxlength="16" v-model="password" />
 				<view class="passwordType" @click="changeSeen">
-					<image :src="seen ==true? '../../static/images/openEyes.png':'../../static/images/closeEyes.png'"
-						class="passwordType-image" />
+					<span class="iconfont" :class="seen ==true? 'icon-eye1':'icon-eye'"></span>
 				</view>
 			</view>
 			<button class="loginUp" @click="savePassword">保存新密码</button>

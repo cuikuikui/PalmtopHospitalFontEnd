@@ -20,10 +20,10 @@
 				<input :type="seen ? type_text : type_password" class="password" v-model="password" value="" placeholder="请输入密码"
 					maxlength="16" />
 				<view v-show='seen' @click="changeSeen" class="passwordType">
-					<image src="../../static/images/openEyes.png" class="passwordType-image" />
+					<span class="iconfont icon-eye1"></span>
 				</view>
 				<view v-show='!seen' @click="changeSeen" class="passwordType">
-					<image src="../../static/images/closeEyes.png" class="passwordType-image" style="width:80rpx" />
+					<span class="iconfont icon-eye"></span>
 				</view>
 			</view>
 			<view class="loginInptu loginInptuCode" v-else-if="loginMode == 2">
@@ -42,18 +42,18 @@
 		<view class="otherLogin">
 			<!--#ifdef APP-PLUS-->
 			<view class="weiixnLogin" @click="login_weixin(1)">
-				<image src="../../static/images/weixin.png" mode="" style="width:100rpx;height:100rpx;"></image>
+				<span class="iconfont icon-weixin"></span>
 			</view>
 			<view class="qqLogin" @click="login_qq(2)">
-				<image src="../../static/images/QQ.png" mode="" style="width:100rpx;height:100rpx;"></image>
+				<span class="iconfont icon-QQ"></span>
 			</view>
 			<view class="weiboLogin" @click="weibologin(3)">
-				<image src="../../static/images/weibo.png" mode="" style="width:100rpx;height:100rpx;"></image>
+				<span class="iconfont icon-weibo"></span>
 			</view>
 			<!--#endif-->
 			<!--#ifdef MP-WEIXIN-->
 			<view class="weiixnLogins" @click="login_weixin">
-				<image src="../../static/images/weixin.png" mode="" style="width:100rpx;height:100rpx;"></image>
+				<span class="iconfont icon-weixin"></span>
 			</view>
 			<!--#endif-->
 		</view>

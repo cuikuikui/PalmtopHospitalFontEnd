@@ -5,7 +5,7 @@
 			<view class="itemCity">
 			<view class="currentCity">
 				<text>当前城市:{{clickCity}}</text>
-				<image src="../../static/images/close.png" @click="closeLocation"></image>
+				<span class="iconfont icon-close" @click="closeLocation"></span>
 			</view>
 			<scroll-view class="classify-container" scroll-y="true">
 				<view class="classify" v-for="(classify,index) in province" :key="index"
@@ -18,7 +18,7 @@
 					<view class="title">{{classify.classifyName}}</view>
 					<view class="goods" v-for="(item,index) in (classify.city)" :key="index" @click="getLocation(city[item].name)">
 						<view class="goodsIcon" hidden="showIcon">
-							<image src="../../static/images/chose.png" style="width:40rpx;height:40rpx"></image>
+							<span class="iconfont icon-xuanze"></span>
 						</view>
 						<view class="name">{{city[item].name}}</view>
 					</view>
@@ -29,12 +29,14 @@
 		
 		<view class="header">	
 			<view class="location" @click="getShowLocation">
-				<image src="../../static/images/location.png"></image>
+				<span class="iconfont icon-location"></span>
+				<!-- <image src="../../static/images/location.png"></image> -->
 				<text>{{clickCity}}</text>
 			</view>
 			
 			<view class="search" @click="searchHospital">
-				<image src="../../static/images/search.png" />
+				<span style="padding-top:4px" class="iconfont icon-search"></span>
+				<!-- <image src="../../static/images/search.png" /> -->
 				搜索医院
 			</view>
 		</view>
@@ -50,19 +52,20 @@
 					</view>
 					<view class="center">
 						<view class="left1">
-							<image src="../../static/images/star.png"></image>
+							<span class="iconfont icon-star-thr"></span>
 							<text>{{item.hrate}}</text>
 						</view>
 						<view class="center1">
-							<image src="../../static/images/type.png"></image>
+							<span class="iconfont icon-dengji"></span>
 							<text>{{item.htype}}</text>
 						</view>
 						<view class="bottom1">
-							<text>>{{item.hdistance}}km</text>
+							<span class="iconfont icon-arrow-right"></span>
+							<text>{{item.hdistance}}km</text>
 						</view>
 					</view>
 					<view class="bottom">
-						<image src="../../static/images/location1.png"></image>
+						<span class="iconfont icon-location"></span>
 						<text :decode="true">&nbsp;{{item.haddress}}</text>
 					</view>
 				</view>

@@ -29,9 +29,8 @@
 					<view class="right">
 						<view class="top1"> {{hospital.hname}}</view>
 						<view class="center1">
-							<image src="../../static/images/grade.png"></image>{{hospital.hgrade}}
-							<image src="../../static/images/type.png" style="margin-left: 40rpx;"></image>
-							{{hospital.htype}}
+							<span class="iconfont icon-dengji"></span>{{hospital.hgrade}}	
+							<span style="padding-left:10px" class="iconfont icon-yiyuan"></span>{{hospital.htype}}
 							<view :class="collected?'active':'attention'" @click.stop="onattention"
 								data-flag="locaFlag">
 								{{collected?'已关注':'关注'}}
@@ -46,7 +45,7 @@
 					<text>就医环境：{{hospital.henviroment}}</text>
 				</view>
 				<view class="bottom" @click="showModal" data-target="Modal">
-					<image src="../../static/images/alert.png" style="width:40rpx;height:40rpx;"></image>
+					<span style="padding: 0 7px;" class="iconfont icon-alert"></span>
 					<text>接诊时间变更通知（2020/06/29）</text>
 				</view>
 			</view>
@@ -390,7 +389,7 @@
 </script>
 
 <style>
-	@import "../../static/style/main/index.css";
+	@import "../../static/style/index.css";
 
 	/* ---------------------------------------------整体样式 -----------------------------------------------*/
 	.container {

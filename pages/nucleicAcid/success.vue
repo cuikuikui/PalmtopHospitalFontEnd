@@ -14,8 +14,7 @@
 
 <script>
 	import {
-		getNowFormatDate,
-		getNowFormatTime
+		getClientNowSystemTime
 	} from '../common/utils.js'
 	import {
 		AppointServlet
@@ -33,8 +32,8 @@
 		onLoad(options) {
 			this.appNo = options.appNo
 			this.appType = options.appType
-			this.payDate = getNowFormatDate()
-			this.payTime = getNowFormatTime()
+			this.payDate = getClientNowSystemTime('yyyy-MM-dd')
+			this.payTime = getClientNowSystemTime('HH:mm:ss')
 			console.log("===this.payDate===", this.payDate);
 			console.log("===this.payTime===", this.payTime);
 		},

@@ -9,7 +9,7 @@
 		<view class="body">
 			<view class="open">
 				<text>就诊人信息</text>
-				<image @click="clickEye" :src="eyeFlag==true ? openEye : closeEye" mode=""></image>
+				<span @click="clickEye" class="iconfont" :class="[eyeFlag ? 'icon-eye1' : 'icon-eye']"></span>
 			</view>
 			<view class="detail">
 				<view class="text1">真实姓名</view>
@@ -40,11 +40,7 @@
 		<view class="delete">
 			<view class="d1" @click="deletes">删除就诊人</view>
 		</view>
-		
-
 		<slider-verify :isShow="sliderVerifyFLag" @touchSliderResult="verifyResult" ref="verifyElement"></slider-verify>
-
-		
 	</view>
 </template>
 
@@ -80,11 +76,7 @@
 				loadMake: true, // 组件加载完成后自动生成二维码
 				src: '',// 二维码生成后的图片地址或base64
 				eyeFlag:false,
-				closeEye:'../../static/images/closeEye.png',
-				openEye:'../../static/images/openEye.png',
-				sliderVerifyFLag: false,
-				desensFamily:{},
-				secretFamily:{}
+				sliderVerifyFLag: false
 			}
 		},
 		onLoad(options) {

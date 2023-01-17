@@ -76,7 +76,7 @@
 		</view>
 		
 		<view class="record" @click="toRecord">
-			<image style="width: 15px;height:15px;margin-right: 5px;" src="../../static/images/自助建档.png" mode=""></image>
+			<span class="iconfont icon-record1"></span>
 			<text>预约记录</text>
 		</view>
 		<view class="submit">
@@ -91,7 +91,7 @@
 	} from '../../pages/common/api.js'
 	import api from '../../pages/common/request.js'
 	import {
-		randomNum,getNowFormatDate
+		randomNum,getClientNowSystemTime
 	} from '../common/utils.js'
 	export default {
 		data(){
@@ -117,7 +117,6 @@
 			}
 		},
 		created() {
-			// console.log("getNowFormatDate: ",getNowFormatDate().replace(/\-/g, ""));
 			let arr = uni.getStorageSync('family_list')
 			if(arr==null || arr==""){
 				uni.showToast({
@@ -191,7 +190,7 @@
 				var openid = uni.getStorageSync('openid')
 				var data = {
 					//从全局变量data中获取数据
-					appNo: randomNum(getNowFormatDate().replace(/\-/g, ""), 6),
+					appNo: randomNum(getClientNowSystemTime('yyyyMMdd'), 6),
 					appDate: this.date,
 					appType: this.appType,
 					appStatus: '1',

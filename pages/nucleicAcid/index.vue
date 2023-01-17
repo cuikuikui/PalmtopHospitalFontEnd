@@ -1,7 +1,8 @@
 <template>
 	<div class="container"> 
 		<div class="item" v-for="(item,index) in process" @click="Jump(item.id)" :key="index">
-			<image :src="item.img" mode=""></image>
+			<!-- <image :src="item.img" mode=""></image> -->
+			<span class="iconfont" :class="item.img"></span>
 			<div>{{item.title}}</div>
 		</div>
 	</div>
@@ -11,10 +12,10 @@
 		data() {
 			return {
 				process:[
-					{id:1,title:'实名绑定',img:'../../static/images/实名绑定.png'},
-					{id:2,title:'新冠核酸预约',img:'../../static/images/新冠核酸预约.png'},
-					{id:3,title:'核酸预约记录',img:'../../static/images/核酸预约记录.png'},
-					{id:4,title:'自助建档',img:'../../static/images/自助建档.png'}
+					{id:1,title:'绑定就诊卡',img:'icon-order-manager'},
+					{id:2,title:'新冠核酸预约',img:'icon-yuyue'},
+					{id:3,title:'核酸预约记录',img:'icon-record'},
+					// {id:4,title:'自助建档',img:'../../static/images/自助建档.png'}
 				]
 			}
 		},

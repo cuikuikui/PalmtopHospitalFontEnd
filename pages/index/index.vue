@@ -1,5 +1,5 @@
 <template>
-	<view style="height:900rpx">
+	<view style="height:900rpx">		
 		<scroll-view scroll-y="true">
 			<!--1、扫一扫组件 -->
 			<scan class="scan"></scan>
@@ -37,10 +37,9 @@
 							<view style="font-size: 30rpx;">{{item.dname}}</view>
 						</view>
 
-						<view v-if="showDoctor==false" style="width:150rpx;margin-top: 50rpx;display: inline-block;"
+						<view v-if="showDoctor==false" style="width:150rpx;display: inline-block;"
 							@click="goToDoctor">
-							<image src="../../static/images/All.png"
-								style="width:90rpx;height:90rpx;margin-left: 20rpx;"></image>
+								<span class="iconfont icon-add" style="font-size: 55px;position: relative;top: 10px"></span>
 							<view style="font-size: 30rpx;">收藏医生</view>
 						</view>
 					</view>

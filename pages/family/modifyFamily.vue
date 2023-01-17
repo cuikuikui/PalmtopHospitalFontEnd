@@ -109,10 +109,9 @@
 		AskerServlet
 	} from '../common/api.js'
 	import {
-		decrypt
+		decrypt,isCardID
 	} from '../../pages/common/utils.js'
 	import api from '../common/request.js'
-	import common from '../common/common.js'
 	export default {
 		data() {
 			return {
@@ -247,7 +246,7 @@
 					console.log("4444444")
 					warn = "请填写您的身份证号";
 					this.showWarn(warn)
-				} else if (common.isCardID(this.modifyFamily.a_IDCard) == false) {
+				} else if (isCardID(this.modifyFamily.a_IDCard) == false) {
 					console.log("555555555")
 					warn = "身份证号格式不正确";
 					this.showWarn(warn)

@@ -1,7 +1,7 @@
 <template>
 	<view>
 		<view class="search" @click="searchDoctor">
-			<image src="../../static/images/search.png" />
+			<span class="iconfont icon-search"></span>
 			搜索医生
 		</view>
 		<scroll-view scroll-y="true" class="container">

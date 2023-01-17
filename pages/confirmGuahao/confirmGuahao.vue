@@ -106,7 +106,7 @@
 				}
 				var data = {
 					FLAG: 'C',
-					gId: randomNum('g', 6),
+					gId: randomNum(new Date().getFullYear(), 6),
 					gTime: this.guHaoInfor.visiTime,
 					roomName: this.guHaoInfor.roomname,
 					gIntroduce: this.gIntroduce,

@@ -28,6 +28,7 @@
 	padding: 10rpx;
 }
 .content text{
-	font-size: 30rpx;
+	font-size: 25rpx;
+	color: #515151;
 }
 </style>

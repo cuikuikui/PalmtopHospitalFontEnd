@@ -27,7 +27,8 @@
 		<view class="footer">
 			<view class="history">
 				<text class="text">历史搜索</text>
-				<image class="img" src="../../static/images/delete.png" @click="clearStore(index)"></image>
+				<span class="iconfont icon-delete" @click="clearStore(index)"></span>
+				<!-- <image class="img" src="../../static/images/delete.png" @click="clearStore(index)"></image> -->
 			</view>
 			<view class="categories">
 				<text class="text" v-for="(item,index) in sercherStorage" :key="index">{{item}}</text>
@@ -286,23 +287,17 @@
 	}
 
 	.footer .history {
-		width: 100%;
 		height: 70rpx;
 		display: flex;
 		align-items: center;
+		justify-content:space-between;
+		padding-right:10px;
 		border-bottom: 1rpx solid rgba(190, 190, 207, 0.925);
-		/* background-color: blueviolet */
 	}
 
 	.footer .history .text {
 		font-size: 25rpx;
 		margin-left: 20rpx;
-	}
-
-	.footer .history .img {
-		width: 40rpx;
-		height: 40rpx;
-		margin-left: 550rpx;
 	}
 
 	.footer .categories {

@@ -114,10 +114,9 @@
 	import {
 		AskerServlet
 	} from '../common/api.js'
-	import common from '../common/common.js'
 	import api from '../common/request.js'
 	import {
-		randomNum
+		randomNum,isCardID
 	} from '../common/utils.js'
 	export default {
 		data() {
@@ -171,7 +170,7 @@
 				} else if (e.detail.value.idCard == "") {
 					warn = "请填写您的身份证号";
 					this.showWarn(warn)
-				} else if (common.isCardID(e.detail.value.idCard) == false) {
+				} else if (isCardID(e.detail.value.idCard) == false) {
 					warn = "身份证号格式不正确";
 					this.showWarn(warn)
 				} else if (e.detail.value.detailRegion == "") {

@@ -30,7 +30,7 @@
 		<view class="footer">
 			<view class="history">
 				<text class="text">历史搜索</text>
-				<image class="img" src="../../static/images/delete.png" @click="clearStore(index)"></image>
+				<span class="iconfont icon-delete"></span>
 			</view>
 			<view class="categories">
 				<text class="text" v-for="(item,index) in sercherStorage" :key="index">{{item}}</text>
@@ -50,19 +50,21 @@
 						</view>
 						<view class="center">
 							<view class="left1">
-								<image src="../../static/images/star.png"></image>
+								<span class="iconfont icon-star-thr"></span>
 								<text>{{item.hrate}}</text>
 							</view>
 							<view class="center1">
-								<image src="../../static/images/type.png"></image>
+								<span class="iconfont icon-dengji"></span>
 								<text>{{item.htype}}</text>
 							</view>
 							<view class="bottom1">
-								<text>>{{item.hdistance}}km</text>
+								<span class="iconfont icon-arrow-right"></span>
+								<text>{{item.hdistance}}km</text>
 							</view>
 						</view>
 						<view class="bottom">
-							<image src="../../static/images/location1.png"></image>
+							<span class="iconfont icon-location"></span>
+							<!-- <image src="../../static/images/location1.png"></image> -->
 							<text :decode="true">&nbsp;{{item.haddress}}</text>
 						</view>
 					</view>
@@ -269,23 +271,17 @@
 	}
 
 	.footer .history {
-		width: 100%;
 		height: 70rpx;
 		display: flex;
 		align-items: center;
+		justify-content:space-between;
 		border-bottom: 1rpx solid rgba(190, 190, 207, 0.925);
-		/* background-color: blueviolet */
+		padding-right:10px;
 	}
 
 	.footer .history .text {
 		font-size: 25rpx;
 		margin-left: 20rpx;
-	}
-
-	.footer .history .img {
-		width: 40rpx;
-		height: 40rpx;
-		margin-left: 550rpx;
 	}
 
 	.footer .categories {

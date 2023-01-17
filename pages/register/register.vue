@@ -64,7 +64,7 @@
 		userServlet
 	} from '../common/api.js'
 	import api from '../common/request.js'
-	var util = require('../common/util.js');
+	import {getClientNowSystemTime} from '../common/utils.js'
 	export default {
 		data() {
 			return {
@@ -337,7 +337,7 @@
 			register: function(e) {
 				var uEnvirn = 'MP-WEIXIN'
 				var uFlag = "weixin"
-				var registerTime = util.formatTime(new Date());
+				var registerTime = getClientNowSystemTime('yyyy-MM-dd HH:mm:ss');
 				var data = {
 					FLAG:"C",
 					openId: this.phoneNumber,

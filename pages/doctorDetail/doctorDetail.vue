@@ -131,7 +131,7 @@
 </template>
 
 <script>
-	import {randomNum} from '../common/utils.js'
+	import {randomNum,getClientNowSystemTime} from '../common/utils.js'
 	var weeksArray = [];
 	import {
 		scheduleList,
@@ -142,11 +142,6 @@
 		CollectionServlet
 	} from '../common/api.js'
 	import api from '../common/request.js'
-	var util = require('../common/util.js');
-	
-	import {
-		getNowFormatDate,getNowFormatTime
-	} from '../common/utils.js'
 	export default {
 		data() {
 			return {
@@ -462,7 +457,7 @@
 				}
 				console.log("=appdate==",appdate)
 				var dd = new Date();
-				var dateTimes=getNowFormatDate() +" "+getNowFormatTime()
+				var dateTimes=getClientNowSystemTime('yyyy-MM-dd HH:mm:ss')
 				// dd.getFullYear()+'-'+dd.getMonth()+'-'+dd.getDate()+' '+dd.getHours()+':'+dd.getMinutes()+':'+dd.getSeconds()
 				this.dateTimes=dateTimes  //此处日期要插入数据库中用于排序
 				//console.log('111111111   '+dateTimes+'   111111111111')
@@ -490,7 +485,7 @@
 				var dfee = this.dfee
 				var drole = this.drole
 				// 获取当前时间的时间戳
-				let strTimex = new Date((util.getClientNowSystemTime('yyyy-MM-dd HH:mm:ss')).replace(/-/g, '/')).getTime()
+				let strTimex = new Date((getClientNowSystemTime('yyyy-MM-dd HH:mm:ss')).replace(/-/g, '/')).getTime()
 				// 将当前时间转为时间戳
 				let orderEndTime = this.$moment(strTimex +1800000).format('yyyy-MM-DD HH:mm:ss')
 				var guHaoInfor = {
@@ -505,7 +500,7 @@
 					drole: drole,
 					hname: this.hname,
 					dateTimes:this.dateTimes,
-					orderStartTime:util.getClientNowSystemTime('yyyy-MM-dd HH:mm:ss'),
+					orderStartTime:getClientNowSystemTime('yyyy-MM-dd HH:mm:ss'),
 					orderEndTime:orderEndTime,
 				}
 				getApp().globalData.guHaoInfor = guHaoInfor

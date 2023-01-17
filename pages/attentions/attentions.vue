@@ -11,20 +11,24 @@
 					</view>
 					<view class="center">
 						<view class="left1">
-							<image src="../../static/images/star.png"></image>
+							<span class="iconfont icon-star-thr"></span>
+							<!-- <image src="../../static/images/star.png"></image> -->
 							<text>{{item.hrate}}</text>
 						</view>
 
 						<view class="center1">
-							<image src="../../static/images/type.png"></image>
+							<span class="iconfont icon-dengji"></span>
+							<!-- <image src="../../static/images/type.png"></image> -->
 							<text>{{item.htype}}</text>
 						</view>
 						<view class="bottom1">
-							<text>>{{item.hdistance}}km</text>
+							<span class="iconfont icon-arrow-right"></span>
+							<text>{{item.hdistance}}km</text>
 						</view>
 					</view>
 					<view class="bottom">
-						<image src="../../static/images/location1.png"></image>
+						<span class="iconfont icon-location"></span>
+						<!-- <image src="../../static/images/location1.png"></image> -->
 						<text :decode="true">&nbsp;{{item.haddress}}</text>
 					</view>
 				</view>

@@ -2,7 +2,7 @@
 	<view class="container">
 		<text style="font-weight: bolder;">预约记录</text>
 		<view class="jiazai" v-if="record==true">
-			<image style="width: 100px;height: 100px" src="../../static/images/upset.png" mode=""></image>
+			<span class="iconfont icon-upset"></span>
 			<text>请求中...</text>
 		</view>
 		<view class="item"  v-if="record==false" v-for="(item,index) in appoints"  :key="index" @click="appointDetail(item.code,item.FId,item.Fname,item.IDCard,item.Phone,item.appDate,item.appNo,item.appType,item.appStatus,item.paySatus)">
@@ -91,12 +91,15 @@
 				
 				api.post(AppointServlet, data).then(res => {
 					//成功时回调函数
+					console.log("====xxxx====",res.length==0);
+					if(res.length>0){
+						this.record = false
+					}
 					// console.log("====res====",res);
 					setTimeout(function () {
 						uni.hideLoading();
 					}, 2000);
-					this.record = false
-					
+				
 					let curArr = res
 					let arr = uni.getStorageSync('family_list')
 					console.log("====arr====",arr);

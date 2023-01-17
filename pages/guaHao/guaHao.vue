@@ -52,7 +52,6 @@
 		PayGuaHaoOK,
 		GuaHaoServlet,
 	} from '../common/api.js'
-	var util = require('../../pages/common/util.js');
 	import api from '../common/request.js'
 	import countDown from '@/components/uni-countDown/uni-countDown.vue'//引入路径，可更改
 	export default {
@@ -75,9 +74,6 @@
 			
 		},
 		methods: {
-			// payUpdate(){
-			// 	util.reload()
-			// },
 			getGuaHao: function() {
 				// 显示挂号信息
 				var data = {
