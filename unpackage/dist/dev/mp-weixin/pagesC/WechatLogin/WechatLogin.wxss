@@ -1,0 +1,120 @@
+
+.authorie {
+	position: fixed;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	z-index: 1110;
+	opacity: 0;
+	outline: 0;
+	text-align: center;
+	-webkit-transform: scale(1.185);
+	transform: scale(1.185);
+	-webkit-backface-visibility: hidden;
+	backface-visibility: hidden;
+	-webkit-perspective: 2000rpx;
+	perspective: 2000rpx;
+	background: rgba(0, 0, 0, 0.6);
+	transition: all 0.3s ease-in-out 0s;
+	pointer-events: none;
+}
+.show {
+	opacity: 1;
+	transition-duration: 0.3s;
+	-webkit-transform: scale(1);
+	transform: scale(1);
+	overflow-x: hidden;
+	overflow-y: auto;
+	pointer-events: auto;
+}
+.infor {
+	width: 620rpx;
+	height: 610rpx;
+	position: absolute;
+	top: 200rpx;
+	margin-left: 70rpx;
+	border-radius: 20rpx;
+	transition: all 2s ease-in-out;
+	border: 1rpx solid #686363;
+	transition: all 2s ease-in-out;
+	background-color: white;
+}
+.top {
+	/* border-radius: 20rpx; */
+	font-weight: bolder;
+	padding: 20rpx 0rpx;
+	border-bottom: 1rpx solid rgb(192, 192, 180);
+}
+.awart {
+	width: 100rpx;
+	height: 100rpx;
+	padding-top: 30rpx;
+	border-radius: 10rpx;
+}
+.infor .text1 {
+	margin-left: 35rpx;
+	font-size: 30rpx;
+	font-weight: bolder;
+}
+.infor .text2 {
+	margin-top: 40rpx;
+	font-size: 25rpx;
+	color: #767676;
+
+	/* font-weight: bolder;
+	 */
+}
+.btn {
+	border-radius: 20rpx;
+	display: flex;
+	justify-content: space-around;
+	margin-top: 110rpx;
+}
+.yes {
+	/* border-radius: 20rpx; */
+	width: 50%;
+	padding-top: 40rpx;
+	padding-bottom: 20rpx;
+	border-top: 1rpx solid #E7E6E6;
+	border-right: 1rpx solid #E7E6E6;
+	/* background-color: #007AFF; */
+}
+.no {
+	/* border-radius: 20rpx; */
+	width: 50%;
+	padding-top: 40rpx;
+	padding-bottom: 20rpx;
+	border-left: 1rpx solid #E7E6E6;
+	border-top: 1rpx solid #E7E6E6;
+	/* background-color: #00FFFF; */
+}
+.header {
+	margin: 90rpx 0 90rpx 50rpx;
+	border-bottom: 1px solid #ccc;
+	text-align: center;
+/* 	width: 650rpx;
+	height: 300rpx; */
+	/* line-height: 450rpx; */
+}
+.header image {
+	width: 200rpx;
+	height: 200rpx;
+}
+.content {
+	margin-left: 50rpx;
+	margin-bottom: 90rpx;
+}
+.content text {
+	display: block;
+	color: #9d9d9d;
+	margin-top: 40rpx;
+}
+.bottom {
+	border-radius: 80rpx;
+	margin: 70rpx 50rpx;
+	font-size: 35rpx;
+}
+
+
+

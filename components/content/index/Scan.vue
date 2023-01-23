@@ -2,7 +2,6 @@
 	<view class="container">
 		<view class="flex" @click="saoyisao">
 			<span class="iconfont icon-saoyisao"></span>
-			<!-- <image src="../../../static/images/index/saoyisao.png" mode="" ></image> -->
 			<text>扫一扫</text>
 		</view>
 		<view class="center flex">
@@ -10,7 +9,6 @@
 		</view>
 		<view class="flex" @click="erweima">
 			<span class="iconfont icon-erweima"></span>
-			<!-- <image src="../../../static/images/index/erweima.png" mode=""></image> -->
 			<text>二维码</text>
 		</view>
 	</view>

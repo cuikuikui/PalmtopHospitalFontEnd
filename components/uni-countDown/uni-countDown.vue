@@ -5,11 +5,11 @@
 </template>
 
 <script>
-import {GuaHaoServlet} from '../../pages/common/api.js'
-	import api from '../../pages/common/request.js'
+import {GuaHaoServlet} from '@/pages/common/api.js'
+	import api from '@/pages/common/request.js'
 	import {
 		reload
-	} from '../../pages/common/utils.js'
+	} from '@/pages/common/utils.js'
 	export default {
 		data() {
 			return {

@@ -326,10 +326,176 @@ var disClaimers=[
 	{text:'9、本声明未涉及的问题请参见国家有关法律法规，当本声明与国家有关法律法规冲突时，以国家法律法规为准。'},
 	{text:'10、本网站相关声明版权及其修改权、更新权和最终解释权均属APP手机APP所有。'}
 ]
+// 1、流行病史
+let epidemicHis = [
+	{
+		value: 'A1',
+		name: '有境外高风险地区旅居史（14天内）',
+		flag:'0'
+	},
+	{
+		value: 'A2',
+		name: '有境内中高风险地区旅居史（7天内）',
+		flag:'0'
+	},
+	{
+		value: 'A3',
+		name: '有省市卫生行政部门发布的疫情重点地区（县/区）旅居史（7天内）',
+		flag:'0'
+	},
+	{
+		value: 'A4',
+		name: '本人（及陪同家属）以上均无',
+		flag:'0'
+	}
+]
+// 2、接触史
+let touchHis = [
+	{
+		value: 'B1',
+		name: '有新冠病毒感染人员或病例报告社区有发热、呼吸道等症状人员接触史（7天内）',
+		flag:'0'
+	},
+	{
+		value: 'B2',
+		name: '健康码异常人员（7天内）',
+		flag:'0'
+	},
+	{
+		value: 'B3',
+		name: '有聚集性发病史（2例及以上发热或呼吸道症状病例）（7天内）',
+		flag:'0'
+	},
+	{
+		value: 'B4',
+		name: '本人（及陪同家属）以上均无。',
+		flag:'0'
+	}
+]
+// 3、高风险岗位人员
+let highRisk = [
+	{
+		value: 'C1',
+		name: '跨境交通工具司乘、保洁、维修等人员。',
+		flag:'0'
+	},
+	{
+		value: 'C2',
+		name: '海关、移民管理部门等其他直接接触入境人员和物品的一线人员。',
+		flag:'0'
+	},
+	{
+		value: 'C3',
+		name: '口岸进口物品搬运人员和管理服务人员。',
+		flag:'0'
+	},
+	{
+		value: 'C4',
+		name: '船舶引航员等登临外籍船舶作业人员。',
+		flag:'0'
+	},
+	{
+		value: 'C5',
+		name: '进口冷链食品、药品（含外包装）监管和从业人员。',
+		flag:'0'
+	},
+	{
+		value: 'C6',
+		name: '定点医疗机构和普通医疗机构发热门诊工作人员。',
+		flag:'0'
+	},
+	{
+		value: 'C7',
+		name: '从事新冠病毒感染者及其他风险人群转运的急救及社区工作人员。',
+		flag:'0'
+	},
+	{
+		value: 'C8',
+		name: '集中隔离医学观察场所工作人员。',
+		flag:'0'
+	},
+	{
+		value: 'C9',
+		name: '从事风险人群核酸采样、运送及检测人员。',
+		flag:'0'
+	},
+	{
+		value: 'C10',
+		name: '其他经风险研判确定的高风险岗位人员。',
+		flag:'0'
+	},
+	{
+		value: 'C11',
+		name: '本人（及陪同家属）以上均无。',
+		flag:'0'
+	}
+]
+// 4、十大临床病状
+let clinical =[
+	{
+		value: 'D1',
+		name: '发热',
+		flag:'0'
+	},
+	{
+		value: 'D2',
+		name: '干咳',
+		flag:'0'
+	},
+	{
+		value: 'D3',
+		name: '鼻塞',
+		flag:'0'
+	},
+	{
+		value: 'D4',
+		name: '流涕',
+		flag:'0'
+	},
+	{
+		value: 'D5',
+		name: '咽喉等呼吸道症状',
+		flag:'0'
+	},
+	{
+		value: 'D6',
+		name: '腹泻等消化道症状',
+		flag:'0'
+	},
+	{
+		value: 'D7',
+		name: '乏力',
+		flag:'0'
+	},
+	{
+		value: 'D8',
+		name: '肌痛',
+		flag:'0'
+	},
+	{
+		value: 'D9',
+		name: '结膜炎',
+		flag:'0'
+	},
+	{
+		value: 'D10',
+		name: '嗅觉味觉减退等其他症状',
+		flag:'0'
+	},
+	{
+		value: 'D11',
+		name: '本人（及陪同家属）以上均无。',
+		flag:'0'
+	}
+]
 module.exports = {
     province,
     city,
 	radioSingle,
 	content,
-	disClaimers
+	disClaimers,
+	epidemicHis,
+	touchHis,
+	highRisk,
+	clinical
 }

@@ -1,0 +1,25 @@
+
+.container.data-v-d36e0aaa {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	flex-wrap: wrap;
+	width: 100%;
+	height: 100%;
+	/* background-color: aqua; */
+	/* padding: 10px; */
+}
+.item.data-v-d36e0aaa {
+	display: flex;
+	width: 250rpx;
+	height: 200rpx;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	font-size: 30rpx;
+}
+.item image.data-v-d36e0aaa {
+	width: 100rpx;
+	height: 100rpx;
+}
+

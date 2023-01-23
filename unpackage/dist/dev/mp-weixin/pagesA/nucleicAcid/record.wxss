@@ -1,0 +1,49 @@
+
+.container.data-v-34bbbe48 {
+	padding: 5px;
+}
+.jiazai.data-v-34bbbe48 {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	color: darkgray;
+	/* margin-top: 100px; */
+}
+.item.data-v-34bbbe48{
+	padding: 10px;
+	box-shadow: 2px 2px 8px 10px darkgrey;
+	border-radius:5px;
+	margin-top: 10px;
+}
+.header.data-v-34bbbe48 {
+	display: flex;
+	padding: 10px;
+	background-color: dodgerblue;
+	border-top-left-radius: 5px;
+	border-top-right-radius: 5px;
+	justify-content: space-between;
+	font-size: 15px;
+}
+.component-code.data-v-34bbbe48 {
+	/* border-radius: 16rpx; */
+	overflow: hidden;
+	display: flex;
+	flex-direction: column;
+	background: #FFFFFF;
+	flex: 1;
+	width: 100%;
+	margin-top:10rpx;
+}
+.content.data-v-34bbbe48 {
+	width: 100%;
+	display: flex;
+	padding:10px 0;
+	font-size: 15px;
+	color: slategray;
+	border-bottom: 1rpx dotted darkgray;
+	justify-content: space-between;
+	border-bottom-left-radius: 5px;
+	border-bottom-right-radius: 5px;
+}
+

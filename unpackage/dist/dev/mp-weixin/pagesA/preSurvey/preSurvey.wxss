@@ -1,0 +1,63 @@
+
+page {
+	background-color: #f5f2f2;
+}
+.directions {
+	margin: 10px;
+	padding: 15px;
+	display:flex;
+	flex-direction: column;
+	border-radius: 7px;
+	justify-content: center;
+	background-color: white;
+}
+.preSurvey .directions ._span{
+	font-size: 25px;
+	font-weight: bolder;
+}
+.preSurvey .directions text{
+	font-size: 14px;
+}
+.button {
+	display: flex;
+	justify-content: center;
+	padding: 7px;
+	margin: 30px 40px;
+	border-radius: 7px;
+	color: white;
+	background-color: #2aada1;
+}
+.record {
+	padding: 10px;
+	margin: 10px;
+	background-color: #2aada1;
+	border-radius: 10px;
+	display: flex;
+	flex-direction: column;
+	color: #fbf3f3;
+	font-size: 14px;
+}
+ /* .record */
+.record .line {
+	border: 1rpx dashed white;
+	margin: 10px 0;
+}
+.record .search {
+	display: flex;
+	width: 100px;
+	padding: 3px;
+	justify-content: center;
+	align-items: center;
+	border: 1px solid white;
+	margin: auto;
+	border-radius: 5px;
+}
+.noRecord {
+	color: darkgray;
+	font-size: 15px;
+	display: flex;
+	margin-top: 70px;
+	justify-content: center;
+}
+
+

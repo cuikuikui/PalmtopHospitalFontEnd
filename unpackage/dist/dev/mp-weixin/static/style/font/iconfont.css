@@ -43,6 +43,11 @@
 	color: forestgreen;
 	font-size: 45px;
 }
+.icon-weixin1:before {
+	content: "\e64b";
+	color: forestgreen;
+	font-size: 110px;
+}
 
 .icon-update:before {
 	content: "\e6aa";
@@ -65,6 +70,11 @@
 	content: "\e80e";
 	letter-spacing: 5px;
 }
+.icon-yiyuan1:before {
+	content: "\e80e";
+	font-size: 35px;
+	letter-spacing: 5px;
+}
 
 .icon-ren:before {
 	content: "\e61a";
@@ -80,6 +90,8 @@
 
 .icon-arrow-up:before {
 	content: "\e60c";
+	font-size: 15px;
+	padding-left: 5px;
 }
 
 .icon-eye:before {

@@ -1,7 +1,0 @@
-{
-  "navigationBarTitleText": "新冠筛查预约详情",
-  "enablePullDownRefresh": false,
-  "usingComponents": {
-    "tki-barcode": "/components/tki-barcode/tki-barcode"
-  }
-}

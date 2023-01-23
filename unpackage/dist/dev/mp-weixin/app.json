@@ -1,50 +1,65 @@
 {
   "pages": [
     "pages/index/index",
-    "pages/menu/menu",
-    "pages/doctorIntroduce/doctorIntroduce",
-    "pages/hospital/hospital",
-    "pages/hospitalIntroduce/hospitalIntroduce",
-    "pages/webView/webView",
-    "pages/login/login",
-    "pages/guaHaoHospital/guaHaoHospital",
-    "pages/WechatLogin/WechatLogin",
     "pages/my/my",
-    "pages/guaHao/guaHao",
-    "pages/searchHospital/searchHospital",
-    "pages/searchDoctor/searchDoctor",
-    "pages/doctors/doctors",
-    "pages/doctorDetail/doctorDetail",
-    "pages/confirmGuahao/confirmGuahao",
-    "pages/family/addFamily",
-    "pages/family/listFamily",
-    "pages/family/detailFamily",
-    "pages/family/modifyFamily",
-    "pages/guaHaoEvaluate/guaHaoEvaluate",
-    "pages/guaHaoEvaluateSuccess/guaHaoEvaluateSuccess",
-    "pages/attentions/attentions",
-    "pages/userInfor/userInfor",
-    "pages/disClaimer/disClaimer",
-    "pages/aboutUs/aboutUs",
-    "pages/guaHaoDetail/guaHaoDetail",
-    "pages/Common_Problems/Common_Problems",
-    "pages/pie/pie",
-    "pages/userInfor/modifyUser/modifyUser",
-    "pages/register/register",
-    "pages/WechatLogin/bindPhone/bindPhone",
-    "pages/forget/forget",
-    "pages/forget/pasword",
-    "pages/home/home",
-    "pages/nucleicAcid/index",
-    "pages/nucleicAcid/appointment",
-    "pages/nucleicAcid/success",
-    "pages/nucleicAcid/record",
-    "pages/nucleicAcid/recordDetail",
-    "pages/nucleicAcid/pay1",
-    "uni_modules/uni-pay/pages/success/success",
-    "uni_modules/uni-pay/pages/ad-interactive-webview/ad-interactive-webview"
+    "pages/guaHao/guaHao"
   ],
-  "subPackages": [],
+  "subPackages": [
+    {
+      "root": "pagesA",
+      "pages": [
+        "forget/pasword",
+        "forget/forget",
+        "hospital/hospital",
+        "guaHaoEvaluate/guaHaoEvaluate",
+        "guaHaoEvaluateSuccess/guaHaoEvaluateSuccess",
+        "nucleicAcid/index",
+        "nucleicAcid/appointment",
+        "nucleicAcid/success",
+        "nucleicAcid/record",
+        "nucleicAcid/recordDetail",
+        "nucleicAcid/pay1",
+        "doctorIntroduce/doctorIntroduce",
+        "webView/webView",
+        "guaHaoHospital/guaHaoHospital",
+        "hospitalIntroduce/hospitalIntroduce",
+        "login/login",
+        "searchHospital/searchHospital",
+        "searchDoctor/searchDoctor",
+        "menu/menu",
+        "doctorDetail/doctorDetail",
+        "doctors/doctors",
+        "confirmGuahao/confirmGuahao",
+        "preSurvey/preSurvey",
+        "preSurvey/question",
+        "preSurvey/detailQuestion"
+      ]
+    },
+    {
+      "root": "pagesB",
+      "pages": [
+        "guaHaoDetail/guaHaoDetail"
+      ]
+    },
+    {
+      "root": "pagesC",
+      "pages": [
+        "aboutUs/aboutUs",
+        "attentions/attentions",
+        "Common_Problems/Common_Problems",
+        "disClaimer/disClaimer",
+        "register/register",
+        "userInfor/userInfor",
+        "userInfor/modifyUser/modifyUser",
+        "family/addFamily",
+        "family/listFamily",
+        "family/detailFamily",
+        "family/modifyFamily",
+        "WechatLogin/WechatLogin",
+        "WechatLogin/bindPhone/bindPhone"
+      ]
+    }
+  ],
   "window": {
     "navigationBarTextStyle": "white",
     "navigationBarTitleText": "uni-app",
@@ -77,6 +92,14 @@
         "text": "我的"
       }
     ]
+  },
+  "preloadRule": {
+    "pages/index/index": {
+      "network": "all",
+      "packages": [
+        "pagesA"
+      ]
+    }
   },
   "permission": {},
   "usingComponents": {}

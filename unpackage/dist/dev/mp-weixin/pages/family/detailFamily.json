@@ -1,7 +1,0 @@
-{
-  "navigationBarTitleText": "就诊卡详情",
-  "usingComponents": {
-    "tki-qrcode": "/components/tki-qrcode/tki-qrcode",
-    "slider-verify": "/components/slider-verify/slider-verify"
-  }
-}

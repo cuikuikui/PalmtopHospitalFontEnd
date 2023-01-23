@@ -396,41 +396,227 @@
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /*1、扫一扫组件 */
 .scan {
 	position: fixed;
+	top: -1px;
 	width: 100%;
 	z-index: 100;
 }
-/*2、医院轮播图 */
-.u-wrp-bnr {
-	padding-top: 115rpx;
-	width: 100%;
-	height: 270rpx;
-	display: block;
-	background: #f0f0f0;
+/*2、就诊卡 */
+.family-container {
+	padding: 10px;
+	margin: 10px;
+	border-radius: 10px;
+	background-color: #15cebc;
 }
-/*轮播图上添加文字*/
-.u-wrp-bnr .text1 {
-	width: 200rpx;
-	text-align: center;
-	font-size: 40rpx;
-	font-weight: bold;
-	color: rgb(29, 27, 26);
-	letter-spacing: 5rpx;
-	font-family: cursive;
-	font-weight: bold;
-	position: absolute;
-	border-radius: 20rpx;
-	top: 0;
-	left: 85%;
-	background-color: burlywood;
-	-webkit-transform: translateX(-50%);
-	        transform: translateX(-50%);
+.family-container .header {
+	display: flex;
+	color: white;
+	flex-direction: row;
+	font-size: 13px;
 }
-.u-img-slide {
-	width: 100%;
-	height: inherit;
+.family-container .header .default {
+	border: 1px solid white;
+	padding: 1rpx 15rpx;
+	border-radius: 5px;
+	margin-left: 7px;
+}
+.family-container .header .switch {
+	border: 1px solid white;
+	padding: 1rpx 15rpx;
+	border-radius: 5px;
+	margin-left: 7px;
+	color: #15cebc;
+	background-color: white;
+}
+.family-container .body {
+	display: flex;
+	justify-content: space-between;
+}
+.family-container .body .left {
+	margin-top: 5px;
+	color: white;
+	display: flex;
+	flex-direction: column;
+	font-size: 13px;
+	line-height: 27px;
+}
+.family-container .body .right {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	font-size: 13px;
+	color:white;
+	padding-right: 20px;
+}
+.family-container .line {
+	border: 1rpx dashed white;
+	margin: 10px 0;
+}
+.family-container .footer {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	color: white;
+	font-size: 13px;
+	padding: 3px 0;
+}
+.family-container .footer .delete {
+	padding: 0 10px;
+	color: white;
+	border: 1px solid white;
+	border-radius: 5px;
+	/* margin-right: 5px; */
+}
+.add {
+	display: flex;
+	background-color: white;
+	justify-content: center;
+	color:#15cebc;
+	font-size: 14px;
+	margin: 10px 0;
 }
 /* 3、功能菜单轮播图 */
 .categoryList {
@@ -455,6 +641,7 @@
 	width: 100%;
 	line-height: 30rpx
 }
+/* 收藏 */
 .collectDoc {
 	font-size: 35rpx;
 	padding: 20rpx 50rpx;
@@ -493,5 +680,33 @@
   left:780rpx;*/
 	/*background-color: #C1C6D4;*/
 	color: rgba(74, 74, 74, 1);
+}
+/* 放大二维码 */
+.qrcode-image {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-color: rgb(58 53 53 / 25%);
+	z-index: 100;
+}
+.qrcode {
+	border-radius: 10px;
+	background-color: white;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+    margin-top: 100px;
+    margin-left: 20px;
+    padding-top: 30px;
+    padding-bottom: 20px;
+    margin-right: 20px;
+}
+.card {
+	display: flex;
+	flex-direction: column;
+	font-size:15px;
 }
 

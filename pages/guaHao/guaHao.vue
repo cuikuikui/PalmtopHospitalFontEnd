@@ -51,8 +51,8 @@
 		AddScheduleNum,
 		PayGuaHaoOK,
 		GuaHaoServlet,
-	} from '../common/api.js'
-	import api from '../common/request.js'
+	} from '@/pages/common/api.js'
+	import api from '@/pages/common/request.js'
 	import countDown from '@/components/uni-countDown/uni-countDown.vue'//引入路径，可更改
 	export default {
 		components: {
@@ -67,7 +67,7 @@
 			console.log("show is called");
 			if (uni.getStorageSync('LoginIndex') == '') {
 				uni.redirectTo({
-					url: "../login/login"
+					url: "/pagesA/login/login"
 				})
 			}
 			this.getGuaHao()
@@ -248,7 +248,7 @@
 			guaHaoDetail: function(e) {
 				// console.log('-------------------------------------')
 				uni.navigateTo({
-					url: '../guaHaoDetail/guaHaoDetail?gid=' + e.currentTarget.dataset.gid + '&gorder=' + e
+					url: '/pagesB/guaHaoDetail/guaHaoDetail?gid=' + e.currentTarget.dataset.gid + '&gorder=' + e
 						.currentTarget.dataset.gorder
 				})
 			},

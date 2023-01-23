@@ -59,17 +59,6 @@
 					<span style="color:#131212" class="iconfont icon-arrow-right1"></span>
 				</view>
 			</view>
-<!-- 			<view class="weui_cell" @click="questionFeedback">
-				<view class="weui_cell_hd">
-					<image src="../../static/images/card.png"></image>
-				</view>
-				<view class="weui_cell_bd">
-					<view class="weui_cell_bd_p">问题反馈 </view>
-				</view>
-				<view class="with_arrow">
-					<image src="../../static/images/arrow.png"></image>
-				</view>
-			</view> -->
 
 			<view class="weui_cell" @click="aboutUs">
 				<view class="weui_cell_hd">
@@ -156,8 +145,7 @@
 </template>
 
 <script>
-	import uniPopup from '../../components/uni-popup/uni-popup.vue';
-import { log } from 'util';
+	import uniPopup from '@/components/uni-popup/uni-popup.vue';
 	export default {
 		data() {
 			return {
@@ -183,14 +171,13 @@ import { log } from 'util';
 		},
 		onShow() {
 			this.WeChatUserInfo = uni.getStorageSync('WeChatUserInfo')
-			// console.log(this.WeChatUserInfo)
-			// console.log('----------------my-WeChatUserInfo-------------------')
-			// console.log(this.WeChatUserInfo)
-			// console.log(uni.getStorageSync('LoginIndex'))
-			// console.log('-----------------my-WeChatUserInfo------------------')
+			console.log('----------------my-WeChatUserInfo-------------------')
+			console.log(this.WeChatUserInfo)
+			console.log(uni.getStorageSync('LoginIndex'))
+			console.log('-----------------my-WeChatUserInfo------------------')
 			if (uni.getStorageSync('LoginIndex') == '') {
 				uni.redirectTo({
-					url: "../login/login"
+					url: "/pagesA/login/login"
 				})
 			}
 		},
@@ -200,67 +187,44 @@ import { log } from 'util';
 		methods: {
 			userInfor: function(u_Name, u_Img,u_Phone) {
 				uni.navigateTo({
-					url: '../userInfor/userInfor?u_Name=' + u_Name + '&u_Img=' + u_Img+'&u_Phone='+u_Phone
+					url: '/pagesC/userInfor/userInfor?u_Name=' + u_Name + '&u_Img=' + u_Img+'&u_Phone='+u_Phone
 				})
 			},
 			// 家庭成员
 			addFamily: function(e) {
 				uni.navigateTo({
-					url: "../family/listFamily"
+					url: "/pagesC/family/listFamily"
 				})
 			},
 			// 我的关注
 			addAttention: function(e) {
 				uni.navigateTo({
-					url: "/pages/attentions/attentions"
+					url: "/pagesC/attentions/attentions"
 				})
 			},
 			// 常见问题
 			Common_Problems: function(e) {
 				uni.navigateTo({
-				  url: "/pages/Common_Problems/Common_Problems"
+				  url: "/pagesC/Common_Problems/Common_Problems"
 				})
-				// uni.showToast({
-				// 	title: '待开发中.............',
-				// 	icon: 'loading',
-				// 	duration: 2000 //持续的时间
-				// })
 			},
 			// 免责声明
 			disClaimer: function() {
 				uni.navigateTo({
-					url: '/pages/disClaimer/disClaimer'
+					url: '/pagesC/disClaimer/disClaimer'
 				})
 			},
 			bindViewTap: function(e) {
 				uni.navigateTo({
-					url: '/pages/register/register'
-				})
-			},
-			// 问题反馈
-			questionFeedback: function() {
-				uni.navigateTo({
-				  url: "/pages/feedback/feedback"
+					url: '/pagesC/register/register'
 				})
 			},
 			// 关于我们
 			aboutUs: function() {
 				uni.navigateTo({
-					url: "/pages/aboutUs/aboutUs"
+					url: "/pagesC/aboutUs/aboutUs"
 				})
-				// uni.showToast({
-				// 	title: '待开发中.............',
-				// 	icon: 'loading',
-				// 	duration: 2000 //持续的时间
-				// })
 			},
-			// #ifdef APP-PLUS
-			// 分享好友
-			share: function() {
-				this.$refs.sharepopup.open();
-			},
-			// #endif
-			
 			// 检查更新
 			upDate: function() {
 				// uni.navigateTo({
