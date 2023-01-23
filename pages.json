@@ -6,281 +6,268 @@
 				"navigationBarTitleText": "首页"
 			}
 		}, {
-			"path": "pages/menu/menu",
-			"style": {
-				"navigationBarTitleText": "医院信息"
-			}
-		}, {
-			"path": "pages/doctorIntroduce/doctorIntroduce",
-			"style": {
-				"navigationBarTitleText": "医生介绍",
-				"navigationBarTextStyle": "white",
-				"navigationBarBackgroundColor": "#00FFFF"
-			}
-		}, {
-			"path": "pages/hospital/hospital",
-			"style": {
-				"navigationBarTitleText": "选择医院"
-			}
-		}, {
-			"path": "pages/hospitalIntroduce/hospitalIntroduce",
-			"style": {}
-		}, {
-			"path": "pages/webView/webView",
-			"style": {
-				"navigationBarTitleText": "uni-app",
-				"navigationStyle": "custom"
-			}
-		}, {
-			"path": "pages/login/login",
-			"style": {
-				"navigationBarTitleText": "登陆"
-			}
-		}, {
-			"path": "pages/guaHaoHospital/guaHaoHospital",
-			"style": {
-				"navigationBarTitleText": "满意度调查"
-			}
-		}, {
-			"path": "pages/WechatLogin/WechatLogin",
-			"style": {
-				"navigationBarTitleText": "微信登录"
-			}
-		}, {
 			"path": "pages/my/my",
 			"style": {
 				"navigationBarTitleText": "个人信息"
 			}
-		}, {
+		},
+		{
 			"path": "pages/guaHao/guaHao",
 			"style": {
 				"navigationBarTitleText": "挂号列表"
 			}
-		}, {
-			"path": "pages/searchHospital/searchHospital",
-			"style": {
-				"navigationBarTitleText": "搜索医院"
-			}
-		}, {
-			"path": "pages/searchDoctor/searchDoctor",
-			"style": {
-				"navigationBarTitleText": "搜索医生"
-			}
-		}, {
-			"path": "pages/doctors/doctors",
-			"style": {
-				"navigationBarTitleText": "医生信息"
-			}
-		}, {
-			"path": "pages/doctorDetail/doctorDetail",
-			"style": {
-				"navigationBarTitleText": "医生列表"
-			}
-		}, {
-			"path": "pages/confirmGuahao/confirmGuahao",
-			"style": {
-				"navigationBarTitleText": "挂号确认"
-			}
-		}, {
-			"path": "pages/family/addFamily",
-			"style": {
-				"navigationBarTitleText": "选择就诊人"
-			}
-		}, {
-			"path": "pages/family/listFamily",
-			"style": {
-				"navigationBarTitleText": "就诊人"
-			}
-		}, {
-			"path": "pages/family/detailFamily",
-			"style": {
-				"navigationBarTitleText": "就诊卡详情"
-			}
-		}, {
-			"path": "pages/family/modifyFamily",
-			"style": {
-				"navigationBarTitleText": "修改就诊人信息"
-			}
-		}, {
-			"path": "pages/guaHaoEvaluate/guaHaoEvaluate",
-			"style": {
-				"navigationBarTitleText": "满意度调查"
-			}
-		}, {
-			"path": "pages/guaHaoEvaluateSuccess/guaHaoEvaluateSuccess",
-			"style": {}
-		}, {
-			"path": "pages/attentions/attentions",
-			"style": {
-				"navigationBarTitleText": "关注"
-			}
-		},
-		{
-			"path": "pages/userInfor/userInfor",
-			"style": {
-				"navigationBarTitleText": "个人中心"
-			}
-		}, {
-			"path": "pages/disClaimer/disClaimer",
-			"style": {
-				"navigationBarTitleText": "免责声明"
-			}
-		}, {
-			"path": "pages/aboutUs/aboutUs",
-			"style": {
-				"navigationBarTitleText": "关于我们"
-			}
-		},
-		{
-			"path": "pages/guaHaoDetail/guaHaoDetail",
-			"style": {
-				"navigationBarTitleText": "挂号详情"
-			}
-		}, {
-			"path": "pages/Common_Problems/Common_Problems",
-			"style": {
-				"navigationBarTitleText": "使用帮助"
-			}
-		}, {
-			"path": "pages/pie/pie",
-			"style": {}
-		}, {
-			"path": "pages/userInfor/modifyUser/modifyUser",
-			"style": {
-				"navigationBarTitleText": "修改信息"
-			}
-		}, {
-			"path": "pages/register/register",
-			"style": {
-				"navigationBarTitleText": "用户注册"
-			}
-		}, {
-			"path": "pages/WechatLogin/bindPhone/bindPhone",
-			"style": {
-				"navigationBarTitleText": "绑定手机号"
-			}
-		},
-		{
-			"path": "pages/forget/forget",
-			"style": {
-				"navigationBarTitleText": "找回登录密码"
-			}
-		}, {
-			"path": "pages/forget/pasword",
-			"style": {
-				"navigationBarTitleText": "密码重置"
-			}
-		}, {
-			"path": "pages/home/home",
-			"style": {
-				"navigationBarTitleText": "",
-				"enablePullDownRefresh": false
-			}
-
-		}, {
-			"path": "pages/nucleicAcid/index",
-			"style": {
-				"navigationBarTitleText": "核酸检测",
-				"enablePullDownRefresh": false
-			}
-		}, {
-			"path": "pages/nucleicAcid/appointment",
-			"style": {
-				"navigationBarTitleText": "新冠筛查预约申请",
-				"enablePullDownRefresh": false
-			}
-		}, {
-			"path": "pages/nucleicAcid/success",
-			"style": {
-				"navigationBarTitleText": "新冠筛查预约成功",
-				"enablePullDownRefresh": false
-			}
-		}, {
-			"path": "pages/nucleicAcid/record",
-			"style": {
-				"navigationBarTitleText": "新冠筛查预约记录",
-				"enablePullDownRefresh": false
-			}
-		}, {
-			"path": "pages/nucleicAcid/recordDetail",
-			"style": {
-				"navigationBarTitleText": "新冠筛查预约详情",
-				"enablePullDownRefresh": false
-			}
-		}, {
-			"path": "pages/nucleicAcid/pay1",
-			"style": {
-				"navigationBarTitleText": "门诊缴费",
-				"enablePullDownRefresh": false
-			}
-		}, {
-			"path": "uni_modules/uni-pay/pages/success/success",
-			"style": {
-				"backgroundColor": "#F8F8F8",
-				"navigationBarTitleText": "支付成功"
-			}
-		}, {
-			"path": "uni_modules/uni-pay/pages/ad-interactive-webview/ad-interactive-webview",
-			"style": {
-				"backgroundColor": "#F8F8F8",
-				"navigationBarTitleText": "ad"
-			}
 		}
 	],
 	//分包加载配置，此配置为小程序的分包加载机制。
-	// "subPackages": [{
-	// 	"root": "pagesA", //子包的根目录
-	// 	"pages": [
-	// 		{ //这里的配置路径和pages里的一样
-	// 			"path": "list", //配置页面路径，这里要注意，因为root已经选中了文件夹，所以我们只要填写文件名就好
-	// 			"style": {
-	// 				"navigationBarTitleText": "",
-	// 				"enablePullDownRefresh": false
-	// 			}
-	// 		},
-	// 		{
-	// 			"path": "tab",
-	// 			"style": {
-	// 				"navigationBarTitleText": "",
-	// 				"enablePullDownRefresh": false
-	// 			}
-	// 		}
-	// 	]
-	// }, {
-	// 	"root": "pagesB", //子包的根目录
-	// 	"pages": [{ //这里的配置路径和pages里的一样
-	// 			"path": "list", //配置页面路径，这里要注意，因为root已经选中了文件夹，所以我们只要填写文件名就好
-	// 			"style": {
-	// 				"navigationBarTitleText": "",
-	// 				"enablePullDownRefresh": false
-	// 			}
-	// 		},
-	// 		{
-	// 			"path": "tab",
-	// 			"style": {
-	// 				"navigationBarTitleText": "",
-	// 				"enablePullDownRefresh": false
-	// 			}
-	// 		}
-	// 	]
-	// },{
-	// 	"root": "pagesC", //子包的根目录
-	// 	"pages": [{ //这里的配置路径和pages里的一样
-	// 			"path": "list", //配置页面路径，这里要注意，因为root已经选中了文件夹，所以我们只要填写文件名就好
-	// 			"style": {
-	// 				"navigationBarTitleText": "",
-	// 				"enablePullDownRefresh": false
-	// 			}
-	// 		},
-	// 		{
-	// 			"path": "tab",
-	// 			"style": {
-	// 				"navigationBarTitleText": "",
-	// 				"enablePullDownRefresh": false
-	// 			}
-	// 		}
-	// 	]
-	// }],
+	"subPackages": [{
+			"root": "pagesA", //子包的根目录(主要是首页的跳转的页面内容)
+			"pages": [{
+					"path": "forget/pasword",
+					"style": {
+						"navigationBarTitleText": "密码重置"
+					}
+				},
+				{
+					"path": "forget/forget",
+					"style": {
+						"navigationBarTitleText": "找回登录密码"
+					}
+				},
+				{
+					"path": "hospital/hospital",
+					"style": {
+						"navigationBarTitleText": "选择医院"
+					}
+				},
+				{
+					"path": "guaHaoEvaluate/guaHaoEvaluate",
+					"style": {
+						"navigationBarTitleText": "满意度调查"
+					}
+				},
+				{
+					"path": "guaHaoEvaluateSuccess/guaHaoEvaluateSuccess",
+					"style": {}
+				},
+				{
+					"path": "nucleicAcid/index",
+					"style": {
+						"navigationBarTitleText": "核酸检测",
+						"enablePullDownRefresh": false
+					}
+				}, {
+					"path": "nucleicAcid/appointment",
+					"style": {
+						"navigationBarTitleText": "新冠筛查预约申请",
+						"enablePullDownRefresh": false
+					}
+				}, {
+					"path": "nucleicAcid/success",
+					"style": {
+						"navigationBarTitleText": "新冠筛查预约成功",
+						"enablePullDownRefresh": false
+					}
+				}, {
+					"path": "nucleicAcid/record",
+					"style": {
+						"navigationBarTitleText": "新冠筛查预约记录",
+						"enablePullDownRefresh": false
+					}
+				}, {
+					"path": "nucleicAcid/recordDetail",
+					"style": {
+						"navigationBarTitleText": "新冠筛查预约详情",
+						"enablePullDownRefresh": false
+					}
+				}, {
+					"path": "nucleicAcid/pay1",
+					"style": {
+						"navigationBarTitleText": "门诊缴费",
+						"enablePullDownRefresh": false
+					}
+				}, {
+					"path": "doctorIntroduce/doctorIntroduce",
+					"style": {
+						"navigationBarTitleText": "医生介绍",
+						"navigationBarTextStyle": "white",
+						"navigationBarBackgroundColor": "#00FFFF"
+					}
+				}, {
+					"path": "webView/webView",
+					"style": {
+						"navigationBarTitleText": "uni-app",
+						"navigationStyle": "custom"
+					}
+				}, {
+					"path": "guaHaoHospital/guaHaoHospital",
+					"style": {
+						"navigationBarTitleText": "满意度调查"
+					}
+				},
+				{
+					"path": "hospitalIntroduce/hospitalIntroduce",
+					"style": {}
+				}, {
+					"path": "login/login",
+					"style": {
+						"navigationBarTitleText": "登陆"
+					}
+				}, {
+					"path": "searchHospital/searchHospital",
+					"style": {
+						"navigationBarTitleText": "搜索医院"
+					}
+				}, {
+					"path": "searchDoctor/searchDoctor",
+					"style": {
+						"navigationBarTitleText": "搜索医生"
+					}
+				}, {
+					"path": "menu/menu",
+					"style": {
+						"navigationBarTitleText": "医院信息"
+					}
+				}, {
+					"path": "doctorDetail/doctorDetail",
+					"style": {
+						"navigationBarTitleText": "医生列表"
+					}
+				}, {
+					"path": "doctors/doctors",
+					"style": {
+						"navigationBarTitleText": "医生信息"
+					}
+				}, {
+					"path": "confirmGuahao/confirmGuahao",
+					"style": {
+						"navigationBarTitleText": "挂号确认"
+					}
+				},{
+					"path": "preSurvey/preSurvey",
+					"style": {
+						"navigationBarTitleText": "预检分诊问卷"
+					}
+				},{
+					"path": "preSurvey/question",
+					"style": {
+						"navigationBarTitleText": "问卷调查"
+					}
+				},{
+					"path": "preSurvey/detailQuestion",
+					"style": {
+						"navigationBarTitleText": "问卷调查"
+					}
+				}
+			]
+		},
+		{
+			"root": "pagesB", //子包的根目录
+			"pages": [{
+					"path": "guaHaoDetail/guaHaoDetail",
+					"style": {
+						"navigationBarTitleText": "挂号详情"
+					}
+				}
+				// { //这里的配置路径和pages里的一样
+				// 	"path": "list", //配置页面路径，这里要注意，因为root已经选中了文件夹，所以我们只要填写文件名就好
+				// 	"style": {
+				// 		"navigationBarTitleText": "",
+				// 		"enablePullDownRefresh": false
+				// 	}
+				// },
+				// {
+				// 	"path": "tab",
+				// 	"style": {
+				// 		"navigationBarTitleText": "",
+				// 		"enablePullDownRefresh": false
+				// 	}
+				// }
+			]
+		},
+		{
+			"root": "pagesC", //子包的根目录(主要是我的跳转的页面内容)
+			"pages": [{
+					"path": "aboutUs/aboutUs",
+					"style": {
+						"navigationBarTitleText": "关于我们"
+					}
+				},
+				{
+					"path": "attentions/attentions",
+					"style": {
+						"navigationBarTitleText": "关注"
+					}
+				},
+				{
+					"path": "Common_Problems/Common_Problems",
+					"style": {
+						"navigationBarTitleText": "使用帮助"
+					}
+				},
+				{
+					"path": "disClaimer/disClaimer",
+					"style": {
+						"navigationBarTitleText": "免责声明"
+					}
+				},
+				{
+					"path": "register/register",
+					"style": {
+						"navigationBarTitleText": "用户注册"
+					}
+				},
+				{
+					"path": "userInfor/userInfor",
+					"style": {
+						"navigationBarTitleText": "个人中心"
+					}
+				}, {
+					"path": "userInfor/modifyUser/modifyUser",
+					"style": {
+						"navigationBarTitleText": "修改信息"
+					}
+				},
+				{
+					"path": "family/addFamily",
+					"style": {
+						"navigationBarTitleText": "选择就诊人"
+					}
+				}, {
+					"path": "family/listFamily",
+					"style": {
+						"navigationBarTitleText": "就诊人"
+					}
+				}, {
+					"path": "family/detailFamily",
+					"style": {
+						"navigationBarTitleText": "就诊卡详情"
+					}
+				}, {
+					"path": "family/modifyFamily",
+					"style": {
+						"navigationBarTitleText": "修改就诊人信息"
+					}
+				}, {
+					"path": "WechatLogin/WechatLogin",
+					"style": {
+						"navigationBarTitleText": "微信登录"
+					}
+				},
+				{
+					"path": "WechatLogin/bindPhone/bindPhone",
+					"style": {
+						"navigationBarTitleText": "绑定手机号"
+					}
+				}
+			]
+		}
+	],
+	"preloadRule": {
+		"pages/index/index": {
+			"network": "all",
+			"packages": ["pagesA"]
+		}
+	},
 	"globalStyle": {
 		"navigationBarTextStyle": "white",
 		"navigationBarTitleText": "uni-app",

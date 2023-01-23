@@ -20,7 +20,8 @@
 				// host:'http://localhost:8088/Hospital/',
 			    location: "",
 			    LoginIndex:'',
-				globalJumpFlag:false,
+				familySign:'',//跳转到就诊人标志，01:从确认挂号跳转到就诊人页面，02:从首页处跳转到就诊人页面
+				fId:'',
 		},
 		onLaunch: function() {
 			// uni.clearStorage()
