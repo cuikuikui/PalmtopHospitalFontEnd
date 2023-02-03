@@ -2,7 +2,7 @@
   "pages": [
     "pages/index/index",
     "pages/my/my",
-    "pages/guaHao/guaHao"
+    "pages/hospital/index"
   ],
   "subPackages": [
     {
@@ -38,16 +38,23 @@
     {
       "root": "pagesB",
       "pages": [
-        "guaHaoDetail/guaHaoDetail"
+        "choseMenu/choseMenu",
+        "hospitalProfile/hospitalProfile",
+        "hospitalGuide/index",
+        "hospitalGuide/detail",
+        "medicalWiki/index",
+        "medicalWiki/calculate/index",
+        "medicalWiki/calculate/result",
+        "medicalWiki/blood/index"
       ]
     },
     {
       "root": "pagesC",
       "pages": [
-        "aboutUs/aboutUs",
+        "guaHao/guaHao",
+        "guaHaoDetail/guaHaoDetail",
         "attentions/attentions",
         "Common_Problems/Common_Problems",
-        "disClaimer/disClaimer",
         "register/register",
         "userInfor/userInfor",
         "userInfor/modifyUser/modifyUser",
@@ -56,7 +63,10 @@
         "family/detailFamily",
         "family/modifyFamily",
         "WechatLogin/WechatLogin",
-        "WechatLogin/bindPhone/bindPhone"
+        "WechatLogin/bindPhone/bindPhone",
+        "more/index",
+        "more/aboutUs",
+        "more/disClaimer"
       ]
     }
   ],
@@ -80,10 +90,10 @@
         "text": "首页"
       },
       {
-        "pagePath": "pages/guaHao/guaHao",
-        "iconPath": "static/images/tarbar/registered.png",
-        "selectedIconPath": "static/images/tarbar/registered-selected.png",
-        "text": "挂号"
+        "pagePath": "pages/hospital/index",
+        "iconPath": "static/images/tarbar/hospital.png",
+        "selectedIconPath": "static/images/tarbar/hospital-selected.png",
+        "text": "走进医院"
       },
       {
         "pagePath": "pages/my/my",

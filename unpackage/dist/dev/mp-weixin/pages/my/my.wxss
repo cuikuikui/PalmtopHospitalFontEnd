@@ -229,35 +229,30 @@
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 /**index.uniss**/
+.flow {
+	padding: 5px;
+	margin:15px;
+	width:330px;
+	background-color: white;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+	border: 1px solid #d8cccc;
+	border-radius: 10px;
+	position: absolute;
+	bottom: 360px;
+	z-index: 999;
+	/* color: #d8cccc; */
+}
+.flow .item {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
 .info_list {
 	background-color: white;
+	padding-top: 50px;
 }
 .container {
 	height: 100%;
@@ -266,38 +261,23 @@
 .userinfo {
 	display: flex;
 	width: 100%;
-	height: 170rpx;
-	padding-bottom: 70rpx;
-	padding-top: 20rpx;
+	font-size: 20px;
+	color: white;
+	padding-bottom: 150rpx;
+	/* padding-top: 20rpx; */
 	flex-direction: column;
-	/* padding: 50rpx 0; */
 	align-items: center;
-	/* background-color: #ff0000; */
 }
 .userinfoLeft {
-	width: 100%;
-	height: 130rpx;
 	display: flex;
-	justify-content: center;
-}
-.userinfoRight {
-	display: flex;
-	justify-content: center;
 	align-items: center;
-	width: 100%;
-	height: 40rpx;
+	justify-content: center;
 }
 .userinfo-avatar {
-	width: 150rpx;
-	height: 150rpx;
+	width: 120rpx;
+	height: 120rpx;
 	border-radius: 50%;
-}
-.userinfo-nickname {
-	margin-top: 80rpx;
-	color: rgba(8, 8, 7, 0.479);
-	font-size: 40rpx;
-	font-weight: bolder;
-	font-family: 'Times New Roman'
+	margin-right: 10px;
 }
 .weui_cell {
 	position: relative;

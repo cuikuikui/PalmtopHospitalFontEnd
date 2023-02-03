@@ -1,0 +1,19 @@
+
+.item.data-v-743c38e2 {
+	display: flex;
+	padding: 10px;
+	justify-content: space-between;
+	align-items: center;
+	border-bottom: 1rpx solid #dbdbdb;
+}
+.item .left.data-v-743c38e2 {
+	display: flex;
+	flex-direction: column;
+	line-height: 40px;
+}
+.item .right image.data-v-743c38e2 {
+	width: 80px;
+	height: 80px;
+	border-radius: 10px;
+}
+

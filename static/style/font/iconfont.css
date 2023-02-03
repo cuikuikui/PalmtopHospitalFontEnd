@@ -23,9 +23,8 @@
 }
 .icon-juzhenren:before {
 	content: "\e617";
-	font-size:23px;
+	font-size:35px;
 }
-
 .icon-declare:before {
 	content: "\e61b";
 }
@@ -168,6 +167,13 @@
 	color: #716f6f;
 	padding-left: 15px;
 }
+.icon-arrow-right2:before {
+	content: "\e666";
+	font-size: 20px;
+	font-weight: bolder;
+	color: #716f6f;
+	padding-left: 15px;
+}
 
 .icon-xuanze:before {
   content: "\e612";
@@ -195,7 +201,15 @@
 	font-size:40px;
 	color:mediumblue;
 }
+.icon-record-my:before {
+	content: "\e630";
+	font-size:35px;
+}
 .icon-record1:before {
+	content: "\e630";
+	color:#8a8a8a;
+}
+.icon-jiedu:before {
 	content: "\e630";
 	color:#8a8a8a;
 }
@@ -204,4 +218,27 @@
 	font-size:40px;
 	color:mediumblue;
 }
+.icon-gengduo:before {
+  content: "\e771";
+}
+.icon-xuexing:before {
+  content: "\e656";
+}
 
+.icon-jisuanqi:before {
+  content: "\e753";
+  color: white;
+  font-size: 17px;
+}
+.icon-yiganzice:before {
+  content: "\e605";
+}
+.icon-arrow-left:before {
+  content: "\e743";
+  /* color: white; */
+}
+.icon-dingwei:before {
+  content: "\e6cb";
+  color: #73f2a0;
+  font-size: 30px;
+}

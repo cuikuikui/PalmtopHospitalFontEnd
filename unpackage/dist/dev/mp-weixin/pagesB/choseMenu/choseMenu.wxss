@@ -1,0 +1,45 @@
+
+.hospital.data-v-3a1afd38 {
+	padding: 10px;
+}
+.swiper.data-v-3a1afd38 {
+	height: 160px;
+}
+.image.data-v-3a1afd38 {
+	width: 100%;
+}
+.more.data-v-3a1afd38 {
+	display: flex;
+	justify-content: space-between;
+	padding: 7px;
+	border-bottom: 1rpx solid gainsboro;
+	font-size: 17px;
+	font-weight: bolder;
+}
+.more .label.data-v-3a1afd38 {
+	color: darkgrey;
+	font-weight: normal;
+	font-size: 15px;
+}
+/* 3、功能菜单轮播图 */
+.categoryList.data-v-3a1afd38 {
+	height: 210rpx;
+	/* border-bottom: 20rpx solid #f4f4f4; */
+}
+.category-info.data-v-3a1afd38 {
+	display: inline-block;
+	text-align: center;
+	position: relative;
+	margin-top: 20rpx;
+	padding: 10px;
+}
+.category-image.data-v-3a1afd38 {
+	width: 80rpx;
+	height: 80rpx;
+}
+.category-text.data-v-3a1afd38 {
+	font-size: 25rpx;
+	width: 100%;
+	line-height: 30rpx
+}
+

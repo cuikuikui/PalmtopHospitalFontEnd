@@ -1,5 +1,6 @@
 
 <script>
+	import Vue from 'vue'
 	export default {
 		globalData:{
 			    hospitals:null,
@@ -25,6 +26,14 @@
 		},
 		onLaunch: function() {
 			// uni.clearStorage()
+			uni.getSystemInfo({
+				success: function(e) {
+					Vue.prototype.StatusBar = e.statusBarHeight;
+					let custom = wx.getMenuButtonBoundingClientRect();
+					Vue.prototype.Custom = custom;
+					Vue.prototype.CustomBar = custom.bottom + custom.top - e.statusBarHeight;	
+				}
+			})
 			console.log('App Launch5')
 		},
 		onShow: function() {

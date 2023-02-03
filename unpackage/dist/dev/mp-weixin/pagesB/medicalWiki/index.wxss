@@ -1,0 +1,19 @@
+
+.wiki.data-v-4c894861 {
+	margin: 5px;
+}
+.item.data-v-4c894861 {
+	padding: 7px;
+	display: flex;
+	border-bottom: 1rpx solid #cdcdcd;
+}
+.iconfont.data-v-4c894861 {
+	border-radius: 50%;
+	width: 25px;
+	height: 25px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background-color: #3dbfc5;
+}
+

@@ -1,0 +1,21 @@
+
+.content {
+	padding: 10px;
+}
+.item {
+	display: flex;
+	flex-direction: column;
+	/* justify-content: center; */
+	align-items: center;
+}
+.content text{
+	line-height: 40px;
+}
+.content image {
+	margin-top: 20px;
+}
+.pdf {
+	padding: 10px;
+	border: 1rpx solid #bfbfbf;
+}
+

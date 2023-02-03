@@ -242,7 +242,9 @@
 			})
 		},
 		onShow() {	
-			console.log('xxxxxxxxxxx')
+			
+			let str = "http://localhost:8080/PalmtopHospitalBackEnd/pdf/挂号-收费指南.pdf"
+			console.log('yyyyyyy',str.substr(str.lastIndexOf(".") + 1,3))
 			this.fId = getApp().globalData.fId
 			this.getFamilys()
 			this.LoginIndex = uni.getStorageSync('LoginIndex')

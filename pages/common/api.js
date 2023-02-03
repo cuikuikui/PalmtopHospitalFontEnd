@@ -14,6 +14,7 @@ const Questions_List_Json='/Questions_List_Json'
 const AppointServlet ='/AppointServlet'
 const GetGuaHaoHospitals ='/GetGuaHaoHospitals'
 const PreSurveyServlet = '/PreSurveyServlet'
+const GuideServlet ='/GuideServlet'
 //抛出getMainPage这个常量
 module.exports = {
   AskerServlet,
@@ -30,5 +31,6 @@ module.exports = {
   GuaHaoServlet,
   AppointServlet,
   GetGuaHaoHospitals,
-  PreSurveyServlet
+  PreSurveyServlet,
+  GuideServlet
 }

@@ -12,9 +12,9 @@
 			}
 		},
 		{
-			"path": "pages/guaHao/guaHao",
+			"path": "pages/hospital/index",
 			"style": {
-				"navigationBarTitleText": "挂号列表"
+				"navigationBarTitleText": "走进医院"
 			}
 		}
 	],
@@ -162,36 +162,81 @@
 		},
 		{
 			"root": "pagesB", //子包的根目录
-			"pages": [{
-					"path": "guaHaoDetail/guaHaoDetail",
+			"pages": [
+				{
+					"path": "choseMenu/choseMenu",
 					"style": {
-						"navigationBarTitleText": "挂号详情"
+						"navigationBarTitleText": "走进医院"
+					}
+				},
+				{
+					"path": "hospitalProfile/hospitalProfile",
+					"style": {
+						"navigationBarTitleText": "医院简介"
+					}
+				},
+				{
+					"path": "hospitalGuide/index",
+					"style": {
+						"navigationBarTitleText": "就医指南"
+					}
+				},
+				{
+					"path": "hospitalGuide/detail",
+					"style": {
+						"navigationBarTitleText": "就医指南详情"
+					}
+				},
+				{
+					"path": "medicalWiki/index",
+					"style": {
+						"navigationBarTitleText": "医学百科"
+					}
+				},
+				{
+					"path": "medicalWiki/calculate/index",
+					"style": {
+						"navigationBarTitleText": "体重计算器"
+						// "navigationStyle": "custom"
+					}
+				},
+				{
+					"path": "medicalWiki/calculate/result",
+					"style": {
+						"navigationBarTitleText": "计算结果",
+						"enablePullDownRefresh": false, //禁止下拉刷新
+						 "allowsBounceVertical": "NO" //禁止下拉
+						// "navigationStyle": "custom"
+					}
+				},
+				{
+					"path": "medicalWiki/blood/index",
+					"style": {
+						"navigationBarTitleText": "宝宝血型"
 					}
 				}
-				// { //这里的配置路径和pages里的一样
-				// 	"path": "list", //配置页面路径，这里要注意，因为root已经选中了文件夹，所以我们只要填写文件名就好
-				// 	"style": {
-				// 		"navigationBarTitleText": "",
-				// 		"enablePullDownRefresh": false
-				// 	}
-				// },
-				// {
-				// 	"path": "tab",
-				// 	"style": {
-				// 		"navigationBarTitleText": "",
-				// 		"enablePullDownRefresh": false
-				// 	}
-				// }
 			]
 		},
 		{
 			"root": "pagesC", //子包的根目录(主要是我的跳转的页面内容)
 			"pages": [{
-					"path": "aboutUs/aboutUs",
+					"path": "guaHao/guaHao",
 					"style": {
-						"navigationBarTitleText": "关于我们"
+						"navigationBarTitleText": "挂号列表"
 					}
 				},
+				{
+					"path": "guaHaoDetail/guaHaoDetail",
+					"style": {
+						"navigationBarTitleText": "挂号详情"
+					}
+				},
+				// {
+				// 	"path": "aboutUs/aboutUs",
+				// 	"style": {
+				// 		"navigationBarTitleText": "关于我们"
+				// 	}
+				// },
 				{
 					"path": "attentions/attentions",
 					"style": {
@@ -204,12 +249,12 @@
 						"navigationBarTitleText": "使用帮助"
 					}
 				},
-				{
-					"path": "disClaimer/disClaimer",
-					"style": {
-						"navigationBarTitleText": "免责声明"
-					}
-				},
+				// {
+				// 	"path": "disClaimer/disClaimer",
+				// 	"style": {
+				// 		"navigationBarTitleText": "免责声明"
+				// 	}
+				// },
 				{
 					"path": "register/register",
 					"style": {
@@ -258,6 +303,24 @@
 					"style": {
 						"navigationBarTitleText": "绑定手机号"
 					}
+				},
+				{
+					"path": "more/index",
+					"style": {
+						"navigationBarTitleText": "更多"
+					}
+				},
+				{
+					"path": "more/aboutUs",
+					"style": {
+						"navigationBarTitleText": "更多"
+					}
+				},
+				{
+					"path": "more/disClaimer",
+					"style": {
+						"navigationBarTitleText": "更多"
+					}
 				}
 			]
 		}
@@ -289,11 +352,12 @@
 			"selectedIconPath": "static/images/tarbar/index-selected.png",
 			"text": "首页"
 		}, {
-			"pagePath": "pages/guaHao/guaHao",
-			"iconPath": "static/images/tarbar/registered.png",
-			"selectedIconPath": "static/images/tarbar/registered-selected.png",
-			"text": "挂号"
-		}, {
+			"pagePath": "pages/hospital/index",
+			"iconPath": "static/images/tarbar/hospital.png",
+			"selectedIconPath": "static/images/tarbar/hospital-selected.png",
+			"text": "走进医院"
+		},
+		{
 			"pagePath": "pages/my/my",
 			"iconPath": "static/images/tarbar/my.png",
 			"selectedIconPath": "static/images/tarbar/my-selected.png",

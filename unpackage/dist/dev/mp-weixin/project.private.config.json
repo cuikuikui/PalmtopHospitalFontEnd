@@ -138,6 +138,153 @@
           "query": "",
           "launchMode": "default",
           "scene": null
+        },
+        {
+          "name": "",
+          "pathName": "pages/my/my",
+          "query": "",
+          "launchMode": "default",
+          "scene": null
+        },
+        {
+          "name": "",
+          "pathName": "pagesC/more/index",
+          "query": "",
+          "launchMode": "default",
+          "scene": null
+        },
+        {
+          "name": "",
+          "pathName": "pagesC/more/index",
+          "query": "",
+          "launchMode": "default",
+          "scene": null
+        },
+        {
+          "name": "",
+          "pathName": "pages/hospital/index",
+          "query": "",
+          "launchMode": "default",
+          "scene": null
+        },
+        {
+          "name": "",
+          "pathName": "pagesB/hospitalProfile/hospitalProfile",
+          "query": "",
+          "launchMode": "default",
+          "scene": null
+        },
+        {
+          "name": "",
+          "pathName": "pagesB/hospitalGuide/hospitalGuide",
+          "query": "",
+          "launchMode": "default",
+          "scene": null
+        },
+        {
+          "name": "",
+          "pathName": "pagesB/hospitalGuide/detail",
+          "query": "guideTitle=%E9%97%A8%E8%AF%8A%E6%8C%87%E5%8D%97-%E6%8C%82%E5%8F%B7%E6%94%B6%E8%B4%B9%E6%8C%87%E5%8D%97&guideTime=2021-05-27%2010%3A47%3A37&guideContent=",
+          "launchMode": "default",
+          "scene": null
+        },
+        {
+          "name": "",
+          "pathName": "pages/hospital/index",
+          "query": "",
+          "launchMode": "default",
+          "scene": null
+        },
+        {
+          "name": "",
+          "pathName": "pagesB/hospitalGuide/detail",
+          "query": "guideTitle=%E6%80%A5%E8%AF%8A%E6%B5%81%E7%A8%8B&guideTime=2021-05-27%2010%3A09%3A01&guideContent=http%3A%2F%2Flocalhost%3A8080%2FPalmtopHospitalBackEnd%2Fimages%2F%E6%80%A5%E8%AF%8A%E6%B5%81%E7%A8%8B.jpg&type=1",
+          "launchMode": "default",
+          "scene": null
+        },
+        {
+          "name": "",
+          "pathName": "pagesB/hospitalGuide/index",
+          "query": "hId=h001",
+          "launchMode": "default",
+          "scene": null
+        },
+        {
+          "name": "",
+          "pathName": "pagesB/hospitalGuide/detail",
+          "query": "guideTitle=%E9%97%A8%E8%AF%8A%E6%8C%87%E5%8D%97-%E6%8C%82%E5%8F%B7%E6%94%B6%E8%B4%B9%E6%8C%87%E5%8D%97&guideTime=2021-05-27%2010%3A47%3A37&guideContent=http%3A%2F%2Flocalhost%3A8080%2FPalmtopHospitalBackEnd%2Fpdf%2F%E6%8C%82%E5%8F%B7-%E6%94%B6%E8%B4%B9%E6%8C%87%E5%8D%97.pdf&type=0",
+          "launchMode": "default",
+          "scene": null
+        },
+        {
+          "name": "",
+          "pathName": "pagesB/medicalWiki/index",
+          "query": "",
+          "launchMode": "default",
+          "scene": null
+        },
+        {
+          "name": "",
+          "pathName": "pagesB/medicalWiki/detail",
+          "query": "id=201&title=BMI%E8%AE%A1%E7%AE%97%E5%99%A8",
+          "launchMode": "default",
+          "scene": null
+        },
+        {
+          "name": "",
+          "pathName": "pagesB/medicalWiki/detail",
+          "query": "id=201&title=BMI%E8%AE%A1%E7%AE%97%E5%99%A8",
+          "launchMode": "default",
+          "scene": null
+        },
+        {
+          "name": "",
+          "pathName": "pagesB/medicalWiki/calculate/index",
+          "query": "",
+          "launchMode": "default",
+          "scene": null
+        },
+        {
+          "name": "",
+          "pathName": "pagesB/medicalWiki/calculate/result",
+          "query": "result=902&height=111&weight=1111",
+          "launchMode": "default",
+          "scene": null
+        },
+        {
+          "name": "",
+          "pathName": "pagesB/medicalWiki/calculate/result",
+          "query": "result=23&height=160&weight=60",
+          "launchMode": "default",
+          "scene": null
+        },
+        {
+          "name": "",
+          "pathName": "pagesB/medicalWiki/calculate/result",
+          "query": "result=23&height=160&weight=60",
+          "launchMode": "default",
+          "scene": null
+        },
+        {
+          "name": "",
+          "pathName": "pagesB/medicalWiki/calculate/result",
+          "query": "result=29&height=175&weight=90",
+          "launchMode": "default",
+          "scene": null
+        },
+        {
+          "name": "",
+          "pathName": "pagesB/medicalWiki/calculate/result",
+          "query": "result=23&height=160&weight=60",
+          "launchMode": "default",
+          "scene": null
+        },
+        {
+          "name": "",
+          "pathName": "pagesB/medicalWiki/blood/index",
+          "query": "",
+          "launchMode": "default",
+          "scene": null
         }
       ]
     }

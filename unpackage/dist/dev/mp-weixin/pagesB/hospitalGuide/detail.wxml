@@ -1,0 +1,1 @@
+<view class="content"><block wx:if="{{type=='1'}}"><view class="item"><text>急诊流程</text><text>发表于：2021-05-27 10:09:01</text><image src="{{guideContent}}" mode></image></view></block><block wx:else><view class="item"><web-view src="{{guideContent}}">指南</web-view></view></block></view>

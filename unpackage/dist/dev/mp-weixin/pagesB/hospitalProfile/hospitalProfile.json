@@ -1,0 +1,7 @@
+{
+  "navigationBarTitleText": "医院简介",
+  "usingComponents": {
+    "custom-tabs": "/uni_modules/custom-tabs/components/custom-tabs/custom-tabs",
+    "custom-tab-pane": "/uni_modules/custom-tabs/components/custom-tab-pane/custom-tab-pane"
+  }
+}

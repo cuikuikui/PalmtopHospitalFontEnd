@@ -537,6 +537,8 @@
 
 
 
+
+
 /*1、扫一扫组件 */
 .scan {
 	position: fixed;

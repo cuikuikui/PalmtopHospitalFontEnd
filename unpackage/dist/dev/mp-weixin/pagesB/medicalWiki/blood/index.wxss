@@ -1,0 +1,25 @@
+
+.blood.data-v-d916e568 {
+	padding: 13px;
+	font-size: 13px;
+	display: flex;
+	flex-direction: column;
+}
+.fa-mo.data-v-d916e568 {
+	display: flex;
+	justify-content: space-between;
+	margin-top: 25px;
+}
+.searchRes.data-v-d916e568 {
+	width: 92%;
+	padding: 10px;
+	margin-top: 15px;
+	border-radius: 5px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	color: white;
+	font-size: 15px;
+	background-color: #1765ea;
+}
+

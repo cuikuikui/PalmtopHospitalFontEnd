@@ -4,26 +4,23 @@
 		<view class="userinfo" style="background-color: #FD0517">
 			<view class="userinfoLeft">
 				<image class="userinfo-avatar" @click="userInfor(WeChatUserInfo.u_Name,WeChatUserInfo.u_Img,WeChatUserInfo.u_Phone)" :src="WeChatUserInfo.u_Img" background-size="cover"></image>
-			</view>
-
-			<view class="userinfoRight">
 				<text class="userinfo-nickname">{{WeChatUserInfo.u_Name}}</text>
 			</view>
 		</view>
 
-		<view class="info_list">
-			<view class="weui_cell" @click="addFamily">
-				<view class="weui_cell_hd">
-					<span class="iconfont icon-juzhenren"></span>
-				</view>
-				<view class="weui_cell_bd">
-					<view class="weui_cell_bd_p"> 就诊人 </view>
-				</view>
-				<view class="with_arrow">
-					<span style="color:#131212" class="iconfont icon-arrow-right1"></span>
-				</view>
+		<view class="flow">
+			<view class="item" @click="family">
+				<span class="iconfont icon-juzhenren"></span>
+				<text>就诊人管理</text>
 			</view>
-
+			
+			<view class="item" @click="guaHao">
+				<span class="iconfont icon-record-my"></span>
+				<text>预约挂号记录</text>
+			</view>
+		</view>
+	
+		<view class="info_list">
 			<view class="weui_cell" @click="addAttention">
 				<view class="weui_cell_hd">
 					<span class="iconfont icon-star-attention"></span>
@@ -48,7 +45,7 @@
 				</view>
 			</view>
 
-			<view class="weui_cell" @click="disClaimer">
+		<!-- 	<view class="weui_cell" @click="disClaimer">
 				<view class="weui_cell_hd">
 					<span class="iconfont icon-declare"></span>
 				</view>
@@ -58,9 +55,9 @@
 				<view class="with_arrow">
 					<span style="color:#131212" class="iconfont icon-arrow-right1"></span>
 				</view>
-			</view>
+			</view> -->
 
-			<view class="weui_cell" @click="aboutUs">
+		<!-- 	<view class="weui_cell" @click="aboutUs">
 				<view class="weui_cell_hd">
 					<span class="iconfont icon-cuowutishi-copy"></span>
 				</view>
@@ -69,51 +66,6 @@
 				</view>
 				<view class="with_arrow">
 					<span style="color:#131212" class="iconfont icon-arrow-right1"></span>
-				</view>
-			</view>
-
-			<!-- APP端时的分享 -->
-			<!--#ifdef APP-PLUS-->
-			<!-- 分享弹窗 -->
-			<uni-popup ref="sharepopup" type="bottom">
-				<share-btn :sharedataTemp="sharedata"></share-btn>
-			</uni-popup>
-			<view class="weui_cell" @click="share">
-				<view class="weui_cell_hd">
-					<image src="../../static/images/card.png"></image>
-				</view>
-				<view class="weui_cell_bd">
-					<view class="weui_cell_bd_p">分享好友 </view>
-				</view>
-				<!-- <view v-if="item.isunread" class="badge">{{item.unreadNum}}</view> -->
-				<view class="with_arrow">
-					<span style="color:#131212" class="iconfont icon-arrow-right1"></span>
-				</view>
-			</view>
-			<!--  #endif -->
-
-			<!-- 微信端时的分享 -->
-<!-- 			<view class="share" :class="shareFlag=='showShare'?'show':''">
-				<view class="shareStyle">
-					<button class="wx" open-type='share'>
-							<image src="../../static/images/weixin.png" alt="" class="shareimg">
-						<text :decode="true">\n微信</text>
-					</button>
-					<button class="wx" open-type='share'>
-							<image src="../../static/images/pengyouquan.png" alt="" class="shareimg">
-						<text :decode="true">\n朋友圈</text>
-					</button>
-				</view>
-			</view>
-			<view class="weui_cell" @click="openShare" data-share="showShare">
-				<view class="weui_cell_hd">
-					<image src="../../static/images/card.png"></image>
-				</view>
-				<view class="weui_cell_bd">
-					<view class="weui_cell_bd_p">分享好友 </view>
-				</view>
-				<view class="with_arrow">
-					<image src="../../static/images/arrow.png"></image>
 				</view>
 			</view> -->
 
@@ -128,8 +80,20 @@
 					<span style="color:#131212" class="iconfont icon-arrow-right1"></span>
 				</view>
 			</view>
+			
+			<view class="weui_cell" @click="more">
+				<view class="weui_cell_hd">
+					<span class="iconfont icon-gengduo"></span>
+				</view>
+				<view class="weui_cell_bd">
+					<view class="weui_cell_bd_p"> 更多 </view>
+				</view>
+				<view class="with_arrow">
+					<span style="color:#131212" class="iconfont icon-arrow-right1"></span>
+				</view>
+			</view>
 
-			<view style="width:100%;height:50rpx;background-color:#cab1b13d;"></view>
+			<!-- <view style="width:100%;height:50rpx;background-color:#cab1b13d;"></view>
 
 			<view class="tel-view" @click="makePhone">
 				<text style="font-size:27rpx;color:orange;letter-spacing: 3rpx;">客服电话: 86-021-33851886</text>
@@ -137,7 +101,7 @@
 
 			<view style="width:100%;height:360rpx;background-color:#cab1b13d;">
 				<view class="serviceTime">服务时间:9:00-23:00</view>
-			</view>
+			</view> -->
 
 		</view>
 
@@ -191,9 +155,14 @@
 				})
 			},
 			// 家庭成员
-			addFamily: function(e) {
+			family() {
 				uni.navigateTo({
 					url: "/pagesC/family/listFamily"
+				})
+			},
+			guaHao(){
+				uni.navigateTo({
+					url: "/pagesC/guaHao/guaHao"
 				})
 			},
 			// 我的关注
@@ -209,20 +178,25 @@
 				})
 			},
 			// 免责声明
-			disClaimer: function() {
-				uni.navigateTo({
-					url: '/pagesC/disClaimer/disClaimer'
-				})
-			},
+			// disClaimer: function() {
+			// 	uni.navigateTo({
+			// 		url: '/pagesC/disClaimer/disClaimer'
+			// 	})
+			// },
 			bindViewTap: function(e) {
 				uni.navigateTo({
 					url: '/pagesC/register/register'
 				})
 			},
 			// 关于我们
-			aboutUs: function() {
+			// aboutUs: function() {
+			// 	uni.navigateTo({
+			// 		url: "/pagesC/aboutUs/aboutUs"
+			// 	})
+			// },
+			more(){
 				uni.navigateTo({
-					url: "/pagesC/aboutUs/aboutUs"
+					url: "/pagesC/more/index"
 				})
 			},
 			// 检查更新
@@ -256,8 +230,29 @@
 
 <style>
 	/**index.uniss**/
+	.flow {
+		padding: 5px;
+		margin:15px;
+		width:330px;
+		background-color: white;
+		display: flex;
+		flex-direction: row;
+		justify-content: space-around;
+		border: 1px solid #d8cccc;
+		border-radius: 10px;
+		position: absolute;
+		bottom: 360px;
+		z-index: 999;
+		/* color: #d8cccc; */
+	}
+	.flow .item {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+	}
 	.info_list {
 		background-color: white;
+		padding-top: 50px;
 	}
 
 	.container {
@@ -268,42 +263,23 @@
 	.userinfo {
 		display: flex;
 		width: 100%;
-		height: 170rpx;
-		padding-bottom: 70rpx;
-		padding-top: 20rpx;
+		font-size: 20px;
+		color: white;
+		padding-bottom: 150rpx;
+		/* padding-top: 20rpx; */
 		flex-direction: column;
-		/* padding: 50rpx 0; */
 		align-items: center;
-		/* background-color: #ff0000; */
 	}
-
 	.userinfoLeft {
-		width: 100%;
-		height: 130rpx;
 		display: flex;
-		justify-content: center;
-	}
-
-	.userinfoRight {
-		display: flex;
-		justify-content: center;
 		align-items: center;
-		width: 100%;
-		height: 40rpx;
+		justify-content: center;
 	}
-
 	.userinfo-avatar {
-		width: 150rpx;
-		height: 150rpx;
+		width: 120rpx;
+		height: 120rpx;
 		border-radius: 50%;
-	}
-
-	.userinfo-nickname {
-		margin-top: 80rpx;
-		color: rgba(8, 8, 7, 0.479);
-		font-size: 40rpx;
-		font-weight: bolder;
-		font-family: 'Times New Roman'
+		margin-right: 10px;
 	}
 
 	.weui_cell {

@@ -1,0 +1,64 @@
+
+.result.data-v-15024027 {
+	padding: 10px;
+}
+.topx.data-v-15024027 {
+	display: flex;
+	font-size: 13px;
+}
+.center.data-v-15024027 {
+	display: flex;
+	color: #8a8a8a;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+.line.data-v-15024027 {
+	width: 97%;
+	height: 35px;
+	border: 2px solid #8a8a8a;
+	display: flex;
+}
+.line text.data-v-15024027 {
+	position: absolute;
+	font-size: 15px;
+	top: 165px;
+}
+.index.data-v-15024027 {
+	position: absolute;
+	top: 92px;
+	left:91px;
+}
+.alerMsg.data-v-15024027 {
+	padding-top: 30px;
+	font-size: 15px;
+}
+.model.data-v-15024027 {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-size: 13px;
+	color: white;
+}
+.model1.data-v-15024027 {
+	width: 12%;
+	background-color: #33c5b8;
+}
+.model2.data-v-15024027{
+	width: 18%;
+	background-color: #8BC34A;
+}
+.model3.data-v-15024027 {
+	width: 13%;
+	background-color: #FFC107;
+}
+.model4.data-v-15024027{
+	width: 27%;
+	background-color: #F44336;
+}
+.model5.data-v-15024027{
+	width: 30%;
+	background-color: #b763c5;
+}
+
+

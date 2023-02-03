@@ -167,8 +167,8 @@
 										duration: 2000
 									});
 									setTimeout(function() {
-										uni.switchTab({
-											url: '/pages/guaHao/guaHao'
+										uni.redirectTo({
+											url: '/pagesC/guaHao/guaHao'
 										})
 									}, 2000);
 								} else {
